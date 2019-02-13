@@ -18,11 +18,11 @@ namespace Core.Access
             return result;
         }
 
-        public static StundenplanModel GetStundenplanByKlassAndDate(IDbConnection con,string klasse,DateTime datum)
+        public static List<StundenplanModel> GetStundenplanByKlassAndDate(IDbConnection con,int klasse,string datum)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Select * From SVS.Stundenplan Where Klasse = {klasse} and Datum = {datum}";
-            var result = con.QueryFirstOrDefault<StundenplanModel>(sql);
+            var sql = $"Select * From SVS.Stundenplan Where Klasse_ID = {klasse} and Datum = '{datum}'";
+            var result = con.Query<StundenplanModel>(sql).AsList();
             return result;
         }
 
@@ -38,6 +38,40 @@ namespace Core.Access
 
         public static void DeleteStundenplan()
         {
+
+        }
+
+        public static string GetKlasseText(IDbConnection con, int ID)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Select Name From SVS.Klasse Where ID = {ID}";
+            var result = con.ExecuteScalar<string>(sql);
+            return result;
+        }
+
+        public static string GetFachText(IDbConnection con, int ID)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Select Name From SVS.Fach Where ID = {ID}";
+            var result = con.ExecuteScalar<string>(sql);
+            return result;
+        }
+
+        public static string GetLehrerText(IDbConnection con, int ID)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Select Name From SVS.Lehrer Where ID = {ID}";
+            var result = con.ExecuteScalar<string>(sql);
+            return result;
+
+        }
+
+        public static string GetRaumText(IDbConnection con, int ID)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Select Name From SVS.Raum Where ID = {ID}";
+            var result = con.ExecuteScalar<string>(sql);
+            return result;
 
         }
 

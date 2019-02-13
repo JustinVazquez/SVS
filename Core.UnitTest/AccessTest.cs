@@ -3,6 +3,7 @@ using Core.Helper;
 using NUnit.Framework;
 using System;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace Tests
 {
@@ -13,6 +14,26 @@ namespace Tests
         {
 
         }
+
+        [Test]
+        public void GetStundenPlanbyDatumAndKlasse()
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+      
+            var result = StundeplanAccess.GetStundenplanByKlassAndDate(con,1, DateTime.Today.ToString("yyyy-MM-dd"));
+            foreach (var item in result)
+            {
+                item.Klasse = StundeplanAccess.GetKlasseText(con, item.Klasse_ID);
+                item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
+                item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
+                item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
+            }
+            con.Close();
+            Console.Write("OK");
+        }
+
+
 
         [Test]
         public void UserAddTest()
