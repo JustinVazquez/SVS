@@ -77,7 +77,41 @@ namespace WebApi.Hubs
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            UserAccess.
+            try
+            {
+                UserAccess.ChangeEmail(con, name, mail);
+                return HttpStatusCode.OK;
+            }
+            catch(Exception error)
+            {
+                return HttpStatusCode.InternalServerError;
+            }
+            finally
+            {
+                con.Close();
+            }                    
+        }
+
+
+        public HttpStatusCode ChangePassword(string name, string password, string newPassword)
+        {                     
+            var User = Login(name,password);
+            if(User != null)
+            {
+                var con = DbHelper.GetDbConnection();
+                con.Open();
+                var HashnSalt = SaltHashHelper.CreateHash(newPassword);
+                UserAccess.ChangeHash(con, name, HashnSalt.Item1);
+                UserAccess.ChangeSalt(con, name, HashnSalt.Item2);
+                con.Close();
+                return HttpStatusCode.OK;
+            }
+            else
+            {
+                return HttpStatusCode.BadRequest;
+            }
+
+           
         }
     }
 }

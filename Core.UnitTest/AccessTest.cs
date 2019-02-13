@@ -43,6 +43,49 @@ namespace Tests
         }
 
         [Test]
+        public void ChangePassword()
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            var name = "Justin_Vazquez";
+            var password = "Test1234";
+            var newPassword = "Test12345";
+
+            if (!string.IsNullOrWhiteSpace(UserAccess.GetName(con, name)))
+            {
+                var userID = UserAccess.GetIdByName(con, name);
+                var hash = UserAccess.GetHash(con, userID);
+                var salt = UserAccess.GetSalt(con, userID);
+
+                try
+                {
+                    if (SaltHashHelper.ValidatePassword(password, hash, salt))
+                    {
+                        
+                        var HashnSalt = SaltHashHelper.CreateHash(newPassword);
+                        UserAccess.ChangeHash(con, name, HashnSalt.Item1);
+                        UserAccess.ChangeSalt(con, name, HashnSalt.Item2);
+                        con.Close();
+                    }
+                    else
+                    {
+                        Console.Write("Error");
+                    }
+                }
+                catch (Exception error)
+                {
+                    Console.Write(error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+
+            }
+        }
+
+        [Test]
         public void UserAnlegen()
         {
             var con = DbHelper.GetDbConnection();
@@ -60,7 +103,7 @@ namespace Tests
             var con = DbHelper.GetDbConnection();
             con.Open();
             var name = "Justin_Vazquez";
-            var password = "Test1234";
+            var password = "Test12345";
 
             if (!string.IsNullOrWhiteSpace(UserAccess.GetName(con, name)))
             {
@@ -76,7 +119,7 @@ namespace Tests
                     }
                     else
                     {
-                        Console.Write("");
+                        Console.Write("Error");
                     }
                 }
                 catch (Exception error)
@@ -89,10 +132,7 @@ namespace Tests
                 }
 
 
-            }
-
-
-            Console.Write("");
+            }          
         }
     }
 }

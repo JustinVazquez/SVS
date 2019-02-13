@@ -50,9 +50,18 @@ namespace Core.Access
           
         }
 
-        public static void ChangePassword(IDbConnection con,string password,string newPassword)
+        public static void ChangeSalt(IDbConnection con, string name,string salt)
         {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"UPDATE SVS.SALT SET salt = '{salt}' where User_ID = {UserAccess.GetIdByName(con, name)}";
+            con.Execute(sql);
+        }
 
+        public static void ChangeHash(IDbConnection con,string name, string newPassword)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"UPDATE SVS.USER SET hash = '{newPassword}' where ID = {UserAccess.GetIdByName(con, name)}";
+            con.Execute(sql);
         }
 
         public static void AddUser(IDbConnection con,string name,string password/*,string email,bool autoversand*/)
