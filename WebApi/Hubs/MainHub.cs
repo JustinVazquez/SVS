@@ -8,6 +8,14 @@ namespace WebApi.Hubs
 {
     public class MainHub : Hub
     {
-        
+        public void OnConnect()
+        {
+            
+        }
+
+        public bool Test()
+        {
+            return true;
+        }
     }
 }
