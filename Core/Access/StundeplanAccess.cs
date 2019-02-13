@@ -13,7 +13,7 @@ namespace Core.Access
         public static List<StundenplanModel> GetAllStundenplaene(IDbConnection con)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Select * From Stundenplan Order By Datum,Stunde";
+            var sql = $"Select * From SVS.Stundenplan Order By Datum,Stunde";
             var result = con.Query<StundenplanModel>(sql).AsList();
             return result;
         }
@@ -21,7 +21,7 @@ namespace Core.Access
         public static StundenplanModel GetStundenplanByKlassAndDate(IDbConnection con,string klasse,DateTime datum)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Select * From Stundenplan Where Klasse = {klasse} and Datum = {datum}";
+            var sql = $"Select * From SVS.Stundenplan Where Klasse = {klasse} and Datum = {datum}";
             var result = con.QueryFirstOrDefault<StundenplanModel>(sql);
             return result;
         }

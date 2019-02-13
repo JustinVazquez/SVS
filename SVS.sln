@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{6AC34BFD-3EE7-441F-940E-F5E993C17E6E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.UnitTest", "Core.UnitTest\Core.UnitTest.csproj", "{689D9448-30D9-4A2F-AC12-2A3E61A86FF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.UnitTest", "Core.UnitTest\WebApi.UnitTest.csproj", "{689D9448-30D9-4A2F-AC12-2A3E61A86FF0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{C1A61FE6-1AF8-4D26-8631-28B46C91B968}"
 EndProject

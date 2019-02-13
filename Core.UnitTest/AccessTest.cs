@@ -13,7 +13,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        public void UserAddTest()
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
