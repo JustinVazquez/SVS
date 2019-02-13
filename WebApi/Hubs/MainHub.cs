@@ -8,6 +8,6 @@ namespace WebApi.Hubs
 {
     public class MainHub : Hub
     {
-
+        
     }
 }
