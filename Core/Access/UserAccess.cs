@@ -68,6 +68,14 @@ namespace Core.Access
                 var sql = $"SELECT * FROM SVS.USER WHERE name = '{user}' and hash = '{password}'";
                 var result = con.QueryFirst<User>(sql);
                 return result;           
-        }       
+        }     
+        
+        public static void ChangeEmail(IDbConnection con, string name,string mail)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"UPDATE SVS.USER SET email = '{mail}' where ID = {UserAccess.GetIdByName(con,name)}";
+            con.Execute(sql);
+         
+        }
     }
 }

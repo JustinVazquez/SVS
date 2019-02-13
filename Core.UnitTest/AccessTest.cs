@@ -34,6 +34,15 @@ namespace Tests
         }
 
         [Test]
+        public void ChangeMail()
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            UserAccess.ChangeEmail(con, "Justin_Vazquez", "JustinRamon.Vazquez@gmail.com");
+            con.Close();         
+        }
+
+        [Test]
         public void UserAnlegen()
         {
             var con = DbHelper.GetDbConnection();

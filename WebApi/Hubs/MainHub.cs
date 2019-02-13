@@ -49,14 +49,9 @@ namespace WebApi.Hubs
                 finally
                 {
                     con.Close();
-                }
-
-              
-            }
-            
-
+                }              
+            }          
             return null;
-
         }
 
         public HttpStatusCode Anlegen(string name,string password)
@@ -76,6 +71,13 @@ namespace WebApi.Hubs
             {
                 return HttpStatusCode.InternalServerError;
             }
+        }
+
+        public HttpStatusCode UpdateMail(string name, string mail)
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            UserAccess.
         }
     }
 }
