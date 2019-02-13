@@ -90,10 +90,18 @@ namespace Tests
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            var SaltnHash = SaltHashHelper.CreateHash("Test1234");
-            UserAccess.AddUser(con, "Justin_Vazquez", SaltnHash.Item1);
-            var ID = UserAccess.GetIdByName(con, "Justin_Vazquez");
-            UserAccess.AddSalt(con, ID, SaltnHash.Item2);
+            if(string.IsNullOrEmpty(UserAccess.GetName(con,"Justin_Vazquez")))
+            {
+                var SaltnHash = SaltHashHelper.CreateHash("Test1234");
+                UserAccess.AddUser(con, "Justin_Vazquez", SaltnHash.Item1);
+                var ID = UserAccess.GetIdByName(con, "Justin_Vazquez");
+                UserAccess.AddSalt(con, ID, SaltnHash.Item2);
+            }
+            else
+            {
+                Console.Write("Error");
+            }
+          
             con.Close();
         }
 
