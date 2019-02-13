@@ -1,6 +1,7 @@
 using Core.Access;
 using Core.Helper;
 using NUnit.Framework;
+using System;
 using System.Diagnostics;
 
 namespace Tests
@@ -18,7 +19,7 @@ namespace Tests
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            UserAccess.AddUser(con,"Test2","Test2");
+            UserAccess.AddUser(con,"Test","Test");
         }
 
         [Test]
@@ -28,6 +29,7 @@ namespace Tests
             con.Open();
             var User = UserAccess.GetUser(con, "Test", "Test");
             con.Close();
+            Console.Write(User);
             Debug.Write(User);
         }
 
@@ -41,6 +43,47 @@ namespace Tests
             var ID = UserAccess.GetIdByName(con, "Justin_Vazquez");
             UserAccess.AddSalt(con, ID, SaltnHash.Item2);
             con.Close();
+        }
+
+        [Test]
+        public void Validate()
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            var name = "Justin_Vazquez";
+            var password = "Test1234";
+
+            if (!string.IsNullOrWhiteSpace(UserAccess.GetName(con, name)))
+            {
+                var userID = UserAccess.GetIdByName(con, name);
+                var hash = UserAccess.GetHash(con, userID);
+                var salt = UserAccess.GetSalt(con, userID);
+
+                try
+                {
+                    if (SaltHashHelper.ValidatePassword(password, hash, salt))
+                    {
+                        Console.Write(UserAccess.GetUser(con, name, hash));
+                    }
+                    else
+                    {
+                        Console.Write("");
+                    }
+                }
+                catch (Exception error)
+                {
+                    Console.Write(error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+
+            }
+
+
+            Console.Write("");
         }
     }
 }

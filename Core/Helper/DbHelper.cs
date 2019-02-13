@@ -9,7 +9,7 @@ namespace Core.Helper
 {
     public static class DbHelper
     {
-        private static readonly string _dataSource = "172.32.1.173:8080";
+        private static readonly string _dataSource = "127.0.0.1";
         private static readonly string _userName = "root";
         private static readonly string _password = "";
   

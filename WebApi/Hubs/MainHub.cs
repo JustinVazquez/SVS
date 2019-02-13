@@ -18,14 +18,42 @@ namespace WebApi.Hubs
             return true;
         }
 
-        public User Login(string user,string password)
+        public User Login(string name,string password)
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            var test = UserAccess.GetUser(con, user, password);
-            con.Close();
+              
+            if (string.IsNullOrWhiteSpace(UserAccess.GetName(con,name)))
+            {
+                var userID = UserAccess.GetIdByName(con,name);
+                var hash = UserAccess.GetHash(con, userID);
+                var salt = UserAccess.GetSalt(con, userID);
 
-            return test;
+                try
+                {
+                    if (SaltHashHelper.ValidatePassword(password, hash, salt))
+                    {
+                        return UserAccess.GetUser(con, name, hash);
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch(Exception error)
+                {
+                    Console.Write(error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+              
+            }
+            
+
+            return null;
 
         }
 
