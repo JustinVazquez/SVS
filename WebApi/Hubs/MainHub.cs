@@ -1,11 +1,13 @@
 ﻿using Core.Access;
 using Core.Helper;
 using Core.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace WebApi.Hubs
@@ -57,9 +59,23 @@ namespace WebApi.Hubs
 
         }
 
-        public void Anlegen(string name,string password)
+        public HttpStatusCode Anlegen(string name,string password)
         {
 
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+
+            if (string.IsNullOrWhiteSpace(UserAccess.GetName(con, name)))
+            {
+                var HashnSalt = SaltHashHelper.CreateHash(password);
+                UserAccess.AddUser(con, name, HashnSalt.Item1);
+                UserAccess.AddSalt(con, UserAccess.GetIdByName(con, name), HashnSalt.Item2);
+                return HttpStatusCode.OK;
+            }
+            else
+            {
+                return HttpStatusCode.InternalServerError;
+            }
         }
     }
 }
