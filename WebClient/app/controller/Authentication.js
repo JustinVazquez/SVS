@@ -21,8 +21,18 @@ Ext.define('SVSClient.controller.Authentication', {
 		console.log(username);
 		console.log(password);
 
+		var user;
+    	connection.invoke("Login", username, password).then(function(data){
+			user = data;
+			console.log(user);
+			if(user){
+				console.log("Working!");
+			}else{
+				console.log("Incorrect!");
+			}
+		})
 
-    	connection.invoke("Login", username, password);
+
     	// Authenticate User
 		// Ext.Ajax.request({
 		// 	method	: 'POST',
