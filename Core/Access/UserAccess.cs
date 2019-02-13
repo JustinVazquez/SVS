@@ -58,7 +58,7 @@ namespace Core.Access
         public static void AddUser(IDbConnection con,string name,string password/*,string email,bool autoversand*/)
         {           
             DbHelper.CheckDbConnection(con);
-            var sql =  $"INSERT INTO SVS.PROJEKTTAGE_USER (Name,Hash) VALUES ('{name}','{password}')";          
+            var sql =  $"INSERT INTO SVS.USER (Name,Hash) VALUES ('{name}','{password}')";          
             con.Execute(sql);                   
         }
 

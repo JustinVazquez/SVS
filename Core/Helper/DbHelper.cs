@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using MySql.Data.MySqlClient;
 
-using System.Data.SqlClient;
 
 namespace Core.Helper
 {
@@ -11,7 +11,7 @@ namespace Core.Helper
     {
         private static readonly string _dataSource = "127.0.0.1";
         private static readonly string _userName = "root";
-        private static readonly string _password = "root";
+        private static readonly string _password = "";
   
 
         public static void CheckDbConnection(IDbConnection con)
@@ -27,9 +27,9 @@ namespace Core.Helper
         public static IDbConnection GetDbConnection()
         {
             var conString =
-                $"DataSource={_dataSource}; UserId={_userName}; Password={_password}; DataCompression=True; CheckConnectionOnOpen=true";
-            SqlConnection connection = new SqlConnection();
-            var con = new SqlConnection(conString);
+                $"Server=localhost; DataSource={_dataSource}; UserId={_userName}; Password={_password};";
+            MySqlConnection connection = new MySqlConnection(conString);
+            var con = connection;
             return con;
         }
 
