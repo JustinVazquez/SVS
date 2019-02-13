@@ -46,7 +46,43 @@
 
     <!-- The line below must be kept intact for Sencha Cmd to build your application -->
     <script id="microloader" data-app="4bb96776-218c-4f09-b279-caf77a751bb3" type="text/javascript" src="bootstrap.js"></script>
+    <script src="wwwroot/js/signalr.js"></script>
+    <!-- <script src="wwwroot/js/site.js"></script> -->
+    <script>
 
+        let connection = new signalR.HubConnectionBuilder()
+            .withUrl("https://localhost:5001/Main")
+            .build();
+            
+        connection.start();
+
+        // async function test(p1) {
+        //     x = await connection.invoke("Send", p1);
+        //     document.getElementById("test").innerHTML = x;
+
+        // }
+
+        // function test2(p1) {
+        //     connection.invoke("Send", p1).then(function (s) {
+
+        //         document.getElementById("test").innerHTML = s;
+        //     });
+        // }
+
+
+        // function alle() {
+        //     connection.invoke("Send2");
+        // } 
+
+        connection.on("onConnect", function () {
+            console.log("onConnection Working: Boolean incoming");
+            var x = await connection.invoke("test");
+            console.log(x);
+        });
+
+        
+
+    </script>
 </head>
 <body></body>
 </html>
