@@ -28,7 +28,11 @@ namespace Tests
                 item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
                 item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
                 item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
+                item.Notiz = StundeplanAccess.GetNotiz(con, item.Notiz_ID);
+                item.Notiz.User_Name = UserAccess.GetNameByID(con, item.Notiz.User_ID);
+                
             }
+
             con.Close();
             Console.Write("OK");
         }

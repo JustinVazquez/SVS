@@ -10,6 +10,8 @@ namespace Core.Models
 
         public int User_ID { get; set; }
 
+        public string User_Name { get; set; }
+
         public string Text { get; set; }
 
         public int Stunde { get; set; }

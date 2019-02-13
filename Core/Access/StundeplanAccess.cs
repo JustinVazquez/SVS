@@ -75,6 +75,22 @@ namespace Core.Access
 
         }
 
+        public static Notiz GetNotiz(IDbConnection con,int ID)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Select * From SVS.Notiz Where ID = {ID}";
+            var result = con.QueryFirstOrDefault<Notiz>(sql);
+            return result;
+        }
+
+        public static Notiz GetNotizByDateAndStunde(IDbConnection con,string Datum,int Stunde)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Select * From SVS.Notiz Where Datum = '{Datum}' And Stunde = {Stunde}";
+            var result = con.QueryFirstOrDefault<Notiz>(sql);
+            return result;           
+        }
+
 
     }
 }

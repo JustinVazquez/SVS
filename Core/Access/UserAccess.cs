@@ -50,6 +50,15 @@ namespace Core.Access
           
         }
 
+        public static string GetNameByID(IDbConnection con, int ID)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"SELECT Name FROM SVS.User WHERE ID = '{ID}'";
+            var result = con.ExecuteScalar<string>(sql);
+            return result;
+
+        }
+
         public static void ChangeSalt(IDbConnection con, string name,string salt)
         {
             DbHelper.CheckDbConnection(con);
