@@ -1,6 +1,7 @@
 using Core.Access;
 using Core.Helper;
 using NUnit.Framework;
+using System.Diagnostics;
 
 namespace Tests
 {
@@ -18,6 +19,16 @@ namespace Tests
             var con = DbHelper.GetDbConnection();
             con.Open();
             UserAccess.AddUser(con,"Test","Test");
+        }
+
+        [Test]
+        public void GetUser()
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            var User = UserAccess.GetUser(con, "Test", "Test");
+            con.Close();
+            Debug.Write(User);
         }
 
         [Test]
