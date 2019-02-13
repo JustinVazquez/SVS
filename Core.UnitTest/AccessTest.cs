@@ -18,7 +18,7 @@ namespace Tests
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            UserAccess.AddUser(con,"Test","Test");
+            UserAccess.AddUser(con,"Test2","Test2");
         }
 
         [Test]

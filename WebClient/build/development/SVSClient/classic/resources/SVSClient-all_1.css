@@ -3063,7 +3063,7 @@ the height of a multi-line element */
     font-size: 13px;
     line-height: 17px;
     font-weight: 300;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     background: #f6f6f6;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/Component.scss:18 */
@@ -3119,7 +3119,7 @@ body > .x-mask {
     padding: 0;
     background-color: transparent;
     color: #404040;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px 'Open Sans', sans-serif !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/LoadMask.scss:59 */
 .x-mask-msg-text {
@@ -3150,7 +3150,7 @@ body > .x-mask {
     color: #fff;
     font-weight: 400;
     font-size: 13px;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     text-align: center;
     line-height: 24px;
 }
@@ -3315,7 +3315,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-small {
-    font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 12px/16px 'Open Sans', sans-serif !important;
     color: #f0f0f0;
     padding: 0 5px;
     max-width: 100%;
@@ -3910,7 +3910,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-medium {
-    font: 400 14px/18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 14px/18px 'Open Sans', sans-serif !important;
     color: #f0f0f0;
     padding: 0 8px;
     max-width: 100%;
@@ -4505,7 +4505,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-large {
-    font: 400 16px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 16px/20px 'Open Sans', sans-serif !important;
     color: #f0f0f0;
     padding: 0 10px;
     max-width: 100%;
@@ -5100,7 +5100,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-toolbar-small {
-    font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 12px/16px 'Open Sans', sans-serif !important;
     color: #606060;
     padding: 0 5px;
     max-width: 100%;
@@ -5695,7 +5695,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-toolbar-medium {
-    font: 400 14px/18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 14px/18px 'Open Sans', sans-serif !important;
     color: #606060;
     padding: 0 8px;
     max-width: 100%;
@@ -6290,7 +6290,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-default-toolbar-large {
-    font: 400 16px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 16px/20px 'Open Sans', sans-serif !important;
     color: #606060;
     padding: 0 10px;
     max-width: 100%;
@@ -7398,7 +7398,7 @@ body > .x-mask {
 .x-toolbar-text-default {
     padding: 0 4px;
     color: #4b4c4c;
-    font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/16px 'Open Sans', sans-serif !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/toolbar/Toolbar.scss:334 */
 .x-toolbar-spacer-default {
@@ -7590,7 +7590,7 @@ body > .x-mask {
 .x-toolbar-text-footer {
     padding: 0 4px;
     color: #4b4c4c;
-    font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/16px 'Open Sans', sans-serif !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/toolbar/Toolbar.scss:334 */
 .x-toolbar-spacer-footer {
@@ -7684,7 +7684,7 @@ body > .x-mask {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/dd/StatusProxy.scss:1 */
 .x-dd-drag-proxy {
     color: #404040;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/17px 'Open Sans', sans-serif !important;
     border: 1px solid #d0d0d0;
     background-color: #fff;
 }
@@ -7812,7 +7812,7 @@ body > .x-mask {
     color: #f0f0f0;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     line-height: 20px;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/panel/Panel.scss:400 */
@@ -7869,7 +7869,7 @@ body > .x-mask {
     color: #404040;
     font-size: 13px;
     font-weight: 300;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     border-width: 1px;
     border-style: solid;
 }
@@ -8173,7 +8173,7 @@ body > .x-mask {
     color: #f0f0f0;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     line-height: 20px;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/panel/Panel.scss:400 */
@@ -8230,7 +8230,7 @@ body > .x-mask {
     color: #404040;
     font-size: 13px;
     font-weight: 300;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     border-width: 1px;
     border-style: solid;
 }
@@ -9582,7 +9582,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/container/ButtonGroup.scss:132 */
 .x-btn-group-header-title-default {
-    font: 300 14px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 14px 'Open Sans', sans-serif !important;
     line-height: 16px;
     color: #606060;
 }
@@ -9842,7 +9842,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/container/ButtonGroup.scss:132 */
 .x-btn-group-header-title-default-framed {
-    font: 300 14px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 14px 'Open Sans', sans-serif !important;
     line-height: 16px;
     color: #606060;
 }
@@ -10024,7 +10024,7 @@ body > .x-mask {
     color: #000;
     font-size: 13px;
     font-weight: 300;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/window/Window.scss:264 */
 .x-window-header-default {
@@ -10056,7 +10056,7 @@ body > .x-mask {
     color: #f0f0f0;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     line-height: 20px;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/window/Window.scss:314 */
@@ -11279,7 +11279,7 @@ body > .x-mask {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/form/Labelable.scss:97 */
 .x-form-item-label-default {
     color: #404040;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/17px 'Open Sans', sans-serif !important;
     min-height: 32px;
     padding-top: 8px;
     padding-right: 5px;
@@ -11321,7 +11321,7 @@ body > .x-mask {
 .x-form-invalid-under-default {
     padding: 2px 2px 2px 20px;
     color: #cf4c35;
-    font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/16px 'Open Sans', sans-serif !important;
     background: no-repeat 0 2px;
     background-image: url(images/form/exclamation.png);
 }
@@ -11365,7 +11365,7 @@ body > .x-mask {
     color: #404040;
     padding: 5px 10px 4px;
     background-color: #fff;
-    font: 300 13px/21px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/21px 'Open Sans', sans-serif !important;
     min-height: 30px;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/form/field/Text.scss:272 */
@@ -11573,7 +11573,7 @@ body > .x-mask {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:169 */
 .x-form-cb-label-default {
     margin-top: 8px;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/17px 'Open Sans', sans-serif !important;
     color: #404040;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/var/form/field/Checkbox.scss:174 */
@@ -11630,7 +11630,7 @@ body > .x-mask {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/form/FieldSet.scss:148 */
 .x-fieldset-header-default > .x-fieldset-header-text {
-    font: 400 16px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 16px/20px 'Open Sans', sans-serif !important;
     color: #919191;
     padding: 1px 0;
 }
@@ -11858,7 +11858,7 @@ body > .x-mask {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/view/BoundList.scss:8 */
 .x-boundlist-item {
     padding: 0 10px;
-    font: normal 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: normal 13px 'Open Sans', sans-serif !important;
     line-height: 30px;
     cursor: pointer;
     cursor: hand;
@@ -11994,7 +11994,7 @@ div.x-datepicker-arrow:hover {
 .x-datepicker-column-header {
     width: 44px;
     color: #404040;
-    font: 400 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 13px 'Open Sans', sans-serif !important;
     text-align: right;
     background-color: #ececec;
 }
@@ -12011,7 +12011,7 @@ div.x-datepicker-arrow:hover {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/picker/Date.scss:163 */
 .x-datepicker-date {
     padding: 0 15px 0 0;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px 'Open Sans', sans-serif !important;
     color: #404040;
     cursor: pointer;
     line-height: 36px;
@@ -12096,7 +12096,7 @@ div.x-datepicker-date:hover {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/picker/Date.scss:274 */
 .x-monthpicker-item {
     margin: 5px 0 5px;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px 'Open Sans', sans-serif !important;
     text-align: center;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/picker/Date.scss:280 */
@@ -12200,7 +12200,7 @@ a.x-monthpicker-yearnav-button:hover {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/var/form/field/Display.scss:52 */
 .x-form-display-field-default {
     min-height: 32px;
-    font: 300 13px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/17px 'Open Sans', sans-serif !important;
     color: #404040;
     margin-top: 8px;
 }
@@ -12828,7 +12828,7 @@ a.x-color-picker-item:hover {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/form/field/HtmlEditor.scss:171 */
 .x-html-editor-wrap textarea {
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px 'Open Sans', sans-serif !important;
     background-color: #fff;
     resize: none;
 }
@@ -12931,12 +12931,12 @@ a.x-color-picker-item:hover {
     padding: 10px;
     color: grey;
     background-color: #fff;
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px 'Open Sans', sans-serif !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/view/Table.scss:25 */
 .x-grid-item {
     color: #404040;
-    font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/19px 'Open Sans', sans-serif !important;
     background-color: #fff;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/view/Table.scss:31 */
@@ -13167,7 +13167,7 @@ a.x-color-picker-item:hover {
 .x-column-header {
     border-right: 1px solid #d0d0d0;
     color: #404040;
-    font: 400 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 13px/19px 'Open Sans', sans-serif !important;
     outline: 0;
     background-color: #fff;
 }
@@ -13514,7 +13514,7 @@ a.x-color-picker-item:hover {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-grid-cell-small {
-    font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 12px/16px 'Open Sans', sans-serif !important;
     color: #f0f0f0;
     padding: 0 5px;
     max-width: 100%;
@@ -13983,7 +13983,7 @@ a.x-color-picker-item:hover {
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/grid/feature/Grouping.scss:36 */
 .x-grid-group-title {
     color: #606060;
-    font: 400 13px/15px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 13px/15px 'Open Sans', sans-serif !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-grid-group-hd-collapsed .x-grid-group-title:before {
@@ -14002,7 +14002,7 @@ a.x-color-picker-item:hover {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/grid/feature/RowBody.scss:1 */
 .x-grid-rowbody {
-    font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/19px 'Open Sans', sans-serif !important;
     padding: 5px 10px 5px 10px;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/grid/feature/Summary.scss:1 */
@@ -14023,7 +14023,7 @@ a.x-color-picker-item:hover {
     border-color: #e9e9e9;
     background-color: #fff !important;
     border-top: 1px solid #e9e9e9;
-    font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px/19px 'Open Sans', sans-serif !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/grid/feature/Summary.scss:26 */
 .x-docked-summary .x-grid-item,
@@ -14121,7 +14121,7 @@ a.x-color-picker-item:hover {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/menu/Menu.scss:417 */
 .x-menu-item-text-default {
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px 'Open Sans', sans-serif !important;
     line-height: 31px;
     padding-top: 1px;
     color: #000;
@@ -14475,7 +14475,7 @@ a.x-color-picker-item:hover {
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/menu/Menu.scss:417 */
 .x-menu-item-text-default-menubar {
-    font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 300 13px 'Open Sans', sans-serif !important;
     line-height: 31px;
     padding-top: 1px;
     color: #000;
@@ -15282,7 +15282,7 @@ a.x-color-picker-item:hover {
 .x-accordion-hd .x-panel-header-title {
     color: #404040;
     font-weight: 300;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     text-transform: none;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/layout/container/Accordion.scss:13 */

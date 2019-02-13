@@ -50,7 +50,7 @@
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2121 */
 .x-tab-inner-default {
-    font: 400 13px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 13px/20px 'Open Sans', sans-serif !important;
     color: #f0f0f0;
     max-width: 100%;
 }
@@ -1687,7 +1687,7 @@
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-plain-toolbar-small {
-    font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 12px/16px 'Open Sans', sans-serif !important;
     color: #606060;
     padding: 0 5px;
     max-width: 100%;
@@ -2265,7 +2265,7 @@
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-plain-toolbar-medium {
-    font: 400 14px/18px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 14px/18px 'Open Sans', sans-serif !important;
     color: #606060;
     padding: 0 8px;
     max-width: 100%;
@@ -2843,7 +2843,7 @@
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/button/Button.scss:464 */
 .x-btn-inner-plain-toolbar-large {
-    font: 400 16px/20px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font: 400 16px/20px 'Open Sans', sans-serif !important;
     color: #606060;
     padding: 0 10px;
     max-width: 100%;
@@ -3402,7 +3402,7 @@
     color: #606060;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     line-height: 20px;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/panel/Panel.scss:400 */
@@ -3459,7 +3459,7 @@
     color: #404040;
     font-size: 13px;
     font-weight: 300;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     border-width: 1px;
     border-style: solid;
 }
@@ -3767,7 +3767,7 @@
     color: #606060;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     line-height: 20px;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/ext/classic/theme-neutral/sass/src/panel/Panel.scss:400 */
@@ -3824,7 +3824,7 @@
     color: #404040;
     font-size: 13px;
     font-weight: 300;
-    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     border-width: 1px;
     border-style: solid;
 }
@@ -8145,15 +8145,90 @@
     -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
     box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:1 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:3 */
+body {
+    background-color: #7c7c7c;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:7 */
+.login .x-window-body-default {
+    background-color: #7c7c7c;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:11 */
 .login {
     top: 0px !important;
     -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
     border-radius: 0 0 8px 8px;
-    font-family: 'ffdinmedium';
-    background-color: #242b2f !important;
-    height: 22px;
-    color: #fff;
+    float: none;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:20 */
+.login .login-container {
+    margin: auto auto;
+    border-radius: 2px;
+    top: 20%;
+    background: #e3e3e3;
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 20px;
+    float: none;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:29 */
+.login .login-container .x-box-inner {
+    margin: auto auto;
+    background: #e3e3e3;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:33 */
+.login .login-container .login-title .x-panel-header {
+    background: transparent;
+    color: black;
+    font-size: 30px;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:38 */
+.login .login-container .login-title .x-panel-header .x-title {
+    background: transparent;
+    font-size: 50px;
+    color: #707070;
+    height: 80px;
+    text-align: center;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:46 */
+.login .login-container .usernameField {
+    margin: auto auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 5px 20px;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:51 */
+.login .login-container .passwordField {
+    margin: auto auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 5px 20px;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:56 */
+.login .login-container .loginButton {
+    width: 135px !important;
+    height: 32px !important;
+    margin: auto auto !important;
+    right: auto !important;
+    left: auto !important;
+    position: relative !important;
+    display: block;
+    border-radius: 50px;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:67 */
+.login .login-container .x-btn-default-small {
+    background: #027f9d;
+    border: none;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:72 */
+.login .login-container .x-form-display-field-default {
+    margin-top: 18px;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:79 */
+.login .x-panel-body-default {
+    background: transparent;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:83 */
+.login .x-panel-header-default {
+    background: transparent;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:87 */
+.login .x-form-display-field-default {
+    font-size: 20px !important;
 }
