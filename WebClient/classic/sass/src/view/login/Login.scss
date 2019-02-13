@@ -1,218 +1,89 @@
-@keyframes swing {
-    15% {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30% {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-    50% {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65% {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80% {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-
 $font-family: 'Open Sans', sans-serif !important;
 
-.login{
-	top: 0px !important;
-	-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
+body{
+	background-color: #7c7c7c;
+}
+
+.login .x-window-body-default{
+	background-color: #7c7c7c;
+}
+
+.login {
+    top: 0px !important;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.75);
 	border-radius: 0 0 8px 8px;
-	background: url('./images/kollegah.jpg') !important;
-	background-color: #242B2F !important;
-	//border: 1px solid black;
-	height: 22px;
-	color: #fff;
-    // opacity: 0;
-    // transition: opacity 0.5s ease-in-out;
-    
-	.svsLogo {
-		background: url(./images/svsLogo.svg);
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: contain;
-		background-color: transparent !important;
-	    display: block; 
-	}
-	.svsText {
-		text-align: center;
-		.x-panel-body-default {
-			color: #959595;
-			font-size: 24px;
-			line-height: 24px;
-		}
-	}
+	float: none;
+}
 
-	.loginform{
-		padding: 10px;
-	}
-	.infoField{
-		text-align: left;
-		padding-top:8px;
-	}
-	.x-toolbar{
-		&.transparent{
-			background-color: transparent;
-		}
-	}
-	.x-form-field{
-		font-family: 'ffdinmedium';	
-		font-size: 14px;
-		border-radius: 4px;
-		min-height: 22px !important;
-		line-height:22px !important;
-	}
-	
-	.x-form-item-label{
-		font-family: 'ffdinmedium';	
-		font-size: 14px;
-		padding-top:18px;
-	}
-	input:-webkit-autofill, .x-form-field {
-		-webkit-text-fill-color: rgb(255, 255, 255) !important;
-		color: rgb(255, 255, 255) !important;
-		-webkit-box-shadow: inset 0 0 0px 9999px #242b2f;
-		box-shadow: inset 0 0 0px 9999px #242b2f;
-		caret-color: rgb(255, 255, 255) !important;
-		border-radius: 0;
-	}
-	.x-window-header-default-top {
-		text-align: center;
-		.x-tool {
-			display: none;
-			/*.x-tool-img {
-				background-color: transparent;
-			}*/
-		}
-		.x-window-header-title-default {
-			font-size: 20px;
-			font-weight: bold;
-			text-align: center;
-			.x-title-text {
-				display: block;
-			}
-		}
-	}
-	.x-toolbar-footer {
-		height: 48px;
-	}
-	.x-window-header{
-//		border-bottom: 1px solid #FFF !important;
-	}
-	.x-window-body-default {
-		border-radius: 0;
-		background-color: #242B2F !important;
-	}
-	.x-btn {
-		background-color: greenyellow !important;
-		border: none;
-		//width: 100% !important;
-		box-sizing: border-box;
-		display: block;
-		color: #FFF;
-		box-shadow: none;
-		border-radius: 4px;
-		&.x-btn-disabled {
-			opacity: 1;
-			.x-btn-button-default-small, .x-btn-inner-default-small, .x-btn-icon-el-default-toolbar-small, .x-btn-inner-default-toolbar-small {
-				color: #ccc;
-			}
-		}
-		&.x-btn-over{
-			background-color: greenyellow !important;
-			.x-btn-button-default-small, .x-btn-inner-default-small, .x-btn-icon-el-default-toolbar-small, .x-btn-inner-default-toolbar-small {
-				color: 	#FFF;
-			}
-		}
-		&.x-btn-pressed{
-			background-color: greenyellow !important;
-			.x-btn-button-default-small, .x-btn-inner-default-small, .x-btn-icon-el-default-toolbar-small, .x-btn-inner-default-toolbar-small {
-				color: 	#FFF;
-			}
-		}
-		&.x-btn-focus.x-btn-default-toolbar-small {
-			box-shadow: none;
-		}
-		.x-btn-button-default-small, .x-btn-button-default-toolbar-small {
-			min-height: 22px;
-			.x-btn-inner-default-small, .x-btn-inner-default-toolbar-small {
-				font-size: 16px;
-				font-weight: bold;
-			}
-		}
-	}
-	.x-form-trigger-wrap-default {
-		margin: 0;
-		border-radius: 0px;
-		.x-form-text-wrap {
-			width: 100%;
-		}
-		.x-form-text-default {
-			text-align: left;
-			background-color: transparent;
-			border: none;
-			font-size: 16px;
-			line-height: 16px;
-			min-height: 16px;
-			padding: 5px;
-		}
-	}
-	.usernameField, .passwordField {
-		border-style: solid;
-		border-width: 0px 0px 1px 0px;
-		border-color: #959595;
-	}
-		
-	.usernameField .x-form-trigger-wrap-default:before {
-		content: '\ea32';
-		font-family: 'icomoon' !important;
-		color: #FFF;
-		font-size: 16px;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-	.passwordField .x-form-trigger-wrap-default:before {
-		content: "\eb4f";
-		font-family: 'icomoon' !important;
-		color: #FFF;
-		font-size: 16px;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-	
-	.infoField {
-		text-align: center;
-	}
-	.x-window-header-default {
-		.x-tool-img {
-			background-color: transparent;
-		}
-	}
+.login .login-container{
+    margin: auto auto;
+    border-radius: 2px;
+    top: 20%;
+    background: #E3E3E3;
+	box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 20px;
+	float: none;
+}
 
-	.x-panel-body-default {
-		//margin: 5px;
-		background-color: transparent !important;
-		border-radius: 6px;
-	}
-	&.login-error {
-		-webkit-animation: swing .5s ease;
-        animation: swing .5s ease;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
-	}
+.login .login-container .x-box-inner {
+	margin: auto auto;
+	background: #E3E3E3;
+}
+.login .login-container .login-title .x-panel-header{
+	background: transparent;
+	color: black;
+	font-size: 30px;
+}
+.login .login-container .login-title .x-panel-header .x-title{
+    background: transparent;
+    font-size: 50px;
+    color: #707070;
+    height: 80px;
+    text-align: center;
+}
+
+.login .login-container .usernameField{
+	margin: auto auto;
+	box-shadow: rgba(0,0,0,0.4) 3px 5px 20px;
+}
+
+.login .login-container .passwordField{
+	margin: auto auto;
+	box-shadow: rgba(0,0,0,0.4) 3px 5px 20px;
+}
+
+.login .login-container .loginButton{
+	width: 135px !important;
+    height: 32px !important;
+    margin: auto auto !important;
+    right: auto !important;
+    left: auto !important;
+    position: relative !important;
+    display: block;
+    border-radius: 50px;
+}
+
+.login .login-container .x-btn-default-small{
+	background: #027F9D;
+	border: none;
+}
+
+.login .login-container .x-form-display-field-default{
+    margin-top: 18px;
+}
+
+// .textfieldHeader{
+// 	background: transparent;
+// }
+.login .x-panel-body-default{
+	background: transparent;
+}
+
+.login .x-panel-header-default{
+	background: transparent;
+}
+
+.login .x-form-display-field-default{
+	font-size: 20px !important;
 }

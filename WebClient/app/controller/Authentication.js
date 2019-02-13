@@ -4,7 +4,7 @@ Ext.define('SVSClient.controller.Authentication', {
 
     listen : {
         controller : {
-            'login' : {
+            '*' : {
                 login		: 'login',
             }
         }
