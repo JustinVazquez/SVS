@@ -19,11 +19,7 @@ namespace WebApi.Hubs
         }
 
         public User Login(string user,string password)
-        {
-            User test = new User();
-            test.ID = 1;
-            test.Name = "Test";
-            test.Email = "Test.Test@Test.de";
+        {        
 
             var con = DbHelper.GetDbConnection();
             con.Open();
@@ -34,7 +30,10 @@ namespace WebApi.Hubs
                 var hash = UserAccess.GetHash(con, userID);
                 con.Close();
 
-                Debug.Write(SaltHashHelper.ValidatePassword(password, hash, salt));
+                if(SaltHashHelper.ValidatePassword(password, hash, salt))
+                {
+                    return UserAccess.GetUser(con, user, hash);
+                }
 
             }
             else
@@ -44,7 +43,7 @@ namespace WebApi.Hubs
 
             }
 
-            return test;
+            return null;
         }
 
         public void Anlegen(string name,string password)
