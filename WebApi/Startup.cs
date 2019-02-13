@@ -45,7 +45,7 @@ namespace WebApi
            builder =>
            {
                builder.AllowAnyMethod().AllowAnyHeader()
-                      .WithOrigins("https://localhost:44338/")
+                      .WithOrigins("https://localhost:1841/")
                       .AllowCredentials();
            }));
 

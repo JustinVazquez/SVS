@@ -54,13 +54,13 @@
             .withUrl("https://localhost:5001/Main")
             .build();
             
-        connection.start();
+            connection.start().then(() => test());
 
-        // async function test(p1) {
-        //     x = await connection.invoke("Send", p1);
-        //     document.getElementById("test").innerHTML = x;
+        async function test(p1) {
+            x = await connection.invoke("Send", p1);
+            document.getElementById("test").innerHTML = x;
 
-        // }
+        }
 
         // function test2(p1) {
         //     connection.invoke("Send", p1).then(function (s) {
@@ -74,12 +74,17 @@
         //     connection.invoke("Send2");
         // } 
 
-        connection.on("onConnect", function () {
-            console.log("onConnection Working: Boolean incoming");
-            var x = await connection.invoke("test");
-            console.log(x);
-        });
 
+            
+        
+
+        
+        async function test(){
+            console.log("onConnection Working: Boolean incoming");
+            
+            var x = await connection.invoke("Test");
+            console.log(x);
+        };
         
 
     </script>
