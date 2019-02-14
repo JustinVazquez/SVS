@@ -163,8 +163,7 @@ namespace WebApi.Hubs
             int currentDayOfWeek = (int)today.DayOfWeek;
             DateTime sunday = today.AddDays(-currentDayOfWeek);
             DateTime monday = sunday.AddDays(1);
-            // If we started on Sunday, we should actually have gone *back*
-            // 6 days instead of forward 1...
+         
             if (currentDayOfWeek == 0)
             {
                 monday = monday.AddDays(-7);
@@ -200,7 +199,20 @@ namespace WebApi.Hubs
 
         #endregion
 
+        public WocheModel TestWoche(int klasse,DateTime datum)
+        {
+            var woche = new WocheModel();
+            var montag = new List<StundenplanModel>();
+            var stunde = new StundenplanModel();
+            montag.Add(stunde);
+            montag.Add(stunde);
+            montag.Add(stunde);
+            montag.Add(stunde);
+            montag.Add(stunde);
+            montag.Add(stunde);
 
+            return woche;
+        }
 
     }
 }
