@@ -5,18 +5,19 @@
 Ext.define('SVSClient.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
-	// listen: {
-	// 	// listen to other controller events
-	// 	controller: {
-	// 		'login': {
-	// 			onMainLoad: 'onMainLoad',
-    //         },
-    //     }
-    // },
+	listen: {
+		// listen to other controller events
+		controller: {
+			'login': {
+				onSetUser: 'onSetUser',
+            },
+        }
+    },
     
     alias: 'controller.main',
 
     init: function(view) {
+        
         var curr = new Date; // get current date
         var first = curr.getDate() - curr.getDay() +1; // First day is the day of the month - the day of the week
         var last = first + 4; // last day is the first day + 6
@@ -50,6 +51,10 @@ Ext.define('SVSClient.view.main.MainController', {
 		});
         
 
+    },
+
+    onSetUser: function(user){
+        this.getViewModel().set('currentuser', user)
     },
 
     onItemSelected: function (sender, record) {

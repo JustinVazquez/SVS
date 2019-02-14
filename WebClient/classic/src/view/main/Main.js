@@ -3,13 +3,14 @@ Ext.define('SVSClient.view.main.Main', {
 	xtype: 'app-main',
 	requires: [
 		// 'SVSClient.view.login.LoginController',
-		// 'SVSClient.view.login.LoginModel',
-		// 'SVSClient.view.main.Main',
+		// 'SVSClient.view.login.LoginModel',',
 		'SVSClient.view.main.schedule.Schedule',
 		'Ext.form.Panel',
 	],
     controller: 'main',
-    viewModel: 'main',
+	viewModel: {
+        type: 'main'
+    },
     closable: false,
 	autoShow: true,
 	modal: false,

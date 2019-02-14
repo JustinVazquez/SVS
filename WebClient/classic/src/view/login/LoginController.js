@@ -34,6 +34,9 @@ Ext.define('SVSClient.view.login.LoginController', {
 				this.getView().destroy();
 				Ext.create({xtype: 'app-main'});
 				
+				//Here i get the user object.. in response?
+				console.log(response);
+				this.fireEvent('onSetUser', response);
 				// Ext.Viewport.create({xtype: 'app-main'});
 				// Ext.Viewport.add({ xtype: 'app-main'});
 				
