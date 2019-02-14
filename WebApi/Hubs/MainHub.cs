@@ -213,6 +213,7 @@ namespace WebApi.Hubs
             stunde.Lehrer = "Max Musterman";
             stunde.Raum_ID = 1;
             stunde.Raum = "Test Raum";
+            stunde.Fach_ID = 1;
             stunde.Stunde = 1;
             montag.Add(stunde);
             stunde.Stunde = 2;
@@ -238,6 +239,7 @@ namespace WebApi.Hubs
             stunde2.Lehrer = "Max Musterman2";
             stunde2.Raum_ID = 2;
             stunde2.Raum = "Test Raum2";
+            stunde2.Fach_ID = 2;
             stunde2.Stunde = 1;
             dienstag.Add(stunde2);
             stunde2.Stunde = 2;
