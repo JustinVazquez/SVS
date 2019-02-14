@@ -16,7 +16,7 @@ namespace Core.Models
 
         public int Notiz_ID { get; set; }
 
-        public Notiz Notiz { get; set; }
+        public NotizModel Notiz { get; set; }
 
         public int Fach_ID { get; set; }
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.Models
 {
-    public class Notiz
+    public class NotizModel
     {
         public int ID { get; set; }
 
