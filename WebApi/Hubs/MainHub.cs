@@ -143,8 +143,6 @@ namespace WebApi.Hubs
             {
                 return HttpStatusCode.BadRequest;
             }
-
-
         }
         #endregion
 
@@ -156,11 +154,36 @@ namespace WebApi.Hubs
         /// <param name="Klasse">Klasse</param>
         /// <param name="date">Datum</param>
         /// <returns>Eine Liste aus Elementen vom Typ StundenplanModel</returns>
-        public List<StundenplanModel> GetStundenplan(int Klasse,DateTime date)
+        public WocheModel GetStundenplan(int klasse,DateTime today)
         {
+            var con = DbHelper.GetDbConnection();
+            con.Open();         
+            int currentDayOfWeek = (int)today.DayOfWeek;
+            DateTime sunday = today.AddDays(-currentDayOfWeek);
+            DateTime monday = sunday.AddDays(1);
+            // If we started on Sunday, we should actually have gone *back*
+            // 6 days instead of forward 1...
+            if (currentDayOfWeek == 0)
+            {
+                monday = monday.AddDays(-7);
+            }
+            var dates = Enumerable.Range(0, 7).Select(days => monday.AddDays(days)).ToList();
+            var woche = new WocheModel();
 
-
-            return null;
+            for (int i = 0; i <= 4; i++)
+            {
+                if(i == 0)
+                    woche.Montag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 1)
+                    woche.Dienstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 2)
+                    woche.Mittwoch = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 3)
+                    woche.Donnerstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 4)
+                    woche.Freitag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+            }      
+            return woche;
         }
 
         #endregion
