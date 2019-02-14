@@ -8194,7 +8194,7 @@
     vertical-align: middle;
     line-height: 60px !important;
     padding-top: 22px;
-    border: 1px solid #b8b8b8 !important;
+    border: 1px solid #e3e3e3 !important;
     background: white !important;
     padding-left: 6px !important;
 }
@@ -8287,7 +8287,7 @@
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:140 */
 .schedulePanels .x-panel-header-default {
     background: white;
-    border: 1px solid #b8b8b8 !important;
+    border: 1px solid #e3e3e3 !important;
     padding: 5px !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:146 */
@@ -8297,7 +8297,7 @@
     text-align: center !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:152 */
-.schedulePanels .active {
+.schedulePanels.active .x-panel-header-default {
     background-color: #027f9d !important;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:3 */

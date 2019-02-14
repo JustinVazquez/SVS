@@ -32,6 +32,13 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 				{
 					xtype: 'panel',
 					title: ' ',
+					cls: 'schedulePanels active',
+					width: '100%',
+					id: 'monday0',
+				},
+				{
+					xtype: 'panel',
+					title: ' ',
 					cls: 'schedulePanels',
 					width: '100%',
 					id: 'monday1',
@@ -78,13 +85,6 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 					width: '100%',
 					id: 'monday7',
 				},
-				{
-					xtype: 'panel',
-					title: ' ',
-					cls: 'schedulePanels',
-					width: '100%',
-					id: 'monday8',
-				},
 			]
 		},
 		{
@@ -92,6 +92,13 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 			height: '100%',
 			width: '20%',
 			items:[
+				{
+					xtype: 'panel',
+					title: ' ',
+					cls: 'schedulePanels',
+					width: '100%',
+					id: 'tuesday0',
+				},
 				{
 					xtype: 'panel',
 					title: ' ',
@@ -141,13 +148,6 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 					width: '100%',
 					id: 'tuesday7',
 				},
-				{
-					xtype: 'panel',
-					title: ' ',
-					cls: 'schedulePanels',
-					width: '100%',
-					id: 'tuesday8',
-				},
 			]
 		},
 		{
@@ -155,6 +155,13 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 			height: '100%',
 			width: '20%',
 			items:[
+				{
+					xtype: 'panel',
+					title: ' ',
+					cls: 'schedulePanels',
+					width: '100%',
+					id: 'wednesday0',
+				},
 				{
 					xtype: 'panel',
 					title: ' ',
@@ -204,13 +211,6 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 					width: '100%',
 					id: 'wednesday7',
 				},
-				{
-					xtype: 'panel',
-					title: ' ',
-					cls: 'schedulePanels',
-					width: '100%',
-					id: 'wednesday8',
-				},
 			]
 		},
 		{
@@ -218,6 +218,13 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 			height: '100%',
 			width: '20%',
 			items:[
+				{
+					xtype: 'panel',
+					title: ' ',
+					cls: 'schedulePanels',
+					width: '100%',
+					id: 'thursday0',
+				},
 				{
 					xtype: 'panel',
 					title: ' ',
@@ -267,13 +274,6 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 					width: '100%',
 					id: 'thursday7',
 				},
-				{
-					xtype: 'panel',
-					title: ' ',
-					cls: 'schedulePanels',
-					width: '100%',
-					id: 'thursday8',
-				},
 			]
 		},
 		{
@@ -281,6 +281,13 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 			height: '100%',
 			width: '20%',
 			items:[
+				{
+					xtype: 'panel',
+					title: ' ',
+					cls: 'schedulePanels',
+					width: '100%',
+					id: 'friday0',
+				},
 				{
 					xtype: 'panel',
 					title: ' ',
@@ -329,13 +336,6 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 					cls: 'schedulePanels',
 					width: '100%',
 					id: 'friday7',
-				},
-				{
-					xtype: 'panel',
-					title: ' ',
-					cls: 'schedulePanels',
-					width: '100%',
-					id: 'friday8',
 				},
 			]
 		},

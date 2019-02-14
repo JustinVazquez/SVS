@@ -184,8 +184,9 @@ Ext.define('SVSClient.view.main.Main', {
 			},
 			{
 				xtype: 'container',
-				height: '100%',
+				height: '90%',
 				width: '100%',
+				cls: 'middleContainer',
 				layout:{
 					type: 'hbox'
 				},

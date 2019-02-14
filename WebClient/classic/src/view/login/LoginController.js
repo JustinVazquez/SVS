@@ -26,6 +26,7 @@ Ext.define('SVSClient.view.login.LoginController', {
     	// The Authentication Controller handles this login event
     	this.fireEvent('login', data.username, data.password, {
 			success	: function(response, opts){
+
 				if(me.lookupReference('label')){
 					me.lookupReference('label').setHtml('<br><center><b>Authenticating...</center></b>');
 				}
