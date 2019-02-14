@@ -9,7 +9,11 @@ namespace Core.Access
 {
     public static class RaumAccess
     {
-        public static List<RaumModel> GetAllFach()
+        /// <summary>
+        /// Liefert eine Liste mit allen Räumen
+        /// </summary>
+        /// <returns>Eine Liste aus Elementen vom Typ RaumModel</returns>
+        public static List<RaumModel> GetAllRaum()
         {
             var con = DbHelper.GetDbConnection();
             var sql = $"Select * From SVS.Raum";

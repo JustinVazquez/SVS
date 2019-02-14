@@ -9,6 +9,10 @@ namespace Core.Access
 {
     public static class FachAccess
     {
+        /// <summary>
+        /// Liefert eine Liste mit allen Fächern
+        /// </summary>
+        /// <returns>Eine Liste mit Elementen vom Typ FachModel</returns>
         public static List<FachModel> GetAllFach()
         {
             var con = DbHelper.GetDbConnection();

@@ -22,19 +22,28 @@ namespace WebApi.Hubs
 
         #region Login und Userverwaltung
 
+        /// <summary>
+        /// Methode um einen User für den Login zu Validieren
+        /// </summary>
+        /// <param name="name">User Name</param>
+        /// <param name="password">User Password</param>
+        /// <returns>Ein Objekt vom Typ User</returns>
         public UserModel Login(string name, string password)
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
 
+            //Wenn der User existiert dann weiter.
             if (string.IsNullOrWhiteSpace(UserAccess.GetName(con, name)))
             {
+                //Hash und Salt aus der Datenbank anhand der UserID die durch den Username ermittelt wird
                 var userID = UserAccess.GetIdByName(con, name);
                 var hash = UserAccess.GetHash(con, userID);
                 var salt = UserAccess.GetSalt(con, userID);
 
                 try
                 {
+                    //Validiert den Hash aus der Datenbank mit dem Passwort aus der Login-Form 
                     if (SaltHashHelper.ValidatePassword(password, hash, salt))
                     {
                         return UserAccess.GetUser(con, name, hash);
@@ -56,6 +65,12 @@ namespace WebApi.Hubs
             return null;
         }
 
+        /// <summary>
+        /// Legt einen neuen User in der Datenbank an
+        /// </summary>
+        /// <param name="name">User Name</param>
+        /// <param name="password">User Password</param>
+        /// <returns>Einen HttpStatusCode OK bei Erfolg InternalServerError bei Fehlschlag</returns>
         public HttpStatusCode Anlegen(string name, string password)
         {
 
@@ -75,12 +90,19 @@ namespace WebApi.Hubs
             }
         }
 
+        /// <summary>
+        /// Updated die Email eines Users anhand des Usernamen
+        /// </summary>
+        /// <param name="name">User Name</param>
+        /// <param name="mail">User Email</param>
+        /// <returns>Einen HttpStatusCode OK bei Erfolg InternalServerError bei Fehlschlag</returns>
         public HttpStatusCode UpdateMail(string name, string mail)
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
             try
             {
+                //Anhand des Usernamen wird die ID des Users ermittelt und die Email an stelle der ID geändert.
                 UserAccess.ChangeEmail(con, name, mail);
                 return HttpStatusCode.OK;
             }
@@ -95,13 +117,22 @@ namespace WebApi.Hubs
         }
 
 
+        /// <summary>
+        /// Ändert das Passwort eines Users
+        /// </summary>
+        /// <param name="name">User Name</param>
+        /// <param name="password">Aktuelles User Password</param>
+        /// <param name="newPassword">Neues User Password</param>
+        /// <returns>Einen HttpStatusCode OK bei Erfolg InternalServerError bei Fehlschlag</returns>
         public HttpStatusCode ChangePassword(string name, string password, string newPassword)
         {
+            //Validierung des Users
             var User = Login(name, password);
             if (User != null)
             {
                 var con = DbHelper.GetDbConnection();
                 con.Open();
+                //Erstellt einen neuen Hash und Updated diesen und den Salt des Users
                 var HashnSalt = SaltHashHelper.CreateHash(newPassword);
                 UserAccess.ChangeHash(con, name, HashnSalt.Item1);
                 UserAccess.ChangeSalt(con, name, HashnSalt.Item2);
@@ -119,6 +150,12 @@ namespace WebApi.Hubs
 
         #region Stundenplanverwaltung
 
+        /// <summary>
+        /// Liefert eine Liste mit Inhalt des Stundenplans für die Klasse an einem bestimmten Datum
+        /// </summary>
+        /// <param name="Klasse">Klasse</param>
+        /// <param name="date">Datum</param>
+        /// <returns>Eine Liste aus Elementen vom Typ StundenplanModel</returns>
         public List<StundenplanModel> GetStundenplan(int Klasse,DateTime date)
         {
 
