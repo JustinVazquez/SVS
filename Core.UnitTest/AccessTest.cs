@@ -1,9 +1,11 @@
 using Core.Access;
 using Core.Helper;
+using Core.Models;
 using NUnit.Framework;
 using System;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 
 namespace Tests
 {
@@ -14,6 +16,20 @@ namespace Tests
         {
 
         }
+
+        /*
+         * DateTime today = DateTime.Today;
+        int currentDayOfWeek = (int) today.DayOfWeek;
+        DateTime sunday = today.AddDays(-currentDayOfWeek);
+        DateTime monday = sunday.AddDays(1);
+        // If we started on Sunday, we should actually have gone *back*
+        // 6 days instead of forward 1...
+        if (currentDayOfWeek == 0)
+        {
+        monday = monday.AddDays(-7);
+        }
+        var dates = Enumerable.Range(0, 7).Select(days => monday.AddDays(days)).ToList();
+         * */
 
         [Test]
         public void GetStundenPlanbyDatumAndKlasse()
@@ -32,7 +48,6 @@ namespace Tests
                 item.Notiz.User_Name = UserAccess.GetNameByID(con, item.Notiz.User_ID);
                 
             }
-
             con.Close();
             Console.Write("OK");
         }
@@ -105,8 +120,6 @@ namespace Tests
                 {
                     con.Close();
                 }
-
-
             }
         }
 
@@ -163,10 +176,43 @@ namespace Tests
                 {
                     con.Close();
                 }
-
-
             }          
         }
+
+        [Test]
+        public void TestMethod()
+        {
+            var today = DateTime.Today;
+            var klasse = 1;
+            var con = DbHelper.GetDbConnection();
+            con.Open();         
+            int currentDayOfWeek = (int)today.DayOfWeek;
+            DateTime sunday = today.AddDays(-currentDayOfWeek);
+            DateTime monday = sunday.AddDays(1);
+       
+            if (currentDayOfWeek == 0)
+            {
+                monday = monday.AddDays(-7);
+            }
+            var dates = Enumerable.Range(0, 7).Select(days => monday.AddDays(days)).ToList();
+             var woche = new WocheModel();
+
+            for (int i = 0; i <= 4; i++)
+            {
+                if(i == 0)
+                    woche.Montag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 1)
+                    woche.Dienstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 2)
+                    woche.Mittwoch = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 3)
+                    woche.Donnerstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                if (i == 4)
+                    woche.Freitag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+            }
+            Console.Write(woche);
+        }
+        
     }
 }
 //https://monarigmbh-my.sharepoint.com/:o:/g/personal/vazquez_monari_de/EgmFD6PxBkdLsl_yK4Kq0iAB3cP40WsfG2mlBJZSNBD70w?e=PfuTXd
