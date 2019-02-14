@@ -174,15 +174,15 @@ namespace WebApi.Hubs
             for (int i = 0; i <= 4; i++)
             {
                 if (i == 0)
-                    woche.Montag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                    woche.monday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
                 if (i == 1)
-                    woche.Dienstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                    woche.tuesday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
                 if (i == 2)
-                    woche.Mittwoch = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                    woche.wednesday= StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
                 if (i == 3)
-                    woche.Donnerstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                    woche.thursday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
                 if (i == 4)
-                    woche.Freitag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                    woche.friday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
             }
             return woche;
         }
@@ -199,7 +199,7 @@ namespace WebApi.Hubs
 
         #endregion
 
-        public WocheModel TestWoche(int klasse,DateTime datum)
+        public WocheModel TestWoche()
         {
             var woche = new WocheModel();
             var montag = new List<StundenplanModel>();
@@ -253,8 +253,8 @@ namespace WebApi.Hubs
             stunde.Stunde = 8;
             dienstag.Add(stunde);
 
-            woche.Montag = montag;
-            woche.Dienstag = dienstag;
+            woche.monday = montag;
+            woche.tuesday = dienstag;
 
             var notiz = new WochenNotizModel();
             var listNotiz = new List<WochenNotizModel>();

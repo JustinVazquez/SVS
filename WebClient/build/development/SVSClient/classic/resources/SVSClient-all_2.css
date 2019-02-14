@@ -8296,6 +8296,10 @@
     font-size: 10px;
     text-align: center !important;
 }
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:152 */
+.schedulePanels .active {
+    background-color: #027f9d !important;
+}
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:3 */
 body {
     background-color: #7c7c7c;

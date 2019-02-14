@@ -30,10 +30,18 @@ Ext.define('SVSClient.view.main.MainController', {
             console.log(data);
             debugger
             var weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
-            for(var day = 0; day < data.length-1; day++){
+            for(var day = 0; day < 5; day++){
                 for(var hours = 0; hours < 8; hours++){
                     var hour = weekdays[day] + hours;
-                    console.log(hour);
+
+                    if(data[weekdays[day]]){
+                        if(data[weekdays[day]][hours].fach_ID != 0){
+                            Ext.getCmp(hour).title = data.weekdays[day].hours.fach;
+                            Ext.getCmp(hour).title.cls += " active";
+                            console.log("Active: " + hour);
+                        }
+                    }
+
 
                     // data.weekdays[day].hours
                 }
