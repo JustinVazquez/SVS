@@ -9,7 +9,11 @@ namespace Core.Access
 {
     public static class LehrerAccess
     {
-        public static List<LehrerModel> GetAllFach()
+        /// <summary>
+        /// Liefert eine Liste mit allen Lehrern
+        /// </summary>
+        /// <returns>Eine Liste aus Elementen vom Typ LehrerModel</returns>
+        public static List<LehrerModel> GetAllLehrer()
         {
             var con = DbHelper.GetDbConnection();
             var sql = $"Select * From SVS.Lehrer";
