@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.Models
 {
-    public class Lehrer
+    public class LehrerModel
     {
         public int ID { get; set; }
 

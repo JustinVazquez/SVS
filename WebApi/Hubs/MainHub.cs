@@ -22,7 +22,7 @@ namespace WebApi.Hubs
 
         #region Login und Userverwaltung
 
-        public User Login(string name, string password)
+        public UserModel Login(string name, string password)
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
@@ -119,7 +119,7 @@ namespace WebApi.Hubs
 
         #region Stundenplanverwaltung
 
-        public List<StundenplanModel> GetStundenplan(string Klasse,DateTime date)
+        public List<StundenplanModel> GetStundenplan(int Klasse,DateTime date)
         {
 
 

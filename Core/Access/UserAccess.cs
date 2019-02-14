@@ -80,11 +80,11 @@ namespace Core.Access
             con.Execute(sql);                   
         }
 
-        public static User GetUser(IDbConnection con,string user, string password)
+        public static UserModel GetUser(IDbConnection con,string user, string password)
         {      
                 DbHelper.CheckDbConnection(con);
                 var sql = $"SELECT * FROM SVS.USER WHERE name = '{user}' and hash = '{password}'";
-                var result = con.QueryFirst<User>(sql);
+                var result = con.QueryFirst<UserModel>(sql);
                 return result;           
         }     
         

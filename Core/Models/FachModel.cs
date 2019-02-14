@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.Models
 {
-    public class Raum
+    public class FachModel
     {
         public int ID { get; set; }
 
