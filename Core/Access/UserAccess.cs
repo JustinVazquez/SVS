@@ -50,9 +50,27 @@ namespace Core.Access
           
         }
 
-        public static void ChangePassword(IDbConnection con,string password,string newPassword)
+        public static string GetNameByID(IDbConnection con, int ID)
         {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"SELECT Name FROM SVS.User WHERE ID = '{ID}'";
+            var result = con.ExecuteScalar<string>(sql);
+            return result;
 
+        }
+
+        public static void ChangeSalt(IDbConnection con, string name,string salt)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"UPDATE SVS.SALT SET salt = '{salt}' where User_ID = {UserAccess.GetIdByName(con, name)}";
+            con.Execute(sql);
+        }
+
+        public static void ChangeHash(IDbConnection con,string name, string newPassword)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"UPDATE SVS.USER SET hash = '{newPassword}' where ID = {UserAccess.GetIdByName(con, name)}";
+            con.Execute(sql);
         }
 
         public static void AddUser(IDbConnection con,string name,string password/*,string email,bool autoversand*/)
@@ -68,6 +86,14 @@ namespace Core.Access
                 var sql = $"SELECT * FROM SVS.USER WHERE name = '{user}' and hash = '{password}'";
                 var result = con.QueryFirst<User>(sql);
                 return result;           
-        }       
+        }     
+        
+        public static void ChangeEmail(IDbConnection con, string name,string mail)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"UPDATE SVS.USER SET email = '{mail}' where ID = {UserAccess.GetIdByName(con,name)}";
+            con.Execute(sql);
+         
+        }
     }
 }
