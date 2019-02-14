@@ -148,16 +148,18 @@ namespace WebApi.Hubs
 
         #region Stundenplanverwaltung
 
+        //TODO: Kommentar Anpassen
+
         /// <summary>
         /// Liefert eine Liste mit Inhalt des Stundenplans für die Klasse an einem bestimmten Datum
         /// </summary>
         /// <param name="Klasse">Klasse</param>
         /// <param name="date">Datum</param>
         /// <returns>Eine Liste aus Elementen vom Typ StundenplanModel</returns>
-        public WocheModel GetStundenplan(int klasse,DateTime today)
+        public WocheModel GetStundenplan(int klasse, DateTime today)
         {
             var con = DbHelper.GetDbConnection();
-            con.Open();         
+            con.Open();
             int currentDayOfWeek = (int)today.DayOfWeek;
             DateTime sunday = today.AddDays(-currentDayOfWeek);
             DateTime monday = sunday.AddDays(1);
@@ -172,7 +174,7 @@ namespace WebApi.Hubs
 
             for (int i = 0; i <= 4; i++)
             {
-                if(i == 0)
+                if (i == 0)
                     woche.Montag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
                 if (i == 1)
                     woche.Dienstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
@@ -182,8 +184,18 @@ namespace WebApi.Hubs
                     woche.Donnerstag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
                 if (i == 4)
                     woche.Freitag = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
-            }      
+            }
             return woche;
+        }
+       
+
+        public WochenNotizModel GetWochenNotiz(int Stundenplan_ID)
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            var result = NotizAccess.GetWochenNotizByID(con, Stundenplan_ID);
+            con.Close();
+            return result;
         }
 
         #endregion
