@@ -17,11 +17,11 @@ namespace Core.Access
             con.Execute(sql);
         }
 
-        public static Notiz GetNotizByDateAndStunde(IDbConnection con, string Datum, int Stunde)
+        public static NotizModel GetNotizByDateAndStunde(IDbConnection con, string Datum, int Stunde)
         {
             DbHelper.CheckDbConnection(con);
             var sql = $"Select * From SVS.stundennotiz Where Datum = '{Datum}' And Stunde = {Stunde}";
-            var result = con.QueryFirstOrDefault<Notiz>(sql);
+            var result = con.QueryFirstOrDefault<NotizModel>(sql);
             return result;
         }
     }
