@@ -12,7 +12,7 @@ Ext.define('SVSClient.controller.Authentication', {
 	sessionName: 'services.sid',
 	
     init: function() {
-         console.log('Initialized Login Controller! This happens before the Application launch() function is called');
+        console.log('Initialized Login Controller! This happens before the Application launch() function is called');
     },
 
     login: function(username, password, callback) {
@@ -22,15 +22,20 @@ Ext.define('SVSClient.controller.Authentication', {
 		console.log(password);
 
 		var user;
-    	connection.invoke("Login", username, password).then(function(data){
-			user = data;
-			console.log(user);
-			if(user){
-				console.log("Working!");
-			}else{
-				console.log("Incorrect!");
-			}
-		})
+		if(username == "test" && password == "test"){
+			Ext.callback(callback.success, callback.scope, []);
+		}else{
+			Ext.callback(callback.failure, callback.scope, []);
+		}
+    	// connection.invoke("Login", username, password).then(function(data){
+		// 	user = data;
+		// 	console.log(user);
+		// 	if(user){
+		// 		console.log("Working!");
+		// 	}else{
+		// 		console.log("Incorrect!");
+		// 	}
+		// });
 
 
     	// Authenticate User

@@ -9,31 +9,27 @@ Ext.define('SVSClient.Application', {
     name: 'SVSClient',
     requires: [
         'SVSClient.view.login.Login',
-        // 'SVSClient.view.main.Main',
+        'SVSClient.view.main.Main',
 
     ],
 	controllers: [
 		'Authentication' // global controller
     ],
     
-    quickTips: false,
-    platformConfig: {
-        desktop: {
-            quickTips: true
-        }
-    },
-	init: function() {
-		Ext.enableAriaButtons = false;
-		Ext.enableAriaPanels = false;
-    },
-    
     stores: [
         // TODO: add global / shared stores here
     ],
 
-    launch: function () {
+    init: function() {
+        Ext.enableAriaButtons = false;
+        Ext.enableAriaPanels = false;
+    },
 
+    launch: function () {
+        // Ext.create({xtype: 'app-main'});
         // Ext.create({xtype: 'login'});
+        Ext.create({xtype: 'login'});
+        // Ext.create({xtype: 'app-main'});
     },
 
     onAppUpdate: function () {
