@@ -32,6 +32,7 @@ Ext.define('SVSClient.view.login.LoginController', {
 				console.log("Logged in!");
 				this.getView().destroy();
 				Ext.create({xtype: 'app-main'});
+				
 				// Ext.Viewport.create({xtype: 'app-main'});
 				// Ext.Viewport.add({ xtype: 'app-main'});
 				
@@ -52,7 +53,7 @@ Ext.define('SVSClient.view.login.LoginController', {
 				}
 				else*/
 					
-					form.setValues({'infoField': 'Login failed, please check data'});
+					form.setValues({'infoField': 'Login failed...'});
 					view = me.getView();
 					view.addCls('login-error');
 					setTimeout(() => {

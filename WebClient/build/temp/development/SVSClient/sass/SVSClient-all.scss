@@ -918,6 +918,9 @@ $include-svsclient-view-login-loginmodel: dynamic(true);;
 $include-svsclient-view-main-main: dynamic(true);;
 $include-svsclient-view-main-maincontroller: dynamic(true);;
 $include-svsclient-view-main-mainmodel: dynamic(true);;
+$include-svsclient-view-main-schedule-schedule: dynamic(true);;
+$include-svsclient-view-main-schedule-timestamp: dynamic(true);;
+$include-svsclient-view-main-schedule-weeknotes: dynamic(true);;
 $output-paths: ("path": "../../classic/resources", "shared": "../../resources");
 
 /* ======================== ETC ======================== */

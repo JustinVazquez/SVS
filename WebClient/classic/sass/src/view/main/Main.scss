@@ -1,3 +1,150 @@
-.main-stuff{
+.main{
     background: black;
+}
+
+.main .authors{
+    color: white;
+    margin: auto auto;
+    bottom: 0;
+    position: absolute;
+}
+
+.main .authors .x-panel-header-default{
+    background: #e3e3e3 !important;
+    padding: 0 !important;
+}
+
+.main .x-window-body-default{
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main .toptoolbar .x-panel-body-default{
+    background: #7C7C7C !important;
+}
+
+.x-window-default {
+    border-color: black !important;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+    -ms-border-radius: 0 0 0 0;
+    -o-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+}
+
+.timestampPanels{
+    height: 10% !important;
+}
+
+.timestampPanelsBreak{
+    height: 5% !important;
+}
+
+.timestampPanels .x-panel-header-default-horizontal.x-header-noborder {
+    height: 100% !important;
+    vertical-align: middle;
+    line-height: 60px !important;
+    padding-top: 22px;
+    border: 1px solid #b8b8b8 !important;
+    background: white !important;
+    padding-left: 6px !important;
+}
+
+.timestampPanels .x-panel-header-default-horizontal.x-header-noborder .x-panel-header-title-default {
+    color: #707070 !important;
+    font-size: 12px !important;
+    text-align: center;
+}
+
+.timestampPanelsBreak .x-panel-header-default-horizontal.x-header-noborder{
+    height: 100% !important;
+}
+
+.timestamp {
+    margin: 10px !important;
+}
+
+.usernameToolbar .x-panel-header-default{
+    background: transparent;
+    padding: 9.7px;
+}
+
+.usernameToolbar .x-title-text {
+    text-align: center;
+}
+
+.logoutButton{
+    border: none !important;
+    background: transparent !important;
+}
+
+.logoutButton .x-btn-inner-default-small{
+    font-size: 17px !important;
+}
+
+.swapPanels .x-panel-header-default{
+    height: 100px;
+    margin: 10px;
+    background: transparent;
+}
+
+.main .x-panel-body-default {
+    background: #e3e3e3 !important;
+}
+
+.swapPanels .x-panel-header-title-default{
+    line-height: 64px;
+    font-size: 22px;
+    color: #707070;
+    text-align: center;   
+}
+
+.swapPanels{
+    border: none !important;
+    background: transparent;
+}
+
+.swapPanels .x-btn-inner-default-small {
+    color: #7c7c7c !important;
+    font-size: 35px !important;
+}
+
+.panelTitles .x-btn-inner-default-small {
+    color: #7c7c7c !important;
+    font-size: 15px !important;
+}
+
+.panelTitles{
+    border: none !important;
+    background: transparent !important;
+    margin-left: 10px !important;
+}
+
+.schedule {
+    margin: 10px !important;
+}
+
+.weeknotes {
+    margin: 10px !important;
+}
+
+.schedulePanels{
+    height: 10% !important;
+}
+
+.schedulePanels .x-panel-header-default-horizontal.x-header-noborder{
+    height: 100% !important;
+}
+
+.schedulePanels .x-panel-header-default{
+    background: white;
+    border: 1px solid #b8b8b8 !important;
+    padding: 5px !important;
+}
+
+.schedulePanels .x-panel-header-default .x-panel-header-title-default {
+    color: white !important;
+    font-size: 10px;
+    text-align: center !important;
 }

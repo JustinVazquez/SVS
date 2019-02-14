@@ -124,7 +124,7 @@ Ext.define('SVSClient.view.login.Login', {
 		xtype: 'panel',
 		height: 50,
 		width: '100%',
-		title: '© Timon Minich, Luca Tecce, Justin Vazquez, Luca Tecce, Christopher Urban',
+		title: '© Timon Minich, Justin Vazquez, Luca Tecce, Valentin Kohlmann, Christopher Urban',
 		// title: 'Randa<span class="super">&reg;</span> QuickStep<span class="super">&trade;</span>',
 		cls: 'authors',
 	}

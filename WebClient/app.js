@@ -9,7 +9,7 @@ Ext.application({
     extend: 'SVSClient.Application',
     
     requires: [
-        'Calendar.*'
+        // 'Calendar.*'
     ],
     // requires: [
     //     'SVSClient.view.login.Login',

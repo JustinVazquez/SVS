@@ -16,10 +16,7 @@ Ext.define('SVSClient.controller.Authentication', {
     },
 
     login: function(username, password, callback) {
-		console.log("Login authentication called")
-		
-		console.log(username);
-		console.log(password);
+		console.log("Login authentication called");
 
 		var user;
 		if(username == "test" && password == "test"){
@@ -27,13 +24,14 @@ Ext.define('SVSClient.controller.Authentication', {
 		}else{
 			Ext.callback(callback.failure, callback.scope, []);
 		}
+
     	// connection.invoke("Login", username, password).then(function(data){
 		// 	user = data;
-		// 	console.log(user);
 		// 	if(user){
-		// 		console.log("Working!");
+		// 		Ext.callback(callback.success, callback.scope, []);
+		// 		console.log(user);
 		// 	}else{
-		// 		console.log("Incorrect!");
+		// 		Ext.callback(callback.failure, callback.scope, []);
 		// 	}
 		// });
 
