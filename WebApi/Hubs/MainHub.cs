@@ -204,12 +204,30 @@ namespace WebApi.Hubs
             var woche = new WocheModel();
             var montag = new List<StundenplanModel>();
             var stunde = new StundenplanModel();
+            stunde.ID = 1;
+            stunde.Klasse_ID = 1;
+            stunde.Klasse = "ITM-3";
+            stunde.Lehrer_ID = 1;
+            stunde.Lehrer = "Max Musterman";
+            stunde.Raum_ID = 1;
+            stunde.Raum = "Test Raum";
+            stunde.Stunde = 1;
             montag.Add(stunde);
+            stunde.Stunde = 2;
             montag.Add(stunde);
+            stunde.Stunde = 3;
             montag.Add(stunde);
+            stunde.Stunde = 4;
             montag.Add(stunde);
+            stunde.Stunde = 5;
             montag.Add(stunde);
+            stunde.Stunde = 6;
             montag.Add(stunde);
+            stunde.Stunde = 7;
+            montag.Add(stunde);
+            stunde.Stunde = 8;
+            montag.Add(stunde);
+          
 
             return woche;
         }
