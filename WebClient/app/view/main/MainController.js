@@ -20,13 +20,26 @@ Ext.define('SVSClient.view.main.MainController', {
         var curr = new Date; // get current date
         var first = curr.getDate() - curr.getDay() +1; // First day is the day of the month - the day of the week
         var last = first + 4; // last day is the first day + 6
+        var currMS = Date.now();
         
         var firstday = new Date(curr.setDate(first)).toUTCString();
         var lastday = new Date(curr.setDate(last)).toUTCString();
-        
         Ext.getCmp('datePanel').title = Ext.util.Format.date(firstday) + ' - ' + Ext.util.Format.date(lastday);
         
+        connection.invoke("TestWoche").then(function(data){
+            console.log(data);
+            debugger
+            var weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+            for(var day = 0; day < data.length-1; day++){
+                for(var hours = 0; hours < 8; hours++){
+                    var hour = weekdays[day] + hours;
+                    console.log(hour);
 
+                    // data.weekdays[day].hours
+                }
+            }
+
+		});
         
 
     },

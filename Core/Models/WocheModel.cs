@@ -16,5 +16,7 @@ namespace Core.Models
 
         public List<StundenplanModel> Freitag { get; set; }
 
+        public List<WochenNotizModel> Notizen { get; set; }
+
     }
 }
