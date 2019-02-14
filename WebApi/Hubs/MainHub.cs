@@ -203,6 +203,7 @@ namespace WebApi.Hubs
         {
             var woche = new WocheModel();
             var montag = new List<StundenplanModel>();
+            var dienstag = new List<StundenplanModel>();
             var stunde = new StundenplanModel();
             stunde.ID = 1;
             stunde.Klasse_ID = 1;
@@ -227,8 +228,49 @@ namespace WebApi.Hubs
             montag.Add(stunde);
             stunde.Stunde = 8;
             montag.Add(stunde);
-          
 
+            stunde.ID = 2;
+            stunde.Klasse_ID = 1;
+            stunde.Klasse = "ITM-3";
+            stunde.Lehrer_ID = 2;
+            stunde.Lehrer = "Max Musterman2";
+            stunde.Raum_ID = 2;
+            stunde.Raum = "Test Raum2";
+            stunde.Stunde = 1;
+            dienstag.Add(stunde);
+            stunde.Stunde = 2;
+            dienstag.Add(stunde);
+            stunde.Stunde = 3;
+            dienstag.Add(stunde);
+            stunde.Stunde = 4;
+            dienstag.Add(stunde);
+            stunde.Stunde = 5;
+            dienstag.Add(stunde);
+            stunde.Stunde = 6;
+            dienstag.Add(stunde);
+            stunde.Stunde = 7;
+            dienstag.Add(stunde);
+            stunde.Stunde = 8;
+            dienstag.Add(stunde);
+
+            woche.Montag = montag;
+            woche.Dienstag = dienstag;
+
+            var notiz = new WochenNotizModel();
+            var listNotiz = new List<WochenNotizModel>();
+            notiz.Stundenplan_ID = 1;
+            notiz.ID = 1;
+            notiz.Text = "Test Notiz";
+
+            listNotiz.Add(notiz);
+
+            notiz.Stundenplan_ID = 2;
+            notiz.ID = 2;
+            notiz.Text = "Test Notiz2";
+
+            listNotiz.Add(notiz);
+
+            woche.WochenNotiz = listNotiz;
             return woche;
         }
 
