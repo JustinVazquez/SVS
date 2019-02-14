@@ -205,6 +205,7 @@ namespace WebApi.Hubs
             var montag = new List<StundenplanModel>();
             var dienstag = new List<StundenplanModel>();
             var stunde = new StundenplanModel();
+
             stunde.ID = 1;
             stunde.Klasse_ID = 1;
             stunde.Klasse = "ITM-3";
@@ -229,29 +230,31 @@ namespace WebApi.Hubs
             stunde.Stunde = 8;
             montag.Add(stunde);
 
-            stunde.ID = 2;
-            stunde.Klasse_ID = 1;
-            stunde.Klasse = "ITM-3";
-            stunde.Lehrer_ID = 2;
-            stunde.Lehrer = "Max Musterman2";
-            stunde.Raum_ID = 2;
-            stunde.Raum = "Test Raum2";
-            stunde.Stunde = 1;
-            dienstag.Add(stunde);
-            stunde.Stunde = 2;
-            dienstag.Add(stunde);
-            stunde.Stunde = 3;
-            dienstag.Add(stunde);
-            stunde.Stunde = 4;
-            dienstag.Add(stunde);
-            stunde.Stunde = 5;
-            dienstag.Add(stunde);
-            stunde.Stunde = 6;
-            dienstag.Add(stunde);
-            stunde.Stunde = 7;
-            dienstag.Add(stunde);
-            stunde.Stunde = 8;
-            dienstag.Add(stunde);
+            var stunde2 = new StundenplanModel();
+            stunde2.ID = 2;
+            stunde2.Klasse_ID = 1;
+            stunde2.Klasse = "ITM-3";
+            stunde2.Lehrer_ID = 2;
+            stunde2.Lehrer = "Max Musterman2";
+            stunde2.Raum_ID = 2;
+            stunde2.Raum = "Test Raum2";
+            stunde2.Stunde = 1;
+            dienstag.Add(stunde2);
+            stunde2.Stunde = 2;
+            dienstag.Add(stunde2);
+            stunde2.Stunde = 3;
+            dienstag.Add(stunde2);
+            stunde2.Stunde = 4;
+            dienstag.Add(stunde2);
+            stunde2.Stunde = 5;
+            dienstag.Add(stunde2);
+            stunde2.Stunde = 6;
+            dienstag.Add(stunde2);
+            stunde2.Stunde = 7;
+            dienstag.Add(stunde2);
+            stunde2.Stunde = 8;
+            dienstag.Add(stunde2);
+
 
             woche.monday = montag;
             woche.tuesday = dienstag;
