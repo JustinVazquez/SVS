@@ -2,13 +2,9 @@ Ext.define('SVSClient.view.main.schedule.Weeknotes', {
     extend: 'Ext.Panel',
 	xtype: 'weeknotes',
 	requires: [
-		// 'SVSClient.view.login.LoginController',
-		// 'SVSClient.view.login.LoginModel',
-		// 'SVSClient.view.main.Main',
 		'Ext.form.Panel'
 	],
-    // controller: 'schedule',
-    // viewModel: 'schedule',
+    
     closable: false,
 	autoShow: true,
 	modal: false,

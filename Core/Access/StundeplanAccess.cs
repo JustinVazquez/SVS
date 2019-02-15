@@ -101,7 +101,7 @@ namespace Core.Access
 
         public static void ChangeStatus(IDbConnection con, int ID, int Status_ID)
         {
-            var con = DbHelper.GetDbConnection();
+            DbHelper.CheckDbConnection(con);
             var sql = $"Update SVS.Stundenplan Set Status_ID = {Status_ID} Where ID = {ID} ";
             con.Execute(sql);
 

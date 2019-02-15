@@ -1,12 +1,11 @@
-/**
- * This class is the controller for the main view for the application. It is specified as
- * the "controller" of the Main view class.
- */
 Ext.define('SVSClient.view.main.MainController', {
     extend: 'Ext.app.ViewController',
     
     alias: 'controller.main',
 
+    //Initiale Funktion für die Main-View.
+    //User wird ins Model geschrieben
+    //Title wird gefüllt
     init: function(view) {
         var me = this;
 
@@ -18,15 +17,17 @@ Ext.define('SVSClient.view.main.MainController', {
         me.dateSet();
         me.fillSchedule(view);
 
-        //Dynamically look up which time and day it is, add cls!!
+        //Todo: Dynamisch Farben ändern und styling
     },
 
+    //Datum ins Viewmodel schreiben
     dateSet: function(){
         var currentFullDate = new Date;
         var today = Ext.util.Format.date(currentFullDate, 'Y-m-d');
         this.getViewModel().set('currentdate', today);
     },
 
+    //Kompletten Stundenplan füllen (Immer mit aktueller Woche)
     fillSchedule: function(view){
         var me = this;
         
@@ -42,7 +43,6 @@ Ext.define('SVSClient.view.main.MainController', {
         
         var userClass = me.getViewModel().get('currentuser')['klasse'];
         var currDate = me.getViewModel().get('currentdate');
-        // var currDate = '2019-02-27';
         
         connection.invoke("GetStundenplan", userClass, currDate).then(function(data){
             console.log(data);
@@ -67,6 +67,7 @@ Ext.define('SVSClient.view.main.MainController', {
         });  
     },
 
+    //Wochennotizen füllen
     fillWeeknotes: function(notes){
         var me = this;
         var noteString = '';
@@ -77,23 +78,18 @@ Ext.define('SVSClient.view.main.MainController', {
         Ext.getCmp('oldNotes').header.title.setText(noteString)
 
     },
-
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            location.reload();
-        }
-    },
     
+    //Ausloggen..
     onLogout: function(){
         Ext.Msg.confirm('Logging out..', 'Are you sure?', 'onConfirm', this);
     },
 
+    //Neue Notizen ans Backend senden und in die Textbox füllen
     onSendNotes: function(button, event){
         var me = this;
         var newInput = Ext.getCmp('newNotesField').value;
         if(newInput){
-            // Neue Notizen an 
-            // var userClass = me.getViewModel().get('currentuser').get('class');
+
             var userClass = me.getViewModel().get('currentuser')['klasse'];
             var currDate = me.getViewModel().get('currentdate');
     
@@ -112,6 +108,8 @@ Ext.define('SVSClient.view.main.MainController', {
         }
     },
     
+
+    //Pop up wird erstellt: Raum, Fach und Status wird übergeben.
     onClickHour: function(button, event){
         var me = this;
         Ext.getCmp('popup').show();
@@ -119,22 +117,40 @@ Ext.define('SVSClient.view.main.MainController', {
         var buttonId = button.id;
         var currDay = buttonId.slice(0, -1);
         var currHour = buttonId.substr(buttonId.length - 1);
-        debugger
-        if(currSchedule[currDay].length != 0){
-            var currSubject = currSchedule[currDay][currHour].fach;
-            var currRoom = currSchedule[currDay][currHour].raum;
-            var currStatus = currSchedule[currDay][currHour].status;
-            if(currSchedule[currDay][currHour].fach){
+        var dayObj = currSchedule[currDay];
+        var hourObj = dayObj[currHour];
+        if(dayObj.length != 0){
+            var currSubject = hourObj.fach;
+            var currRoom = hourObj.raum;
+            var currStatus = hourObj.status;
+            if(currSubject){
                 Ext.getCmp('subject').setValue(currSubject);
             }
-            if(currSchedule[currDay][currHour].raum){
+            if(currRoom){
                 Ext.getCmp('room').setValue(currRoom);
             }
-            if(currSchedule[currDay][currHour].status){
+            if(currStatus){
                 Ext.getCmp('status').setValue(currStatus);
             }
-        }
-        // var subject = 
+        } 
+    },
+
+    //Änderungen werden ans Backend gegeben und gespeichert
+    //Bisher nur Status möglich
+    //Testweise: StundenId: 10, Status 1 (Entfall)
+    //Nicht vollständig
+    sendChanges: function(){
+        var scheduleHour = 10
+        var statusId = 1;
+
+        connection.invoke("changeStatus", scheduleHour, statusId).then(function(send){
+            if(send){
+                Ext.toast("Send changes..");
+                location.reload();
+            }else{
+                Ext.toast("Error sending message..");
+            }
+        });
     }
 
 });

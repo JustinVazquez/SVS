@@ -8372,6 +8372,10 @@
 .popup .x-panel-body {
     background: #e3e3e3;
 }
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:226 */
+.popupFields {
+    margin: auto auto;
+}
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:3 */
 body {
     background-color: #7c7c7c;

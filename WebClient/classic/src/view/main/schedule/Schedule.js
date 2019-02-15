@@ -2,13 +2,10 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
     extend: 'Ext.Container',
 	xtype: 'schedule',
 	requires: [
-		// 'SVSClient.view.login.LoginController',
-		// 'SVSClient.view.login.LoginModel',
-		// 'SVSClient.view.main.Main',
 		'Ext.form.Panel'
 	],
     controller: 'main',
-    // viewModel: 'schedule',
+
     closable: false,
 	autoShow: true,
 	modal: false,
@@ -23,6 +20,8 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 	height: '100%',
 	width: '100%',
 	layout: 'hbox',
+
+	//Templates möglich, nicht fertig geworden.
 	items:[
 		{
 			xtype: 'container',

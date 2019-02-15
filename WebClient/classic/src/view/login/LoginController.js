@@ -9,21 +9,21 @@ Ext.define('SVSClient.view.login.LoginController', {
 		'Ext.form.Panel'
 	],
 
+	//Auf Enter wird eingeloggt
 	onSpecialKey: function(field, event, options) {
 	    if (event.getKey() == event.ENTER) {
 			this.onLoginClick();
 	    }
 	},
 
+	//Login geklickt, einloggen
     onLoginClick: function() {
 		var me = this;
-    	// this.fireViewEvent('login', this);
+
     	var form = this.lookupReference('loginForm').getForm();
     	var data = form.getValues();
     	
     	form.setValues({'infoField': 'Authenticating...'});
-    	
-		// The Authentication Controller handles this login event
 		
     	connection.invoke("Login", data.username, data.password).then(function(user){
 			if(user){

@@ -47,7 +47,7 @@ Ext.define('SVSClient.view.main.schedule.Popup',{
                             name: 'subject',
                             id: 'subject',
                             itemId: 'subject',
-                            cls: 'subjectField',
+                            cls: 'popupFields',
                             emptyText: 'Subject',
                             allowBlank: false,
                             selectOnFocus: true,
@@ -71,7 +71,7 @@ Ext.define('SVSClient.view.main.schedule.Popup',{
                             name: 'room',
                             id: 'room',
                             itemId: 'room',
-                            cls: 'roomField',
+                            cls: 'popupFields',
                             emptyText: 'Room',
                             allowBlank: false,
                             selectOnFocus: true,
@@ -95,7 +95,7 @@ Ext.define('SVSClient.view.main.schedule.Popup',{
                             name: 'status',
                             id: 'status',
                             itemId: 'status',
-                            cls: 'statusField',
+                            cls: 'popupFields',
                             emptyText: 'Status',
                             allowBlank: false,
                             selectOnFocus: true,
@@ -113,9 +113,11 @@ Ext.define('SVSClient.view.main.schedule.Popup',{
             ]
         },
         {
-            xtype: 'panel',
+            xtype: 'button',
             height: 50,
             width: '100%',
+            title: 'Send',
+            handler: 'sendChanges',
         }
     ]
 });
