@@ -184,20 +184,13 @@ namespace WebApi.Hubs
                 if (i == 4)
                     woche.friday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
             }
+
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
             return woche;
-        }
-       
-
-        public WochenNotizModel GetWochenNotiz(int Stundenplan_ID)
-        {
-            var con = DbHelper.GetDbConnection();
-            con.Open();
-            var result = NotizAccess.GetWochenNotizByID(con, Stundenplan_ID);
-            con.Close();
-            return result;
-        }
-
+        }      
         #endregion
+
+      
 
         public WocheModel TestWoche()
         {
@@ -275,7 +268,7 @@ namespace WebApi.Hubs
 
             listNotiz.Add(notiz);
 
-            woche.WochenNotiz = listNotiz;
+            
             return woche;
         }
 

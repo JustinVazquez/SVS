@@ -30,6 +30,5 @@ namespace Core.Models
 
         public DateTime Datum { get; set; }
 
-
     }
 }

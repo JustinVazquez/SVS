@@ -40,12 +40,11 @@ namespace Core.Access
             return result;
         }
 
-
-        public static WochenNotizModel GetWochenNotizByID(IDbConnection con, int Stundenplan_ID)
+        public static List<WochenNotizModel> GetWochenNotizenByID(IDbConnection con, string von, string bis)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Select * From SVS.WochenNotiz Where Stundenplan_ID = {Stundenplan_ID}";
-            var result = con.QueryFirstOrDefault<WochenNotizModel>(sql);
+            var sql = $"Select * From SVS.WochenNotiz Where Datum Between '{von}' and '{bis}'";
+            var result = con.Query<WochenNotizModel>(sql).AsList();
             return result;
         }
     }
