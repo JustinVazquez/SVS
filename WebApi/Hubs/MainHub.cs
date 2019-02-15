@@ -47,7 +47,9 @@ namespace WebApi.Hubs
                     //Validiert den Hash aus der Datenbank mit dem Passwort aus der Login-Form 
                     if (SaltHashHelper.ValidatePassword(password, hash, salt))
                     {
-                        return UserAccess.GetUser(con, name, hash);
+                        var user = UserAccess.GetUser(con, name, hash);
+                        user.KlassenName = StundeplanAccess.GetKlasseText(con,user.ID);
+                        return user;
                     }
                     else
                     {
@@ -159,7 +161,7 @@ namespace WebApi.Hubs
         /// <param name="Klasse">Klasse</param>
         /// <param name="date">Datum</param>
         /// <returns>Eine Liste aus Elementen vom Typ StundenplanModel</returns>
-        public WocheModel GetStundenplan(int klasse)
+        public WocheModel GetStundenplan(int klasse, DateTime datum)
         {
             var today = DateTime.Now;
             var con = DbHelper.GetDbConnection();
@@ -224,12 +226,12 @@ namespace WebApi.Hubs
                 }
             }
 
-            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),int klasse);
             return woche;
         }      
         #endregion
 
-        public bool addWeekNote(int klasse,string text)
+        public bool addWeekNote(int klasse,string text,)
         {
             var con = DbHelper.GetDbConnection();
             con.Open();

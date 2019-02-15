@@ -14,5 +14,7 @@ namespace Core.Models
 
         public int Klasse { get; set; }
 
+        public string KlassenName { get; set; }
+
     }
 }

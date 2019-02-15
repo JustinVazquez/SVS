@@ -47,7 +47,7 @@ namespace Core.Access
             return result;
         }
 
-        public static List<WochenNotizModel> GetWochenNotizenByID(IDbConnection con, string von, string bis)
+        public static List<WochenNotizModel> GetWochenNotizenByID(IDbConnection con, string von, string bis,int klasse)
         {
             DbHelper.CheckDbConnection(con);
             var sql = $"Select * From SVS.WochenNotiz Where Datum Between '{von}' and '{bis}'";
