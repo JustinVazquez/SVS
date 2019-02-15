@@ -25,6 +25,13 @@ namespace Core.Access
             con.Execute(sql);
         }
 
+        public static void AddWochenNotiz(IDbConnection con, int klasse, string text, string datum)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Insert into SVS.wochennotiz (Inhalt,Klasse_ID,Datum) Values ({text},'{klasse}'{datum}'";
+            con.Execute(sql);
+        }
+
         /// <summary>
         /// Liefert eine Notiz anhand des Datums und der Stunde
         /// </summary>

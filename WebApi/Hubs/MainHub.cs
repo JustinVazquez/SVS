@@ -191,7 +191,13 @@ namespace WebApi.Hubs
         }      
         #endregion
 
-     
+        public void addWeekNote(int klasse,string text)
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            NotizAccess.AddWochenNotiz(con,klasse,text,DateTime.Now.ToString("yyyy-MM-dd"));
+            con.Close();
+        }
 
         public void SendMail(int klasse,string text) {
 
