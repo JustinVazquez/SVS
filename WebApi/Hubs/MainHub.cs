@@ -191,20 +191,33 @@ namespace WebApi.Hubs
         }      
         #endregion
 
-        public void addWeekNote(int klasse,string text)
+        public bool addWeekNote(int klasse,string text)
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            NotizAccess.AddWochenNotiz(con,klasse,text,DateTime.Now.ToString("yyyy-MM-dd"));
-            con.Close();
+            try { NotizAccess.AddWochenNotiz(con, klasse, text, DateTime.Now.ToString("yyyy-MM-dd")); return true; }
+            catch { return false; }
+            finally { con.Close(); }
+          
+            
         }
 
-        public void SendMail(int klasse,string text) {
+        public bool SendMail(int klasse,string text) {
 
             var con = DbHelper.GetDbConnection();
             con.Open();
             var list = UserAccess.getEmails(con, klasse);
-            Email.sendMail(list,text);
+            try
+            {
+               Email.sendMail(list, text);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+                
+            
         }
 
         public WocheModel TestWoche()
