@@ -210,6 +210,8 @@ namespace Tests
                 if (i == 4)
                     woche.friday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
             }
+
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
             Console.Write(woche);
         }
         

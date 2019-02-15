@@ -3,6 +3,7 @@ using Core.Helper;
 using Core.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
+using SVS;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -184,20 +185,40 @@ namespace WebApi.Hubs
                 if (i == 4)
                     woche.friday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
             }
-            return woche;
-        }
-       
 
-        public WochenNotizModel GetWochenNotiz(int Stundenplan_ID)
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
+            return woche;
+        }      
+        #endregion
+
+        public bool addWeekNote(int klasse,string text)
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            var result = NotizAccess.GetWochenNotizByID(con, Stundenplan_ID);
-            con.Close();
-            return result;
+            try { NotizAccess.AddWochenNotiz(con, klasse, text, DateTime.Now.ToString("yyyy-MM-dd")); return true; }
+            catch { return false; }
+            finally { con.Close(); }
+          
+            
         }
 
-        #endregion
+        public bool SendMail(int klasse,string text) {
+
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            var list = UserAccess.getEmails(con, klasse);
+            try
+            {
+               Email.sendMail(list, text);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+                
+            
+        }
 
         public WocheModel TestWoche()
         {
@@ -275,7 +296,7 @@ namespace WebApi.Hubs
 
             listNotiz.Add(notiz);
 
-            woche.WochenNotiz = listNotiz;
+            
             return woche;
         }
 
