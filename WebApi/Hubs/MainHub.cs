@@ -279,9 +279,11 @@ namespace WebApi.Hubs
             }                          
         }
 
-        public void changeStatus(int status) { 
+        public void changeStatus(int id,int status) {
 
-
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            StundeplanAccess.ChangeStatus(con,id,status);
         }
         
     }

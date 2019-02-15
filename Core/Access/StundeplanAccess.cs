@@ -99,7 +99,7 @@ namespace Core.Access
             return result;           
         }
 
-        public static void ChangeStatus(int ID, int Status_ID)
+        public static void ChangeStatus(IDbConnection con, int ID, int Status_ID)
         {
             var con = DbHelper.GetDbConnection();
             var sql = $"Update SVS.Stundenplan Set Status_ID = {Status_ID} Where ID = {ID} ";
