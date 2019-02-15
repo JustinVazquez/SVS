@@ -261,7 +261,7 @@ namespace Tests
             list.Add(email);
             list.Add(email);
             var text = "Spasti Anderung Lan";
-            var client = new SmtpClient("smtp.gmail.com", 587)
+            var client = new SmtpClient("smtp.googlemail.com", 465)
             {
                 Credentials = new NetworkCredential("svs.aenderung@gmail.com", "Projekttage123!"),
                 EnableSsl = true,               

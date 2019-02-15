@@ -66,6 +66,14 @@ namespace Core.Access
 
         }
 
+        public static string GetStatusText(IDbConnection con, int ID)
+        {
+            DbHelper.CheckDbConnection(con);
+            var sql = $"Select Name From SVS.Status Where ID = {ID}";
+            var result = con.ExecuteScalar<string>(sql);
+            return result;
+        }
+
         public static string GetRaumText(IDbConnection con, int ID)
         {
             DbHelper.CheckDbConnection(con);
@@ -89,6 +97,15 @@ namespace Core.Access
             var sql = $"Select * From SVS.Notiz Where Datum = '{Datum}' And Stunde = {Stunde}";
             var result = con.QueryFirstOrDefault<NotizModel>(sql);
             return result;           
+        }
+
+        public static void ChangeStatus(IDbConnection con, int ID, int Status_ID)
+        {
+            var con = DbHelper.GetDbConnection();
+            var sql = $"Update SVS.Stundenplan Set Status_ID = {Status_ID} Where ID = {ID} ";
+            con.Execute(sql);
+
+
         }
 
 

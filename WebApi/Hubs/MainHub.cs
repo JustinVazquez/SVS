@@ -188,6 +188,7 @@ namespace WebApi.Hubs
                         item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
                         item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
                         item.Fach = StundeplanAccess.GetFachText(con, item.Fach_ID);
+                        item.Status = StundeplanAccess.GetStatusText(con, item.Status_ID);
                     }
                 }
 
@@ -201,6 +202,7 @@ namespace WebApi.Hubs
                         item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
                         item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
                         item.Fach = StundeplanAccess.GetFachText(con, item.Fach_ID);
+                        item.Status = StundeplanAccess.GetStatusText(con, item.Status_ID);
                     }
                 }
 
@@ -213,6 +215,7 @@ namespace WebApi.Hubs
                         item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
                         item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
                         item.Fach = StundeplanAccess.GetFachText(con, item.Fach_ID);
+                        item.Status = StundeplanAccess.GetStatusText(con, item.Status_ID);
                     }
                 }
 
@@ -225,6 +228,7 @@ namespace WebApi.Hubs
                         item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
                         item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
                         item.Fach = StundeplanAccess.GetFachText(con, item.Fach_ID);
+                        item.Status = StundeplanAccess.GetStatusText(con, item.Status_ID);
                     }
                 }
 
@@ -238,6 +242,7 @@ namespace WebApi.Hubs
                         item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
                         item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
                         item.Fach = StundeplanAccess.GetFachText(con, item.Fach_ID);
+                        item.Status = StundeplanAccess.GetStatusText(con, item.Status_ID);
                     }
                 }
 
@@ -250,6 +255,8 @@ namespace WebApi.Hubs
 
         public bool addWeekNote(int klasse,string text,string date)
         {
+            if (String.IsNullOrWhiteSpace(text))
+                return false;
             var con = DbHelper.GetDbConnection();
             con.Open();
             try { NotizAccess.AddWochenNotiz(con, klasse, text, date); return true; }
@@ -271,5 +278,13 @@ namespace WebApi.Hubs
                 return false;
             }                          
         }
+
+        public void changeStatus(int id,int status) {
+
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            StundeplanAccess.ChangeStatus(con,id,status);
+        }
+        
     }
 }

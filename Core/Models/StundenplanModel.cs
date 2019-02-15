@@ -28,6 +28,10 @@ namespace Core.Models
 
         public int Stunde { get; set; }
 
+        public int Status_ID { get; set; }
+
+        public string Status { get; set; }
+
         public DateTime Datum { get; set; }
 
     }
