@@ -3,6 +3,7 @@ using Core.Helper;
 using Core.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
+using SVS;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -198,6 +199,14 @@ namespace WebApi.Hubs
         }
 
         #endregion
+
+        public void SendMail(int klasse,string text) {
+
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            var list = UserAccess.getEmails(con, klasse);
+            Email.sendMail(list,text);
+        }
 
         public WocheModel TestWoche()
         {
