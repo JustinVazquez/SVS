@@ -6,6 +6,8 @@ using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 
 namespace Tests
 {
@@ -59,7 +61,7 @@ namespace Tests
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            UserAccess.AddUser(con,"Test","Test");
+            UserAccess.AddUser(con,"Test2","Test2");
         }
 
         [Test]
@@ -128,11 +130,11 @@ namespace Tests
         {
             var con = DbHelper.GetDbConnection();
             con.Open();
-            if(string.IsNullOrEmpty(UserAccess.GetName(con,"Justin_Vazquez")))
+            if(string.IsNullOrEmpty(UserAccess.GetName(con,"Test")))
             {
-                var SaltnHash = SaltHashHelper.CreateHash("Test1234");
-                UserAccess.AddUser(con, "Justin_Vazquez", SaltnHash.Item1);
-                var ID = UserAccess.GetIdByName(con, "Justin_Vazquez");
+                var SaltnHash = SaltHashHelper.CreateHash("Test");
+                UserAccess.AddUser(con, "Test", SaltnHash.Item1);
+                var ID = UserAccess.GetIdByName(con, "Test");
                 UserAccess.AddSalt(con, ID, SaltnHash.Item2);
             }
             else
@@ -214,7 +216,32 @@ namespace Tests
             woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
             Console.Write(woche);
         }
-        
+
+        [Test]
+        public void sendMail()
+        {
+            var con = DbHelper.GetDbConnection();
+            con.Open();
+            var list = UserAccess.getEmails(con,1);
+            var text = "Spasti Anderung Lan";
+            var client = new SmtpClient("smtp.gmail.com", 587)
+            {
+                Credentials = new NetworkCredential("SVS.Aenderung@gmail.com", "Projekttage123!"),
+                EnableSsl = true
+            };
+
+            foreach (var item in list)
+            {
+               
+                client.Send("SVS.Aenderung@gmail.com", item, "Änderung Stundenplan", text);
+            }
+            con.Close();
+
+            Console.WriteLine("Sent");
+            Console.ReadLine();
+
+        }
+
     }
 }
 //https://monarigmbh-my.sharepoint.com/:o:/g/personal/vazquez_monari_de/EgmFD6PxBkdLsl_yK4Kq0iAB3cP40WsfG2mlBJZSNBD70w?e=PfuTXd

@@ -149,16 +149,15 @@ namespace WebApi.Hubs
 
         #region Stundenplanverwaltung
 
-        //TODO: Kommentar Anpassen
 
         /// <summary>
-        /// Liefert eine Liste mit Inhalt des Stundenplans für die Klasse an einem bestimmten Datum
+        /// Liefert den Stundenplan und Notizen für eine Woche anhand der Klasse und einem Datum
         /// </summary>
-        /// <param name="Klasse">Klasse</param>
-        /// <param name="date">Datum</param>
-        /// <returns>Eine Liste aus Elementen vom Typ StundenplanModel</returns>
+        /// <param name="klasse">Klassen ID</param>
+        /// <param name="today">Datum</param>
+        /// <returns>Ein Objekt vom Typ WocheModel</returns>
         public WocheModel GetStundenplan(int klasse, DateTime today)
-        {
+        {       
             var con = DbHelper.GetDbConnection();
             con.Open();
             int currentDayOfWeek = (int)today.DayOfWeek;
@@ -197,13 +196,10 @@ namespace WebApi.Hubs
             con.Open();
             try { NotizAccess.AddWochenNotiz(con, klasse, text, DateTime.Now.ToString("yyyy-MM-dd")); return true; }
             catch { return false; }
-            finally { con.Close(); }
-          
-            
+            finally { con.Close(); }           
         }
 
         public bool SendMail(int klasse,string text) {
-
             var con = DbHelper.GetDbConnection();
             con.Open();
             var list = UserAccess.getEmails(con, klasse);
@@ -215,90 +211,7 @@ namespace WebApi.Hubs
             catch
             {
                 return false;
-            }
-                
-            
+            }                          
         }
-
-        public WocheModel TestWoche()
-        {
-            var woche = new WocheModel();
-            var montag = new List<StundenplanModel>();
-            var dienstag = new List<StundenplanModel>();
-            var stunde = new StundenplanModel();
-
-            stunde.ID = 1;
-            stunde.Klasse_ID = 1;
-            stunde.Klasse = "ITM-3";
-            stunde.Lehrer_ID = 1;
-            stunde.Lehrer = "Max Musterman";
-            stunde.Raum_ID = 1;
-            stunde.Raum = "Test Raum";
-            stunde.Fach_ID = 1;
-            stunde.Stunde = 1;
-            montag.Add(stunde);
-            stunde.Stunde = 2;
-            montag.Add(stunde);
-            stunde.Stunde = 3;
-            montag.Add(stunde);
-            stunde.Stunde = 4;
-            montag.Add(stunde);
-            stunde.Stunde = 5;
-            montag.Add(stunde);
-            stunde.Stunde = 6;
-            montag.Add(stunde);
-            stunde.Stunde = 7;
-            montag.Add(stunde);
-            stunde.Stunde = 8;
-            montag.Add(stunde);
-
-            var stunde2 = new StundenplanModel();
-            stunde2.ID = 2;
-            stunde2.Klasse_ID = 1;
-            stunde2.Klasse = "ITM-3";
-            stunde2.Lehrer_ID = 2;
-            stunde2.Lehrer = "Max Musterman2";
-            stunde2.Raum_ID = 2;
-            stunde2.Raum = "Test Raum2";
-            stunde2.Fach_ID = 2;
-            stunde2.Stunde = 1;
-            dienstag.Add(stunde2);
-            stunde2.Stunde = 2;
-            dienstag.Add(stunde2);
-            stunde2.Stunde = 3;
-            dienstag.Add(stunde2);
-            stunde2.Stunde = 4;
-            dienstag.Add(stunde2);
-            stunde2.Stunde = 5;
-            dienstag.Add(stunde2);
-            stunde2.Stunde = 6;
-            dienstag.Add(stunde2);
-            stunde2.Stunde = 7;
-            dienstag.Add(stunde2);
-            stunde2.Stunde = 8;
-            dienstag.Add(stunde2);
-
-
-            woche.monday = montag;
-            woche.tuesday = dienstag;
-
-            var notiz = new WochenNotizModel();
-            var listNotiz = new List<WochenNotizModel>();
-            notiz.Stundenplan_ID = 1;
-            notiz.ID = 1;
-            notiz.Text = "Test Notiz";
-
-            listNotiz.Add(notiz);
-
-            notiz.Stundenplan_ID = 2;
-            notiz.ID = 2;
-            notiz.Text = "Test Notiz2";
-
-            listNotiz.Add(notiz);
-
-            
-            return woche;
-        }
-
     }
 }

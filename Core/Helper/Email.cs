@@ -6,7 +6,7 @@ using System.Net.Mail;
 using System.Net;
 using Core.Access;
 
-namespace SVS
+namespace Core.Helper
 {
     public static class Email
     {
