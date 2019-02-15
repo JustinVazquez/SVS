@@ -9,6 +9,7 @@ namespace Core.Helper
 {
     public static class DbHelper
     {
+        private static readonly string _host = "192.168.10.7";
         private static readonly string _dataSource = "127.0.0.1";
         private static readonly string _userName = "root";
         private static readonly string _password = "";
@@ -27,7 +28,7 @@ namespace Core.Helper
         public static IDbConnection GetDbConnection()
         {
             var conString =
-                $"Server=localhost; DataSource={_dataSource}; UserId={_userName}; Password={_password};";
+                $"Server={_host}; DataSource={_dataSource}; UserId={_userName}; Password={_password};";
             MySqlConnection connection = new MySqlConnection(conString);
             var con = connection;
             return con;
