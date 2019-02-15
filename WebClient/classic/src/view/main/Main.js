@@ -57,9 +57,8 @@ Ext.define('SVSClient.view.main.Main', {
 				width: '59%',
 				id: 'usernameField',
 				itemId: 'usernameField',
-				title: 'test',
+				title: ' ',
 				cls: 'usernameToolbar',
-				text: 'test',
 			},
 			{
 				xtype: 'button',

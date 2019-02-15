@@ -27,7 +27,7 @@ Ext.define('SVSClient.view.login.LoginController', {
 		
     	connection.invoke("Login", data.username, data.password).then(function(user){
 			if(user){
-				console.log("Logged in!");
+				console.log(user);
 				if(me.lookupReference('label')){
 					me.lookupReference('label').setHtml('<br><center><b>Authenticating...</center></b>');
 				}

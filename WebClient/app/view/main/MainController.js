@@ -9,9 +9,12 @@ Ext.define('SVSClient.view.main.MainController', {
 
     init: function(view) {
         var me = this;
+
         var user = Ext.getCmp('login').getViewModel().get('currentuser');
         me.getViewModel().set('currentuser', user);
         
+        Ext.getCmp('usernameField').setTitle(user + ' - ' + user.klassenName)
+
         me.dateSet();
         me.fillSchedule(view);
 
@@ -40,7 +43,6 @@ Ext.define('SVSClient.view.main.MainController', {
         var userClass = me.getViewModel().get('currentuser')['klasse'];
         var currDate = me.getViewModel().get('currentdate');
         
-        debugger
         connection.invoke("GetStundenplan", userClass, currDate).then(function(data){
             console.log(data);
             me.getViewModel().set('currentschedule', data);
@@ -54,7 +56,6 @@ Ext.define('SVSClient.view.main.MainController', {
                             var inputString = data[weekdays[day]][hours].fach + '<br>' + data[weekdays[day]][hours].raum;
                             Ext.getCmp(hour).header.title.setText(inputString)
                             Ext.getCmp(hour).addCls('active')
-                            console.log("Active: " + hour);
                         }
                         // data.weekdays[day].hours
                     }
@@ -78,7 +79,6 @@ Ext.define('SVSClient.view.main.MainController', {
     onConfirm: function (choice) {
         if (choice === 'yes') {
             location.reload();
-            console.log("Loggin out...")
         }
     },
     
@@ -93,9 +93,8 @@ Ext.define('SVSClient.view.main.MainController', {
         var userClass = me.getViewModel().get('currentuser')['klasse'];
         var newInput = Ext.getCmp('newNotesField').value;
         var currDate = me.getViewModel().get('currentdate');
-        debugger
+
     	connection.invoke("addWeekNote", userClass, newInput, currDate).then(function(send){
-            console.log(send);
 			if(send){
                 //Füllt die Textbox mit den neuen Notizen
                 var formattedNew = "- " + newInput + "<br>"; 
