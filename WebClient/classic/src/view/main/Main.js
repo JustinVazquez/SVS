@@ -4,6 +4,7 @@ Ext.define('SVSClient.view.main.Main', {
 	requires: [
 		'SVSClient.view.main.schedule.Schedule',
 		'Ext.form.Panel',
+		'SVSClient.view.main.schedule.Popup',
 	],
     controller: 'main',
 	viewModel: {
@@ -26,6 +27,9 @@ Ext.define('SVSClient.view.main.Main', {
 	layout: 'border',
 
 	items:[
+	{
+		xtype: 'popup',
+	},
 	{
 		region: 'north',
 		itemId: 'toptoolbar',

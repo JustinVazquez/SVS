@@ -42,6 +42,7 @@ Ext.define('SVSClient.view.main.MainController', {
         
         var userClass = me.getViewModel().get('currentuser')['klasse'];
         var currDate = me.getViewModel().get('currentdate');
+        // var currDate = '2019-02-27';
         
         connection.invoke("GetStundenplan", userClass, currDate).then(function(data){
             console.log(data);
@@ -89,28 +90,51 @@ Ext.define('SVSClient.view.main.MainController', {
 
     onSendNotes: function(button, event){
         var me = this;
-        // Neue Notizen an 
-        // var userClass = me.getViewModel().get('currentuser').get('class');
-        var userClass = me.getViewModel().get('currentuser')['klasse'];
         var newInput = Ext.getCmp('newNotesField').value;
-        var currDate = me.getViewModel().get('currentdate');
-
-    	connection.invoke("addWeekNote", userClass, newInput, currDate).then(function(send){
-			if(send){
-                //Füllt die Textbox mit den neuen Notizen
-                var formattedNew = "- " + newInput + "<br>"; 
-                var oldInput = Ext.getCmp('oldNotes').header.title.getText();
-                Ext.getCmp('oldNotes').header.title.setText(oldInput + formattedNew);
-                Ext.getCmp('newNotesField').setValue("");
-                Ext.toast("Sending message..");
-			}else{
-				Ext.toast("Error sending message..");
-			}
-		});
+        if(newInput){
+            // Neue Notizen an 
+            // var userClass = me.getViewModel().get('currentuser').get('class');
+            var userClass = me.getViewModel().get('currentuser')['klasse'];
+            var currDate = me.getViewModel().get('currentdate');
+    
+            connection.invoke("addWeekNote", userClass, newInput, currDate).then(function(send){
+                if(send){
+                    //Füllt die Textbox mit den neuen Notizen
+                    var formattedNew = "- " + newInput + "<br>"; 
+                    var oldInput = Ext.getCmp('oldNotes').header.title.getText();
+                    Ext.getCmp('oldNotes').header.title.setText(oldInput + formattedNew);
+                    Ext.getCmp('newNotesField').setValue("");
+                    Ext.toast("Sending message..");
+                }else{
+                    Ext.toast("Error sending message..");
+                }
+            });
+        }
     },
     
     onClickHour: function(button, event){
-        
+        var me = this;
+        Ext.getCmp('popup').show();
+        var currSchedule = me.getViewModel().get('currentschedule');
+        var buttonId = button.id;
+        var currDay = buttonId.slice(0, -1);
+        var currHour = buttonId.substr(buttonId.length - 1);
+        debugger
+        if(currSchedule[currDay].length != 0){
+            var currSubject = currSchedule[currDay][currHour].fach;
+            var currRoom = currSchedule[currDay][currHour].raum;
+            var currStatus = currSchedule[currDay][currHour].status;
+            if(currSchedule[currDay][currHour].fach){
+                Ext.getCmp('subject').setValue(currSubject);
+            }
+            if(currSchedule[currDay][currHour].raum){
+                Ext.getCmp('room').setValue(currRoom);
+            }
+            if(currSchedule[currDay][currHour].status){
+                Ext.getCmp('status').setValue(currStatus);
+            }
+        }
+        // var subject = 
     }
 
 });

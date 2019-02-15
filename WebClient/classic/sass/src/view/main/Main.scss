@@ -209,3 +209,16 @@
     white-space: unset;
     word-break: break-word;
 }
+
+.popupTitle .x-panel-header {
+    background: transparent;
+}
+
+.popupTitle .x-panel-header-title-default{
+    color: #707070;
+    text-align: center;
+}
+
+.popup .x-panel-body{
+    background: #e3e3e3;
+}
