@@ -8278,39 +8278,56 @@
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:132 */
 .schedulePanels {
-    height: 10% !important;
+    border-color: #e3e3e3;
+    background: white;
+    height: 7.3vh !important;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:136 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:138 */
 .schedulePanels .x-panel-header-default-horizontal.x-header-noborder {
     height: 100% !important;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:140 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:142 */
 .schedulePanels .x-panel-header-default {
     background: white;
     border: 1px solid #e3e3e3 !important;
     padding: 5px !important;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:146 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:148 */
 .schedulePanels .x-panel-header-default .x-panel-header-title-default {
     color: white !important;
     font-size: 10px;
     text-align: center !important;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:152 */
-.schedulePanels.active .x-panel-header-default {
-    background-color: #027f9d !important;
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:154 */
+.schedulePanels.active {
+    background-color: #027f9d;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:156 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:159 */
+.schedulePanels.x-btn-focus.x-btn-over.x-btn-default-small {
+    background: rgba(2, 127, 157, 0.6);
+    border-color: #e3e3e3;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:163 */
+.schedulePanels:hover {
+    background: rgba(2, 127, 157, 0.6);
+    border-color: #e3e3e3;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:167 */
+.schedulePanels.x-btn-focus.x-btn-default-small {
+    background: rgba(2, 127, 157, 0.6);
+    border-color: #e3e3e3;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:172 */
 .oldNotes {
     height: 60% !important;
     width: 100%;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:160 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:176 */
 .newNotes {
     height: 10% !important;
     width: 100%;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:165 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:181 */
 .sendButton {
     height: 7% !important;
     border-radius: 100px;
@@ -8320,24 +8337,24 @@
     margin: auto auto !important;
     display: -webkit-box;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:175 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:191 */
 .weeknotes {
     margin-right: 10px !important;
     margin-left: 5px !important;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:180 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:196 */
 .oldNotes .x-panel-header-default-horizontal.x-header-noborder {
     padding: 5px !important;
     height: 100% !important;
     background: white !important;
     overflow: scroll;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:187 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:203 */
 .oldNotes .x-panel-header-title-default {
     color: #707070;
     font-size: 0.8em;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:192 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:208 */
 .oldNotes .x-title-text {
     white-space: unset;
     word-break: break-word;

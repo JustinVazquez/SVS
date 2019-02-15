@@ -54,7 +54,8 @@ Ext.define('SVSClient.view.main.MainController', {
                         
                         if(data[weekdays[day]][hours] && data[weekdays[day]][hours].fach_ID != 0){
                             var inputString = data[weekdays[day]][hours].fach + '<br>' + data[weekdays[day]][hours].raum;
-                            Ext.getCmp(hour).header.title.setText(inputString)
+
+                            Ext.getCmp(hour).setText(inputString)
                             Ext.getCmp(hour).addCls('active')
                         }
                         // data.weekdays[day].hours
@@ -106,5 +107,10 @@ Ext.define('SVSClient.view.main.MainController', {
 				Ext.toast("Error sending message..");
 			}
 		});
+    },
+    
+    onClickHour: function(button, event){
+        
     }
+
 });

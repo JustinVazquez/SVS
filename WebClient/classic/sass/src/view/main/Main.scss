@@ -130,7 +130,9 @@
 }
 
 .schedulePanels{
-    height: 10% !important;
+    border-color: #e3e3e3;
+    background: white;
+    height: 7.3vh !important;
 }
 
 .schedulePanels .x-panel-header-default-horizontal.x-header-noborder{
@@ -149,8 +151,22 @@
     text-align: center !important;
 }
 
-.schedulePanels.active .x-panel-header-default{
-    background-color: #027F9D !important;
+.schedulePanels.active{
+    background-color: #027F9D;
+}
+
+
+.schedulePanels.x-btn-focus.x-btn-over.x-btn-default-small {
+    background: rgba(2,127,157,0.6);
+    border-color: #e3e3e3;
+}
+.schedulePanels:hover{
+    background: rgba(2,127,157,0.6);
+    border-color: #e3e3e3;
+}
+.schedulePanels.x-btn-focus.x-btn-default-small {
+    background: rgba(2,127,157,0.6);
+    border-color: #e3e3e3;
 }
 
 .oldNotes{
