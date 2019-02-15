@@ -9,6 +9,10 @@ namespace Core.Access
 {
     public static class StatusAccess
     {
+        /// <summary>
+        ///  Liefert einen Status der einzelnen Stunden
+        /// </summary>
+        /// <returns>Eine Liste aus Elementen vom Typ StatusModel</returns>
         public static List<StatusModel> GetAllFach()
         {
             var con = DbHelper.GetDbConnection();
