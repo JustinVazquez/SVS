@@ -23,33 +23,25 @@ Ext.define('SVSClient.view.login.LoginController', {
     	
     	form.setValues({'infoField': 'Authenticating...'});
     	
-    	// The Authentication Controller handles this login event
-    	this.fireEvent('login', data.username, data.password, {
-			success	: function(response, opts){
-
+		// The Authentication Controller handles this login event
+		
+    	connection.invoke("Login", data.username, data.password).then(function(user){
+			if(user){
+				console.log("Logged in!");
 				if(me.lookupReference('label')){
 					me.lookupReference('label').setHtml('<br><center><b>Authenticating...</center></b>');
 				}
-				console.log("Logged in!");
-				this.getView().destroy();
+				me.getViewModel().set('currentuser', user);
 				Ext.create({xtype: 'app-main'});
-				
-				//Here i get the user object.. in response?
-				console.log(response);
-				Ext.getCmp('main').getViewModel().set('currentuser', response);
-
-    		}, 
-    		failure	: function(response, opts){
-    			console.log("Failed to log in!");
-
+				me.getView().destroy();
+			}else{
 				form.setValues({'infoField': 'Login failed...'});
 				view = me.getView();
 				view.addCls('login-error');
 				setTimeout(() => {
 					view.removeCls('login-error')
 				}, 500);
-    		}, 
-    		scope: this
-    	});
+			}
+		});
     }
 });

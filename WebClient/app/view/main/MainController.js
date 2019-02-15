@@ -9,7 +9,9 @@ Ext.define('SVSClient.view.main.MainController', {
 
     init: function(view) {
         var me = this;
-
+        var user = Ext.getCmp('login').getViewModel().get('currentuser');
+        me.getViewModel().set('currentuser', user);
+        
         me.fillSchedule(view);
         //Dynamically look up which time and day it is, add cls!!
     },
@@ -24,27 +26,28 @@ Ext.define('SVSClient.view.main.MainController', {
         var firstday = new Date(curr.setDate(first)).toUTCString();
         var lastday = new Date(curr.setDate(last)).toUTCString();
         Ext.getCmp('datePanel').title = Ext.util.Format.date(firstday) + ' - ' + Ext.util.Format.date(lastday);
-        
-        connection.invoke("TestWoche").then(function(data){
+        debugger
+        var userClass = me.getViewModel().get('currentuser')['klasse'];
+
+        connection.invoke("GetStundenplan", userClass).then(function(data){
             console.log(data);
             var weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
             for(var day = 0; day < 5; day++){
-                for(var hours = 0; hours < 8; hours++){
-                    var hour = weekdays[day] + hours;
-
-                    if(data[weekdays[day]]){
-                        if(data[weekdays[day]][hours].fach_ID != 0){
+                if(data[weekdays[day]].length != 0){
+                    for(var hours = 0; hours < 8; hours++){
+                        var hour = weekdays[day] + hours;
+                        
+                        if(data[weekdays[day]][hours] && data[weekdays[day]][hours].fach_ID != 0){
                             var inputString = data[weekdays[day]][hours].fach + '<br>' + data[weekdays[day]][hours].raum;
                             Ext.getCmp(hour).header.title.setText(inputString)
                             Ext.getCmp(hour).addCls('active')
                             console.log("Active: " + hour);
                         }
+                        // data.weekdays[day].hours
                     }
-
-                    // data.weekdays[day].hours
                 }
             }
-            me.fillWeeknotes(data.wochenNotiz);
+            me.fillWeeknotes(data.weekNotes);
         });  
     },
 
