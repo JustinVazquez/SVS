@@ -3,6 +3,7 @@ using Core.Helper;
 using Core.Models;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -248,33 +249,30 @@ namespace Tests
                 }
             }
 
-            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),klasse);
             Console.Write(woche);
         }
 
         [Test]
         public void sendMail()
-        {
-            var con = DbHelper.GetDbConnection();
-            con.Open();
-            var list = UserAccess.getEmails(con,1);
+        {              
+            var email = "JustinRamon.Vazquez@gmail.com";
+            var list = new List<string>();
+            list.Add(email);
+            list.Add(email);
             var text = "Spasti Anderung Lan";
             var client = new SmtpClient("smtp.gmail.com", 587)
             {
-                Credentials = new NetworkCredential("SVS.Aenderung@gmail.com", "Projekttage123!"),
-                EnableSsl = true
+                Credentials = new NetworkCredential("svs.aenderung@gmail.com", "Projekttage123!"),
+                EnableSsl = true,               
+                
             };
-
             foreach (var item in list)
-            {
-               
-                client.Send("SVS.Aenderung@gmail.com", item, "Änderung Stundenplan", text);
+            {                       
+                client.Send("svs.aenderung@gmail.com", "JustinRamon.Vazquez@gmail.com", "Änderung Stundenplan", "Test");
             }
-            con.Close();
-
-            Console.WriteLine("Sent");
-            Console.ReadLine();
-
+          
+            Console.WriteLine("Sent");        
         }
 
     }
