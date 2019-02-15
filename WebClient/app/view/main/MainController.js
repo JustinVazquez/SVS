@@ -12,25 +12,38 @@ Ext.define('SVSClient.view.main.MainController', {
         var user = Ext.getCmp('login').getViewModel().get('currentuser');
         me.getViewModel().set('currentuser', user);
         
+        me.dateSet();
         me.fillSchedule(view);
+
         //Dynamically look up which time and day it is, add cls!!
+    },
+
+    dateSet: function(){
+        var currentFullDate = new Date;
+        var today = Ext.util.Format.date(currentFullDate, 'Y-m-d');
+        this.getViewModel().set('currentdate', today);
     },
 
     fillSchedule: function(view){
         var me = this;
-        var curr = new Date; // get current date
-        var first = curr.getDate() - curr.getDay() +1; // First day is the day of the month - the day of the week
-        var last = first + 4; // last day is the first day + 6
-        var currMS = Date.now();
         
+        //Ersten Tag und letzten Tag der Woche bekommen
+        var curr = new Date;
+        var first = curr.getDate()-curr.getDay()+1;
+        var last = first+4;
+        var currMS = Date.now();
         var firstday = new Date(curr.setDate(first)).toUTCString();
         var lastday = new Date(curr.setDate(last)).toUTCString();
-        Ext.getCmp('datePanel').title = Ext.util.Format.date(firstday) + ' - ' + Ext.util.Format.date(lastday);
-        debugger
-        var userClass = me.getViewModel().get('currentuser')['klasse'];
 
-        connection.invoke("GetStundenplan", userClass).then(function(data){
+        Ext.getCmp('datePanel').title = Ext.util.Format.date(firstday) + ' - ' + Ext.util.Format.date(lastday);
+        
+        var userClass = me.getViewModel().get('currentuser')['klasse'];
+        var currDate = me.getViewModel().get('currentdate');
+        
+        debugger
+        connection.invoke("GetStundenplan", userClass, currDate).then(function(data){
             console.log(data);
+            me.getViewModel().set('currentschedule', data);
             var weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
             for(var day = 0; day < 5; day++){
                 if(data[weekdays[day]].length != 0){
@@ -54,8 +67,9 @@ Ext.define('SVSClient.view.main.MainController', {
     fillWeeknotes: function(notes){
         var me = this;
         var noteString = '';
+
         for(var i = 0; i < notes.length; i++){
-            noteString += "- " + notes[i].text + "<br>";
+            noteString += "- " + notes[i].inhalt + "<br>";
         }
         Ext.getCmp('oldNotes').header.title.setText(noteString)
 
@@ -74,12 +88,14 @@ Ext.define('SVSClient.view.main.MainController', {
 
     onSendNotes: function(button, event){
         var me = this;
-        //Neue Notizen an 
+        // Neue Notizen an 
         // var userClass = me.getViewModel().get('currentuser').get('class');
-        var userClass = "1";
+        var userClass = me.getViewModel().get('currentuser')['klasse'];
         var newInput = Ext.getCmp('newNotesField').value;
-    	connection.invoke("addWeekNote", userClass, newInput).then(function(send){
-			
+        var currDate = me.getViewModel().get('currentdate');
+        debugger
+    	connection.invoke("addWeekNote", userClass, newInput, currDate).then(function(send){
+            console.log(send);
 			if(send){
                 //Füllt die Textbox mit den neuen Notizen
                 var formattedNew = "- " + newInput + "<br>"; 
@@ -87,7 +103,6 @@ Ext.define('SVSClient.view.main.MainController', {
                 Ext.getCmp('oldNotes').header.title.setText(oldInput + formattedNew);
                 Ext.getCmp('newNotesField').setValue("");
                 Ext.toast("Sending message..");
-				console.log(user);
 			}else{
 				Ext.toast("Error sending message..");
 			}
