@@ -8330,13 +8330,14 @@
     padding: 5px !important;
     height: 100% !important;
     background: white !important;
+    overflow: scroll;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:186 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:187 */
 .oldNotes .x-panel-header-title-default {
     color: #707070;
     font-size: 0.8em;
 }
-/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:191 */
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:192 */
 .oldNotes .x-title-text {
     white-space: unset;
     word-break: break-word;

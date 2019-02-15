@@ -30,6 +30,7 @@ Ext.define('SVSClient.view.main.schedule.Weeknotes', {
 			itemId: 'oldNotes',
             title: ' ',
 			cls: 'oldNotes',
+			autoScroll: true,
 		},
 		{
 			xtype: 'textfield',

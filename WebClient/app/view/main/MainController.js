@@ -13,7 +13,7 @@ Ext.define('SVSClient.view.main.MainController', {
         var user = Ext.getCmp('login').getViewModel().get('currentuser');
         me.getViewModel().set('currentuser', user);
         
-        Ext.getCmp('usernameField').setTitle(user + ' - ' + user.klassenName)
+        Ext.getCmp('usernameField').setTitle(user.name + ' - ' + user.klassenName)
 
         me.dateSet();
         me.fillSchedule(view);

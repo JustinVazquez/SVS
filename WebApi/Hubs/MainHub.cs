@@ -47,7 +47,7 @@ namespace WebApi.Hubs
                     if (SaltHashHelper.ValidatePassword(password, hash, salt))
                     {
                         var user = UserAccess.GetUser(con, name, hash);
-                        user.KlassenName = StundeplanAccess.GetKlasseText(con,user.ID);
+                        user.KlassenName = StundeplanAccess.GetKlasseText(con,user.Klasse);
                         return user;
                     }
                     else
@@ -243,7 +243,7 @@ namespace WebApi.Hubs
 
             }
 
-            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),int klasse);
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),klasse);
             return woche;
         }      
         #endregion
