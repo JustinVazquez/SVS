@@ -8,6 +8,8 @@ Ext.define('SVSClient.view.main.MainModel', {
 
     data: {
         currentuser: false,
+        currentschedule: false,
+        currentdate: false,
     }
 
     //TODO - add data, formulas and/or methods to support your view
