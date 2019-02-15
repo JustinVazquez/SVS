@@ -46,7 +46,9 @@ namespace WebApi.Hubs
                     //Validiert den Hash aus der Datenbank mit dem Passwort aus der Login-Form 
                     if (SaltHashHelper.ValidatePassword(password, hash, salt))
                     {
-                        return UserAccess.GetUser(con, name, hash);
+                        var user = UserAccess.GetUser(con, name, hash);
+                        user.KlassenName = StundeplanAccess.GetKlasseText(con,user.ID);
+                        return user;
                     }
                     else
                     {
@@ -241,7 +243,7 @@ namespace WebApi.Hubs
 
             }
 
-            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),int klasse);
             return woche;
         }      
         #endregion

@@ -203,14 +203,49 @@ namespace Tests
             {
                 if(i == 0)
                     woche.monday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                foreach (var item in woche.monday)
+                {
+                    item.Klasse = StundeplanAccess.GetKlasseText(con, item.Klasse_ID);
+                    item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
+                    item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
+                    item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
+                }
                 if (i == 1)
                     woche.tuesday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                foreach (var item in woche.tuesday)
+                {
+                    item.Klasse = StundeplanAccess.GetKlasseText(con, item.Klasse_ID);
+                    item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
+                    item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
+                    item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
+                }
                 if (i == 2)
                     woche.wednesday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                foreach (var item in woche.wednesday)
+                {
+                    item.Klasse = StundeplanAccess.GetKlasseText(con, item.Klasse_ID);
+                    item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
+                    item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
+                    item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
+                }
                 if (i == 3)
                     woche.thursday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                foreach (var item in woche.thursday)
+                {
+                    item.Klasse = StundeplanAccess.GetKlasseText(con, item.Klasse_ID);
+                    item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
+                    item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
+                    item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
+                }
                 if (i == 4)
                     woche.friday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
+                foreach (var item in woche.friday)
+                {
+                    item.Klasse = StundeplanAccess.GetKlasseText(con, item.Klasse_ID);
+                    item.Lehrer = StundeplanAccess.GetLehrerText(con, item.Lehrer_ID);
+                    item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
+                    item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
+                }
             }
 
             woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"));
