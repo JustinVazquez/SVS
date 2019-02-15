@@ -78,10 +78,14 @@ Ext.define('SVSClient.view.main.MainController', {
         Ext.getCmp('oldNotes').header.title.setText(noteString)
 
     },
+
     
     //Ausloggen..
     onLogout: function(){
         Ext.Msg.confirm('Logging out..', 'Are you sure?', 'onConfirm', this);
+    },
+    onConfirm: function(){
+        location.reload();
     },
 
     //Neue Notizen ans Backend senden und in die Textbox füllen
