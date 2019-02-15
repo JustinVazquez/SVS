@@ -47,6 +47,14 @@ namespace Core.Access
             return result;
         }
 
+        /// <summary>
+        ///  Liefert eine Notiz anhand der Woche
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="von">Datum von</param>
+        /// <param name="bis">Datum bis</param>
+        /// <param name="klasse">Klasse</param>
+        /// <returns>Eine Liste aus Elementen vom Typ WochenNotizModel </returns>
         public static List<WochenNotizModel> GetWochenNotizenByID(IDbConnection con, string von, string bis,int klasse)
         {
             DbHelper.CheckDbConnection(con);

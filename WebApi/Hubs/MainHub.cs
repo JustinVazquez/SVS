@@ -152,8 +152,6 @@ namespace WebApi.Hubs
         #endregion
 
         #region Stundenplanverwaltung
-
-
         /// <summary>
         /// Liefert den Stundenplan und Notizen für eine Woche anhand der Klasse und einem Datum
         /// </summary>
@@ -253,6 +251,13 @@ namespace WebApi.Hubs
         }      
         #endregion
 
+        /// <summary>
+        /// Fügt anhand eines Datums und der Klasse eine Notiz für die jeweilige Woche hinzu
+        /// </summary>
+        /// <param name="klasse">Klassen ID</param>
+        /// <param name="text">Text</param>
+        /// <param name="date">Datum</param>
+        /// <returns>Einen boolschen Wert</returns>
         public bool addWeekNote(int klasse,string text,string date)
         {
             if (String.IsNullOrWhiteSpace(text))
@@ -264,6 +269,13 @@ namespace WebApi.Hubs
             finally { con.Close(); }           
         }
 
+        /// <summary>
+        /// Sendet eine Email and alle User éiner Klasse die eine Email éingeplfegt haben.
+        /// Aus Zeitlichen Gründen muss die Email noch vom Datenbank Administrator eingepflegt werden
+        /// </summary>
+        /// <param name="klasse">Klassen ID</param>
+        /// <param name="text">Text</param>
+        /// <returns>Einen boolschen Wert</returns>
         public bool SendMail(int klasse,string text) {
             var con = DbHelper.GetDbConnection();
             con.Open();
@@ -279,6 +291,11 @@ namespace WebApi.Hubs
             }                          
         }
 
+        /// <summary>
+        /// Ändert den Status einer Stunde anhand der Stundenplan ID und der StatusID
+        /// </summary>
+        /// <param name="id">Stundenplan ID</param>
+        /// <param name="status">Status ID</param>
         public void changeStatus(int id,int status) {
 
             var con = DbHelper.GetDbConnection();

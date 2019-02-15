@@ -10,6 +10,12 @@ namespace Core.Access
 {
     public class UserAccess
     {
+        /// <summary>
+        /// Liefert den Hash eines Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="userID">UserID</param>
+        /// <returns>String</returns>
         public static string GetHash(IDbConnection con,int userID)
         {
             DbHelper.CheckDbConnection(con);
@@ -18,6 +24,12 @@ namespace Core.Access
             return result;
         }
 
+        /// <summary>
+        /// Liefert den Salt eines Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="userID">UserID</param>
+        /// <returns>String</returns>
         public static string GetSalt(IDbConnection con,int userID)
         {
             DbHelper.CheckDbConnection(con);
@@ -26,6 +38,12 @@ namespace Core.Access
             return result;
         }     
 
+        /// <summary>
+        /// Liefert den Namen eines Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="user">User</param>
+        /// <returns>String</returns>
         public static string GetName(IDbConnection con, string user)
         {
             DbHelper.CheckDbConnection(con);
@@ -34,6 +52,12 @@ namespace Core.Access
             return result;
         }
 
+        /// <summary>
+        /// Fügt Salt zum User hinzu
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="UserId">UserID</param>
+        /// <param name="salt">Salt</param>
         public static void AddSalt(IDbConnection con,int UserId,string salt)
         {
             DbHelper.CheckDbConnection(con);
@@ -41,6 +65,12 @@ namespace Core.Access
             con.Execute(sql);
         }
 
+        /// <summary>
+        /// Liefert die ID über den Namen eines Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="user">User</param>
+        /// <returns>int</returns>
         public static int GetIdByName(IDbConnection con, string user)
         {
             DbHelper.CheckDbConnection(con);
@@ -50,6 +80,12 @@ namespace Core.Access
           
         }
 
+        /// <summary>
+        /// Liefert den Namen eines User über die ID
+        /// </summary>
+        /// <param name="con"></param>
+        /// <param name="ID"></param>
+        /// <returns>String</returns>
         public static string GetNameByID(IDbConnection con, int ID)
         {
             DbHelper.CheckDbConnection(con);
@@ -59,6 +95,12 @@ namespace Core.Access
 
         }
 
+        /// <summary>
+        /// Ändert den Salt des Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="name">Name</param>
+        /// <param name="salt">Salt</param>
         public static void ChangeSalt(IDbConnection con, string name,string salt)
         {
             DbHelper.CheckDbConnection(con);
@@ -66,6 +108,12 @@ namespace Core.Access
             con.Execute(sql);
         }
 
+        /// <summary>
+        /// Ändert den Hash eines Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="name">Name</param>
+        /// <param name="newPassword">NewPassword</param>
         public static void ChangeHash(IDbConnection con,string name, string newPassword)
         {
             DbHelper.CheckDbConnection(con);
@@ -73,6 +121,12 @@ namespace Core.Access
             con.Execute(sql);
         }
 
+        /// <summary>
+        /// Fügt einen User hinzu
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="name">Name</param>
+        /// <param name="password">Password</param>
         public static void AddUser(IDbConnection con,string name,string password/*,string email,bool autoversand*/)
         {           
             DbHelper.CheckDbConnection(con);
@@ -80,6 +134,13 @@ namespace Core.Access
             con.Execute(sql);                   
         }
 
+        /// <summary>
+        /// Liefert einen User über Name und Hash
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="user">User</param>
+        /// <param name="password">Password</param>
+        /// <returns>Ein Objekt vom Typ UserModel</returns>
         public static UserModel GetUser(IDbConnection con,string user, string password)
         {      
                 DbHelper.CheckDbConnection(con);
@@ -88,6 +149,12 @@ namespace Core.Access
                 return result;           
         }     
         
+        /// <summary>
+        /// Ändert die Email eines Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="name">Name</param>
+        /// <param name="mail">Mail</param>
         public static void ChangeEmail(IDbConnection con, string name,string mail)
         {
             DbHelper.CheckDbConnection(con);
@@ -96,6 +163,12 @@ namespace Core.Access
          
         }
 
+        /// <summary>
+        /// Liefert die Email eines Users
+        /// </summary>
+        /// <param name="con">Datenbankverbindung</param>
+        /// <param name="klasse">Klasse</param>
+        /// <returns>Eine Liste aus Elementen vom Typ string</returns>
         public static List<string> getEmails(IDbConnection con, int klasse)
         {
             DbHelper.CheckDbConnection(con);
