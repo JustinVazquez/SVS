@@ -20,21 +20,21 @@ Ext.define('SVSClient.controller.Authentication', {
 
 		var user;
 		if(username == "test" && password == "test"){
-			Ext.callback(callback.success, callback.scope, []);
+			Ext.callback(callback.success, callback.scope, ['bla Testuser']);
 		}else{
 			Ext.callback(callback.failure, callback.scope, []);
 		}
 
-    	connection.invoke("Login", username, password).then(function(data){
-			user = data;
+    	// connection.invoke("Login", username, password).then(function(data){
+		// 	user = data;
 			
-			if(user){
-				Ext.callback(callback.success, callback.scope, user);
-				console.log(user);
-			}else{
-				Ext.callback(callback.failure, callback.scope, user);
-			}
-		});
+		// 	if(user){
+		// 		Ext.callback(callback.success, callback.scope, user);
+		// 		console.log(user);
+		// 	}else{
+		// 		Ext.callback(callback.failure, callback.scope, user);
+		// 	}
+		// });
 
 
     	// Authenticate User

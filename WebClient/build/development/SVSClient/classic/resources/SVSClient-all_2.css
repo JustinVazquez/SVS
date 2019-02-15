@@ -8193,7 +8193,7 @@
     height: 100% !important;
     vertical-align: middle;
     line-height: 60px !important;
-    padding-top: 22px;
+    padding-top: 16px;
     border: 1px solid #e3e3e3 !important;
     background: white !important;
     padding-left: 6px !important;
@@ -8299,6 +8299,47 @@
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:152 */
 .schedulePanels.active .x-panel-header-default {
     background-color: #027f9d !important;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:156 */
+.oldNotes {
+    height: 60% !important;
+    width: 100%;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:160 */
+.newNotes {
+    height: 10% !important;
+    width: 100%;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:165 */
+.sendButton {
+    height: 7% !important;
+    border-radius: 100px;
+    background: #027f9d;
+    border: none;
+    width: 30%;
+    margin: auto auto !important;
+    display: -webkit-box;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:175 */
+.weeknotes {
+    margin-right: 10px !important;
+    margin-left: 5px !important;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:180 */
+.oldNotes .x-panel-header-default-horizontal.x-header-noborder {
+    padding: 5px !important;
+    height: 100% !important;
+    background: white !important;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:186 */
+.oldNotes .x-panel-header-title-default {
+    color: #707070;
+    font-size: 0.8em;
+}
+/* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/main/Main.scss:191 */
+.oldNotes .x-title-text {
+    white-space: unset;
+    word-break: break-word;
 }
 /* /Users/christopherurban/Desktop/projects/SVS/WebClient/classic/sass/src/view/login/Login.scss:3 */
 body {

@@ -4,20 +4,18 @@
  */
 Ext.define('SVSClient.view.main.MainController', {
     extend: 'Ext.app.ViewController',
-
-	listen: {
-		// listen to other controller events
-		controller: {
-			'login': {
-				onSetUser: 'onSetUser',
-            },
-        }
-    },
     
     alias: 'controller.main',
 
     init: function(view) {
-        
+        var me = this;
+
+        me.fillSchedule(view);
+        //Dynamically look up which time and day it is, add cls!!
+    },
+
+    fillSchedule: function(view){
+        var me = this;
         var curr = new Date; // get current date
         var first = curr.getDate() - curr.getDay() +1; // First day is the day of the month - the day of the week
         var last = first + 4; // last day is the first day + 6
@@ -43,29 +41,53 @@ Ext.define('SVSClient.view.main.MainController', {
                         }
                     }
 
-
                     // data.weekdays[day].hours
                 }
             }
-
-		});
-        
-
+            me.fillWeeknotes(data.wochenNotiz);
+        });  
     },
 
-    onSetUser: function(user){
-        this.getViewModel().set('currentuser', user)
-    },
+    fillWeeknotes: function(notes){
+        var me = this;
+        var noteString = '';
+        for(var i = 0; i < notes.length; i++){
+            noteString += "- " + notes[i].text + "<br>";
+        }
+        Ext.getCmp('oldNotes').header.title.setText(noteString)
 
-    onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
 
     onConfirm: function (choice) {
         if (choice === 'yes') {
-            //
+            location.reload();
+            console.log("Loggin out...")
         }
     },
+    
+    onLogout: function(){
+        Ext.Msg.confirm('Logging out..', 'Are you sure?', 'onConfirm', this);
+    },
 
-
+    onSendNotes: function(button, event){
+        var me = this;
+        //Neue Notizen an 
+        // var userClass = me.getViewModel().get('currentuser').get('class');
+        var userClass = "1";
+        var newInput = Ext.getCmp('newNotesField').value;
+    	connection.invoke("addWeekNote", userClass, newInput).then(function(send){
+			
+			if(send){
+                //Füllt die Textbox mit den neuen Notizen
+                var formattedNew = "- " + newInput + "<br>"; 
+                var oldInput = Ext.getCmp('oldNotes').header.title.getText();
+                Ext.getCmp('oldNotes').header.title.setText(oldInput + formattedNew);
+                Ext.getCmp('newNotesField').setValue("");
+                Ext.toast("Sending message..");
+				console.log(user);
+			}else{
+				Ext.toast("Error sending message..");
+			}
+		});
+    }
 });
