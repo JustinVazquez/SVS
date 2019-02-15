@@ -10,7 +10,7 @@ namespace Core.Models
 
         public int Stundenplan_ID { get; set; }
 
-        public string Text { get; set; }
+        public string Inhalt { get; set; }
 
         public DateTime Datum { get; set; }
     }

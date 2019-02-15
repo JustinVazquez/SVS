@@ -10,7 +10,7 @@ namespace SVS
 {
     public static class Email
     {
-        public static void sendMail(List<string> list,string text)
+        public static void sendMail(List<string> list, string text)
         {
             var client = new SmtpClient("smtp.gmail.com", 587)
             {
@@ -20,11 +20,12 @@ namespace SVS
 
             foreach (var item in list)
             {
-                client.Send("SVS.Aenderung@gmail.com",item, "Änderung Stundenplan", text);
+                client.Send("SVS.Aenderung@gmail.com", item, "Änderung Stundenplan", text);
             }
-           
+
             Console.WriteLine("Sent");
             Console.ReadLine();
-        
+
+        }
     }
 }

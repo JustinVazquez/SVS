@@ -191,9 +191,7 @@ namespace WebApi.Hubs
         }      
         #endregion
 
-      
-
-        #endregion
+     
 
         public void SendMail(int klasse,string text) {
 
