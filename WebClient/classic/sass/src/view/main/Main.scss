@@ -45,7 +45,7 @@
     height: 100% !important;
     vertical-align: middle;
     line-height: 60px !important;
-    padding-top: 22px;
+    padding-top: 16px;
     border: 1px solid #e3e3e3 !important;
     background: white !important;
     padding-left: 6px !important;
@@ -151,4 +151,44 @@
 
 .schedulePanels.active .x-panel-header-default{
     background-color: #027F9D !important;
+}
+
+.oldNotes{
+    height: 60% !important;
+    width: 100%;
+}
+.newNotes{
+    height: 10% !important;
+    width: 100%;
+}
+
+.sendButton{
+    height: 7% !important;
+    border-radius: 100px;
+    background: #027F9D;
+    border: none;
+    width: 30%;
+    margin: auto auto !important;
+    display: -webkit-box;
+}
+
+.weeknotes{
+    margin-right: 10px !important;
+    margin-left: 5px !important;
+}
+
+.oldNotes .x-panel-header-default-horizontal.x-header-noborder{
+    padding: 5px !important;
+    height: 100% !important;
+    background: white !important;
+}
+
+.oldNotes .x-panel-header-title-default {
+    color: #707070;
+    font-size: 0.8em;
+}
+
+.oldNotes .x-title-text {
+    white-space: unset;
+    word-break: break-word;
 }

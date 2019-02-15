@@ -35,7 +35,7 @@ namespace WebApi.Hubs
             con.Open();
 
             //Wenn der User existiert dann weiter.
-            if (string.IsNullOrWhiteSpace(UserAccess.GetName(con, name)))
+            if (!string.IsNullOrWhiteSpace(UserAccess.GetName(con, name)))
             {
                 //Hash und Salt aus der Datenbank anhand der UserID die durch den Username ermittelt wird
                 var userID = UserAccess.GetIdByName(con, name);
@@ -63,7 +63,10 @@ namespace WebApi.Hubs
                     con.Close();
                 }
             }
-            return null;
+            
+                return null;
+
+           
         }
 
         /// <summary>
@@ -153,11 +156,12 @@ namespace WebApi.Hubs
         /// <summary>
         /// Liefert den Stundenplan und Notizen für eine Woche anhand der Klasse und einem Datum
         /// </summary>
-        /// <param name="klasse">Klassen ID</param>
-        /// <param name="today">Datum</param>
-        /// <returns>Ein Objekt vom Typ WocheModel</returns>
-        public WocheModel GetStundenplan(int klasse, DateTime today)
-        {       
+        /// <param name="Klasse">Klasse</param>
+        /// <param name="date">Datum</param>
+        /// <returns>Eine Liste aus Elementen vom Typ StundenplanModel</returns>
+        public WocheModel GetStundenplan(int klasse)
+        {
+            var today = DateTime.Now;
             var con = DbHelper.GetDbConnection();
             con.Open();
             int currentDayOfWeek = (int)today.DayOfWeek;

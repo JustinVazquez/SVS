@@ -2,8 +2,6 @@ Ext.define('SVSClient.view.main.Main', {
     extend: 'Ext.window.Window',
 	xtype: 'app-main',
 	requires: [
-		// 'SVSClient.view.login.LoginController',
-		// 'SVSClient.view.login.LoginModel',',
 		'SVSClient.view.main.schedule.Schedule',
 		'Ext.form.Panel',
 	],
@@ -170,8 +168,36 @@ Ext.define('SVSClient.view.main.Main', {
 					{
 						xtype: 'button',
 						height: '100%',
-						width: '60%',
-						text: 'Schedule',
+						width: '12%',
+						text: 'Monday',
+						cls: 'panelTitles',
+					},
+					{
+						xtype: 'button',
+						height: '100%',
+						width: '12%',
+						text: 'Tuesday',
+						cls: 'panelTitles',
+					},
+					{
+						xtype: 'button',
+						height: '100%',
+						width: '11%',
+						text: 'Wednesday',
+						cls: 'panelTitles',
+					},
+					{
+						xtype: 'button',
+						height: '100%',
+						width: '12%',
+						text: 'Thursday',
+						cls: 'panelTitles',
+					},
+					{
+						xtype: 'button',
+						height: '100%',
+						width: '12%',
+						text: 'Friday',
 						cls: 'panelTitles',
 					},
 					{

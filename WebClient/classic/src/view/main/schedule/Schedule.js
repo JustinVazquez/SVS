@@ -32,7 +32,7 @@ Ext.define('SVSClient.view.main.schedule.Schedule', {
 				{
 					xtype: 'panel',
 					title: ' ',
-					cls: 'schedulePanels active',
+					cls: 'schedulePanels',
 					width: '100%',
 					id: 'monday0',
 				},

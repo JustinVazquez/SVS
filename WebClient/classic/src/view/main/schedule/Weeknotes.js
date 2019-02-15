@@ -25,9 +25,37 @@ Ext.define('SVSClient.view.main.schedule.Weeknotes', {
 
 	items:[
         {
-            xtype: 'button',
-            height: 20,
-            width: 20,
-        }
+			xtype: 'panel',
+			id: 'oldNotes',
+			itemId: 'oldNotes',
+            title: ' ',
+			cls: 'oldNotes',
+		},
+		{
+			xtype: 'textfield',
+			name: 'newNotes',
+			id: 'newNotesField',
+			itemId: 'newNotesField',
+			cls: 'newNotes',
+			emptyText: 'New Notes...',
+			allowBlank: false,
+			selectOnFocus: true,
+			listeners: {
+				afterrender: function (field) {
+					setTimeout(function() {
+						field.inputEl.dom.focus();
+					}, 500);
+				}
+			},
+			inputAttrTpl: 'autocapitalize=off'
+		},
+		{
+			xtype: 'button',
+			text: 'Send',
+			formBind: true,
+			handler: 'onSendNotes',
+			cls: 'sendButton',
+		}
+		
 	]
 });

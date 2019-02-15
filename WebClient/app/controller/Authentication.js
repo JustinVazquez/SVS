@@ -4,9 +4,9 @@ Ext.define('SVSClient.controller.Authentication', {
 
     listen : {
         controller : {
-            '*' : {
-                login		: 'login',
-            }
+            // '*' : {
+            //     login		: 'login',
+            // }
         }
     },
 	sessionName: 'services.sid',
@@ -18,21 +18,19 @@ Ext.define('SVSClient.controller.Authentication', {
     login: function(username, password, callback) {
 		console.log("Login authentication called");
 
-		var user;
-		if(username == "test" && password == "test"){
-			Ext.callback(callback.success, callback.scope, []);
-		}else{
-			Ext.callback(callback.failure, callback.scope, []);
-		}
+		// if(username == "test" && password == "test"){
+		// 	Ext.callback(callback.success, callback.scope, ['bla Testuser']);
+		// }else{
+		// 	Ext.callback(callback.failure, callback.scope, []);
+		// }
 
     	connection.invoke("Login", username, password).then(function(data){
-			user = data;
-			
+			var user = data;
 			if(user){
-				Ext.callback(callback.success, callback.scope, user);
 				console.log(user);
+				Ext.callback(callback.success, callback.scope, user);
 			}else{
-				Ext.callback(callback.failure, callback.scope, user);
+				Ext.callback(callback.failure, callback.scope, []);
 			}
 		});
 
