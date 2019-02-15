@@ -243,7 +243,7 @@ namespace WebApi.Hubs
 
             }
 
-            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),int klasse);
+            woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),klasse);
             return woche;
         }      
         #endregion
