@@ -4,6 +4,7 @@ Ext.define('SVSClient.view.main.Main', {
 	requires: [
 		'SVSClient.view.main.schedule.Schedule',
 		'Ext.form.Panel',
+		'SVSClient.view.main.schedule.Popup',
 	],
     controller: 'main',
 	viewModel: {
@@ -17,7 +18,7 @@ Ext.define('SVSClient.view.main.Main', {
 	shim: false,
     shadow: false,
     onEsc: Ext.emptyFn,
-	// width: 300,
+
 	cls: 'main',
 	id: 'main',
 	itemId: 'main',
@@ -26,6 +27,9 @@ Ext.define('SVSClient.view.main.Main', {
 	layout: 'border',
 
 	items:[
+	{
+		xtype: 'popup',
+	},
 	{
 		region: 'north',
 		itemId: 'toptoolbar',
@@ -44,9 +48,7 @@ Ext.define('SVSClient.view.main.Main', {
 		items: [
 			{
 				xtype: 'button',
-				// iconCls: 'moon-mobile2',
 				text: '',
-				// handler: 'onLogout',
 				margin: '10 0 0 10',
 				cls: 'logoutButton',
 				width: '11.8%'
@@ -57,28 +59,17 @@ Ext.define('SVSClient.view.main.Main', {
 				width: '59%',
 				id: 'usernameField',
 				itemId: 'usernameField',
-				title: 'test',
+				title: ' ',
 				cls: 'usernameToolbar',
-				text: 'test',
 			},
 			{
 				xtype: 'button',
-				// iconCls: 'moon-mobile2',
 				text: '<small>Logout</small>',
 				handler: 'onLogout',
 				margin: '10 0 0 10',
 				cls: 'logoutButton',
 				width: '30%'
 			},
-			/*{
-				itemId: 'contentToolbar',
-				xtype: 'maintoolbar.contenttoolbar',
-				cls: 'maintoolbar-contenttoolbar',
-				bind: {
-					disabled: '{!selected.distributiongroup}'
-				},
-				hidden:true
-			}, */
 		]
 	},
 	{
@@ -90,24 +81,13 @@ Ext.define('SVSClient.view.main.Main', {
 		width: '100%',
 		xtype: 'panel',
 		collapsible: false,
-		// header: false,
-		// plain: true,
+
 		layout: {
 			type: 'hbox',
 			align: 'middle'
 		},
 		title: '© Timon Minich, Justin Vazquez, Luca Tecce, Valentin Kohlmann, Christopher Urban',
 		cls: 'authors',
-		// items:[
-		// 	{
-		// 		xtype: 'panel',
-		// 		width: '100%',
-		// 		height: 40,
-				
-		// 		// title: 'Randa<span class="super">&reg;</span> QuickStep<span class="super">&trade;</span>',
-				
-		// 	}
-		// ]
 	},
 	{
 		region: 'center',
@@ -244,15 +224,6 @@ Ext.define('SVSClient.view.main.Main', {
 					},
 				]
 			},
-
 		]
-	},
-	// {
-	// 	xtype: 'panel',
-	// 	width: '100%',
-	// 	height: 500,
-	// },
-	
-	]
-	// }]
+	}]
 });
