@@ -27,10 +27,6 @@ namespace Core.Helper
             {
                 client.Send("SVS.Aenderung@gmail.com", item, "Änderung Stundenplan", text);
             }
-
-            Console.WriteLine("Sent");
-            Console.ReadLine();
-
         }
     }
 }

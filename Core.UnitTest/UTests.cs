@@ -18,21 +18,7 @@ namespace Tests
         public void Setup()
         {
 
-        }
-
-        /*
-         * DateTime today = DateTime.Today;
-        int currentDayOfWeek = (int) today.DayOfWeek;
-        DateTime sunday = today.AddDays(-currentDayOfWeek);
-        DateTime monday = sunday.AddDays(1);
-        // If we started on Sunday, we should actually have gone *back*
-        // 6 days instead of forward 1...
-        if (currentDayOfWeek == 0)
-        {
-        monday = monday.AddDays(-7);
-        }
-        var dates = Enumerable.Range(0, 7).Select(days => monday.AddDays(days)).ToList();
-         * */
+        }   
 
         [Test]
         public void GetStundenPlanbyDatumAndKlasse()
@@ -48,8 +34,7 @@ namespace Tests
                 item.Raum = StundeplanAccess.GetRaumText(con, item.Raum_ID);
                 item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
                 item.Notiz = StundeplanAccess.GetNotiz(con, item.Notiz_ID);
-                item.Notiz.User_Name = UserAccess.GetNameByID(con, item.Notiz.User_ID);
-                
+                item.Notiz.User_Name = UserAccess.GetNameByID(con, item.Notiz.User_ID);               
             }
             con.Close();
             Console.Write("OK");
@@ -103,8 +88,7 @@ namespace Tests
                 try
                 {
                     if (SaltHashHelper.ValidatePassword(password, hash, salt))
-                    {
-                        
+                    {                     
                         var HashnSalt = SaltHashHelper.CreateHash(newPassword);
                         UserAccess.ChangeHash(con, name, HashnSalt.Item1);
                         UserAccess.ChangeSalt(con, name, HashnSalt.Item2);
@@ -141,8 +125,7 @@ namespace Tests
             else
             {
                 Console.Write("Error");
-            }
-          
+            }          
             con.Close();
         }
 
@@ -183,7 +166,7 @@ namespace Tests
         }
 
         [Test]
-        public void TestMethod()
+        public void GetWochenPlan()
         {
             var today = DateTime.Today;
             var klasse = 1;
@@ -248,7 +231,6 @@ namespace Tests
                     item.Fach = StundeplanAccess.GetRaumText(con, item.Fach_ID);
                 }
             }
-
             woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),klasse);
             Console.Write(woche);
         }
@@ -257,10 +239,14 @@ namespace Tests
         public void sendMail()
         {              
             var email = "JustinRamon.Vazquez@gmail.com";
+
+
+            //var tmp = UserAccess.getEmails(con, 1); //Alle Emails der ITM-3
             var list = new List<string>();
             list.Add(email);
             list.Add(email);
-            var text = "Spasti Anderung Lan";
+
+            var text = "Test";
             var client = new SmtpClient("smtp.googlemail.com", 465)
             {
                 Credentials = new NetworkCredential("svs.aenderung@gmail.com", "Projekttage123!"),
@@ -277,4 +263,3 @@ namespace Tests
 
     }
 }
-//https://monarigmbh-my.sharepoint.com/:o:/g/personal/vazquez_monari_de/EgmFD6PxBkdLsl_yK4Kq0iAB3cP40WsfG2mlBJZSNBD70w?e=PfuTXd

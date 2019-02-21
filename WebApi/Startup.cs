@@ -49,10 +49,6 @@ namespace WebApi
                       .AllowCredentials();
            }));
 
-
-
-
-
             // SignalR mit JSON
             services.AddSignalR(hubOptions =>
             {

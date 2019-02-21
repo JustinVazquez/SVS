@@ -172,7 +172,7 @@ namespace Core.Access
         public static List<string> getEmails(IDbConnection con, int klasse)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"SELECT email FROM SVS.USER WHERE klasse = {klasse}";
+            var sql = $"SELECT email FROM SVS.USER WHERE klasse = {klasse} and email is not null";
             var result = con.Query<string>(sql).AsList();
             return result;
         }
