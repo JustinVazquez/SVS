@@ -16,7 +16,7 @@ namespace Core.Access
         public static List<RaumModel> GetAllRaum()
         {
             var con = DbHelper.GetDbConnection();
-            var sql = $"Select * From SVS.Raum";
+            var sql = $"Select * From sql7280199.Raum";
             var result = con.Query<RaumModel>(sql).AsList();
             return result;
         }

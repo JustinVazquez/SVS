@@ -16,7 +16,7 @@ namespace Core.Access
         public static List<StatusModel> GetAllFach()
         {
             var con = DbHelper.GetDbConnection();
-            var sql = $"Select * From SVS.Status";
+            var sql = $"Select * From sql7280199.Status";
             var result = con.Query<StatusModel>(sql).AsList();
             return result;
         }

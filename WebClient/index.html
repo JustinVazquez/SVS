@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
 
     <title>SVSClient</title>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script type="text/javascript">
         var Ext = Ext || {}; // Ext namespace won't be defined yet...
 
@@ -54,32 +54,9 @@
             .withUrl("https://localhost:5001/Main")
             .build();
             
-            connection.start().then(() => test());
-
-        // async function test(p1) {
-        //     x = await connection.invoke("Send", p1);
-        //     document.getElementById("test").innerHTML = x;
-
-        // }
-
-        // function test2(p1) {
-        //     connection.invoke("Send", p1).then(function (s) {
-
-        //         document.getElementById("test").innerHTML = s;
-        //     });
-        // }
-
-
-        // function alle() {
-        //     connection.invoke("Send2");
-        // } 
-
-
-            
+            connection.start().then(() => connecting());           
         
-
-        
-        async function test(){
+        async function connecting(){
             console.log("Connecting....");
             var x = await connection.invoke("Test");
             console.log(x);
