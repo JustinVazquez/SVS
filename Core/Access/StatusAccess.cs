@@ -13,7 +13,7 @@ namespace Core.Access
         ///  Liefert einen Status der einzelnen Stunden
         /// </summary>
         /// <returns>Eine Liste aus Elementen vom Typ StatusModel</returns>
-        public static List<StatusModel> GetAllFach()
+        public static List<StatusModel> GetAllStatus()
         {
             var con = DbHelper.GetDbConnection();
             var sql = $"Select * From sql7280199.Status";

@@ -8,7 +8,8 @@ namespace Core.Helper
 {
     /*
     *    Quelle: https://www.codeproject.com/Articles/704865/Salted-Password-Hashing-Doing-it-Right
-    *            https://github.com/defuse/password-hashing/blob/master/PasswordStorage.cs
+    *            https://github.com/defuse/password-hashing/blob/master/PasswordStorage.cs als Vorlage jedoch haben wir den Quellcode optimiert
+    *            und auf das nötigste Reduziert.
     */
 
     /// <summary>
@@ -29,8 +30,7 @@ namespace Core.Helper
         /// <param name="password">User Password</param>
         /// <returns>Zwei Strings(Hash,Salt)</returns>
         public static (string,string) CreateHash(string password)
-        {
-            
+        {        
             byte[] salt = new byte[SaltByteSize];
             try
             {

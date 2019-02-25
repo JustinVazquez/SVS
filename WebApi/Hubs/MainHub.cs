@@ -288,7 +288,11 @@ namespace WebApi.Hubs
             catch
             {
                 return false;
-            }                          
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         /// <summary>
@@ -301,6 +305,7 @@ namespace WebApi.Hubs
             var con = DbHelper.GetDbConnection();
             con.Open();
             StundeplanAccess.ChangeStatus(con,id,status);
+            con.Close();
         }
         
     }
