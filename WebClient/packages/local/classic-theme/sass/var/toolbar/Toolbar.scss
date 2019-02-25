@@ -1,0 +1,8 @@
+$toolbar-background-color: $base-color;
+$toolbar-text-color: $base-text-color;
+$toolbar-tool-glyph-color: $base-text-color;
+
+@include extjs-toolbar-ui (
+    $ui: 'medialibrary',
+	$background-color: $base-toolbar-background-color
+);

@@ -1,0 +1,8 @@
+$window-border-radius: $base-border-radius;
+$window-border-width: 0px;
+$window-body-background-color: $base-window-background-color;
+
+@include extjs-window-ui (
+    $ui: 'medialibrary',
+	$ui-border-width: 0px
+);

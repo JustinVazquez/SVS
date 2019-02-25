@@ -1,0 +1,4864 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/IcoMoon-Ultimate.eot');
+	src: url('fonts/IcoMoon-Ultimate.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/IcoMoon-Ultimate.woff') format('woff'), 
+	     url('fonts/IcoMoon-Ultimate.ttf')  format('truetype'),
+	     url('fonts/IcoMoon-Ultimate.svg#') format('svg');
+	font-weight: normal;
+    font-style: normal;
+}
+
+$icon-font-family: 'icomoon';
+
+[class^="moon-"], [class*=" moon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.moon-home:before {
+	content: "\e900";
+}
+.moon-home2:before {
+	content: "\e901";
+}
+.moon-home3:before {
+	content: "\e902";
+}
+.moon-home4:before {
+	content: "\e903";
+}
+.moon-home5:before {
+	content: "\e904";
+}
+.moon-home6:before {
+	content: "\e905";
+}
+.moon-home7:before {
+	content: "\e906";
+}
+.moon-home8:before {
+	content: "\e907";
+}
+.moon-home9:before {
+	content: "\e908";
+}
+.moon-office:before {
+	content: "\e909";
+}
+.moon-city:before {
+	content: "\e90a";
+}
+.moon-newspaper:before {
+	content: "\e90b";
+}
+.moon-magazine:before {
+	content: "\e90c";
+}
+.moon-design:before {
+	content: "\e90d";
+}
+.moon-pencil:before {
+	content: "\e90e";
+}
+.moon-pencil2:before {
+	content: "\e90f";
+}
+.moon-pencil3:before {
+	content: "\e910";
+}
+.moon-pencil4:before {
+	content: "\e911";
+}
+.moon-pencil5:before {
+	content: "\e912";
+}
+.moon-pencil6:before {
+	content: "\e913";
+}
+.moon-pencil7:before {
+	content: "\e914";
+}
+.moon-eraser:before {
+	content: "\e915";
+}
+.moon-eraser2:before {
+	content: "\e916";
+}
+.moon-eraser3:before {
+	content: "\e917";
+}
+.moon-quill:before {
+	content: "\e918";
+}
+.moon-quill2:before {
+	content: "\e919";
+}
+.moon-quill3:before {
+	content: "\e91a";
+}
+.moon-quill4:before {
+	content: "\e91b";
+}
+.moon-pen:before {
+	content: "\e91c";
+}
+.moon-pen-plus:before {
+	content: "\e91d";
+}
+.moon-pen-minus:before {
+	content: "\e91e";
+}
+.moon-pen2:before {
+	content: "\e91f";
+}
+.moon-pen3:before {
+	content: "\e920";
+}
+.moon-pen4:before {
+	content: "\e921";
+}
+.moon-pen5:before {
+	content: "\e922";
+}
+.moon-marker:before {
+	content: "\e923";
+}
+.moon-marker2:before {
+	content: "\e924";
+}
+.moon-blog:before {
+	content: "\e925";
+}
+.moon-blog2:before {
+	content: "\e926";
+}
+.moon-pen6:before {
+	content: "\e927";
+}
+.moon-brush:before {
+	content: "\e928";
+}
+.moon-spray:before {
+	content: "\e929";
+}
+.moon-palette:before {
+	content: "\e92a";
+}
+.moon-palette2:before {
+	content: "\e92b";
+}
+.moon-color-sampler:before {
+	content: "\e92c";
+}
+.moon-toggle:before {
+	content: "\e92d";
+}
+.moon-bucket:before {
+	content: "\e92e";
+}
+.moon-bucket2:before {
+	content: "\e92f";
+}
+.moon-gradient:before {
+	content: "\e930";
+}
+.moon-eyedropper:before {
+	content: "\e931";
+}
+.moon-eyedropper2:before {
+	content: "\e932";
+}
+.moon-eyedropper3:before {
+	content: "\e933";
+}
+.moon-droplet:before {
+	content: "\e934";
+}
+.moon-droplet2:before {
+	content: "\e935";
+}
+.moon-droplet-contrast:before {
+	content: "\e936";
+}
+.moon-color-clear:before {
+	content: "\e937";
+}
+.moon-paint-format:before {
+	content: "\e938";
+}
+.moon-stamp:before {
+	content: "\e939";
+}
+.moon-images:before {
+	content: "\e93a";
+}
+.moon-image:before {
+	content: "\e93b";
+}
+.moon-image2:before {
+	content: "\e93c";
+}
+.moon-image-compare:before {
+	content: "\e93d";
+}
+.moon-images2:before {
+	content: "\e93e";
+}
+.moon-image3:before {
+	content: "\e93f";
+}
+.moon-images3:before {
+	content: "\e940";
+}
+.moon-image4:before {
+	content: "\e941";
+}
+.moon-image5:before {
+	content: "\e942";
+}
+.moon-image6:before {
+	content: "\e943";
+}
+.moon-camera:before {
+	content: "\e944";
+}
+.moon-camera2:before {
+	content: "\e945";
+}
+.moon-camera3:before {
+	content: "\e946";
+}
+.moon-shutter:before {
+	content: "\e947";
+}
+.moon-headphones:before {
+	content: "\e948";
+}
+.moon-headset:before {
+	content: "\e949";
+}
+.moon-music:before {
+	content: "\e94a";
+}
+.moon-music2:before {
+	content: "\e94b";
+}
+.moon-music3:before {
+	content: "\e94c";
+}
+.moon-music4:before {
+	content: "\e94d";
+}
+.moon-music5:before {
+	content: "\e94e";
+}
+.moon-music6:before {
+	content: "\e94f";
+}
+.moon-album:before {
+	content: "\e950";
+}
+.moon-cassette:before {
+	content: "\e951";
+}
+.moon-tape:before {
+	content: "\e952";
+}
+.moon-piano:before {
+	content: "\e953";
+}
+.moon-guitar:before {
+	content: "\e954";
+}
+.moon-trumpet:before {
+	content: "\e955";
+}
+.moon-speakers:before {
+	content: "\e956";
+}
+.moon-play:before {
+	content: "\e957";
+}
+.moon-play2:before {
+	content: "\e958";
+}
+.moon-clapboard-play:before {
+	content: "\e959";
+}
+.moon-clapboard:before {
+	content: "\e95a";
+}
+.moon-media:before {
+	content: "\e95b";
+}
+.moon-presentation:before {
+	content: "\e95c";
+}
+.moon-movie:before {
+	content: "\e95d";
+}
+.moon-film:before {
+	content: "\e95e";
+}
+.moon-film2:before {
+	content: "\e95f";
+}
+.moon-film3:before {
+	content: "\e960";
+}
+.moon-film4:before {
+	content: "\e961";
+}
+.moon-video-camera:before {
+	content: "\e962";
+}
+.moon-video-camera2:before {
+	content: "\e963";
+}
+.moon-video-camera-slash:before {
+	content: "\e964";
+}
+.moon-video-camera3:before {
+	content: "\e965";
+}
+.moon-video-camera4:before {
+	content: "\e966";
+}
+.moon-video-camera-slash2:before {
+	content: "\e967";
+}
+.moon-video-camera5:before {
+	content: "\e968";
+}
+.moon-recording:before {
+	content: "\e969";
+}
+.moon-dice:before {
+	content: "\e96a";
+}
+.moon-gamepad:before {
+	content: "\e96b";
+}
+.moon-gamepad2:before {
+	content: "\e96c";
+}
+.moon-gamepad3:before {
+	content: "\e96d";
+}
+.moon-pacman:before {
+	content: "\e96e";
+}
+.moon-spades:before {
+	content: "\e96f";
+}
+.moon-clubs:before {
+	content: "\e970";
+}
+.moon-diamonds:before {
+	content: "\e971";
+}
+.moon-chess-king:before {
+	content: "\e972";
+}
+.moon-chess-queen:before {
+	content: "\e973";
+}
+.moon-chess-rook:before {
+	content: "\e974";
+}
+.moon-chess-bishop:before {
+	content: "\e975";
+}
+.moon-chess-knight:before {
+	content: "\e976";
+}
+.moon-chess-pawn:before {
+	content: "\e977";
+}
+.moon-chess:before {
+	content: "\e978";
+}
+.moon-bullhorn:before {
+	content: "\e979";
+}
+.moon-megaphone:before {
+	content: "\e97a";
+}
+.moon-new:before {
+	content: "\e97b";
+}
+.moon-connection:before {
+	content: "\e97c";
+}
+.moon-connection2:before {
+	content: "\e97d";
+}
+.moon-connection3:before {
+	content: "\e97e";
+}
+.moon-connection4:before {
+	content: "\e97f";
+}
+.moon-podcast:before {
+	content: "\e980";
+}
+.moon-station:before {
+	content: "\e981";
+}
+.moon-station2:before {
+	content: "\e982";
+}
+.moon-antenna:before {
+	content: "\e983";
+}
+.moon-satellite-dish:before {
+	content: "\e984";
+}
+.moon-satellite-dish2:before {
+	content: "\e985";
+}
+.moon-feed:before {
+	content: "\e986";
+}
+.moon-podcast2:before {
+	content: "\e987";
+}
+.moon-antenna2:before {
+	content: "\e988";
+}
+.moon-mic:before {
+	content: "\e989";
+}
+.moon-mic-off:before {
+	content: "\e98a";
+}
+.moon-mic2:before {
+	content: "\e98b";
+}
+.moon-mic-off2:before {
+	content: "\e98c";
+}
+.moon-mic3:before {
+	content: "\e98d";
+}
+.moon-mic4:before {
+	content: "\e98e";
+}
+.moon-mic5:before {
+	content: "\e98f";
+}
+.moon-book:before {
+	content: "\e990";
+}
+.moon-book2:before {
+	content: "\e991";
+}
+.moon-book-play:before {
+	content: "\e992";
+}
+.moon-book3:before {
+	content: "\e993";
+}
+.moon-bookmark:before {
+	content: "\e994";
+}
+.moon-books:before {
+	content: "\e995";
+}
+.moon-archive:before {
+	content: "\e996";
+}
+.moon-reading:before {
+	content: "\e997";
+}
+.moon-library:before {
+	content: "\e998";
+}
+.moon-library2:before {
+	content: "\e999";
+}
+.moon-graduation:before {
+	content: "\e99a";
+}
+.moon-file-text:before {
+	content: "\e99b";
+}
+.moon-profile:before {
+	content: "\e99c";
+}
+.moon-file-empty:before {
+	content: "\e99d";
+}
+.moon-file-empty2:before {
+	content: "\e99e";
+}
+.moon-files-empty:before {
+	content: "\e99f";
+}
+.moon-files-empty2:before {
+	content: "\e9a0";
+}
+.moon-file-plus:before {
+	content: "\e9a1";
+}
+.moon-file-plus2:before {
+	content: "\e9a2";
+}
+.moon-file-minus:before {
+	content: "\e9a3";
+}
+.moon-file-minus2:before {
+	content: "\e9a4";
+}
+.moon-file-download:before {
+	content: "\e9a5";
+}
+.moon-file-download2:before {
+	content: "\e9a6";
+}
+.moon-file-upload:before {
+	content: "\e9a7";
+}
+.moon-file-upload2:before {
+	content: "\e9a8";
+}
+.moon-file-check:before {
+	content: "\e9a9";
+}
+.moon-file-check2:before {
+	content: "\e9aa";
+}
+.moon-file-eye:before {
+	content: "\e9ab";
+}
+.moon-file-eye2:before {
+	content: "\e9ac";
+}
+.moon-file-text2:before {
+	content: "\e9ad";
+}
+.moon-file-text3:before {
+	content: "\e9ae";
+}
+.moon-file-picture:before {
+	content: "\e9af";
+}
+.moon-file-picture2:before {
+	content: "\e9b0";
+}
+.moon-file-music:before {
+	content: "\e9b1";
+}
+.moon-file-music2:before {
+	content: "\e9b2";
+}
+.moon-file-play:before {
+	content: "\e9b3";
+}
+.moon-file-play2:before {
+	content: "\e9b4";
+}
+.moon-file-video:before {
+	content: "\e9b5";
+}
+.moon-file-video2:before {
+	content: "\e9b6";
+}
+.moon-copy:before {
+	content: "\e9b7";
+}
+.moon-copy2:before {
+	content: "\e9b8";
+}
+.moon-file-zip:before {
+	content: "\e9b9";
+}
+.moon-file-zip2:before {
+	content: "\e9ba";
+}
+.moon-file-xml:before {
+	content: "\e9bb";
+}
+.moon-file-xml2:before {
+	content: "\e9bc";
+}
+.moon-file-css:before {
+	content: "\e9bd";
+}
+.moon-file-css2:before {
+	content: "\e9be";
+}
+.moon-file-presentation:before {
+	content: "\e9bf";
+}
+.moon-file-presentation2:before {
+	content: "\e9c0";
+}
+.moon-file-stats:before {
+	content: "\e9c1";
+}
+.moon-file-stats2:before {
+	content: "\e9c2";
+}
+.moon-file-locked:before {
+	content: "\e9c3";
+}
+.moon-file-locked2:before {
+	content: "\e9c4";
+}
+.moon-file-spreadsheet:before {
+	content: "\e9c5";
+}
+.moon-file-spreadsheet2:before {
+	content: "\e9c6";
+}
+.moon-copy3:before {
+	content: "\e9c7";
+}
+.moon-copy4:before {
+	content: "\e9c8";
+}
+.moon-paste:before {
+	content: "\e9c9";
+}
+.moon-paste2:before {
+	content: "\e9ca";
+}
+.moon-paste3:before {
+	content: "\e9cb";
+}
+.moon-paste4:before {
+	content: "\e9cc";
+}
+.moon-stack:before {
+	content: "\e9cd";
+}
+.moon-stack2:before {
+	content: "\e9ce";
+}
+.moon-stack3:before {
+	content: "\e9cf";
+}
+.moon-folder:before {
+	content: "\e9d0";
+}
+.moon-folder-search:before {
+	content: "\e9d1";
+}
+.moon-folder-download:before {
+	content: "\e9d2";
+}
+.moon-folder-upload:before {
+	content: "\e9d3";
+}
+.moon-folder-plus:before {
+	content: "\e9d4";
+}
+.moon-folder-plus2:before {
+	content: "\e9d5";
+}
+.moon-folder-minus:before {
+	content: "\e9d6";
+}
+.moon-folder-minus2:before {
+	content: "\e9d7";
+}
+.moon-folder-check:before {
+	content: "\e9d8";
+}
+.moon-folder-heart:before {
+	content: "\e9d9";
+}
+.moon-folder-remove:before {
+	content: "\e9da";
+}
+.moon-folder2:before {
+	content: "\e9db";
+}
+.moon-folder-open:before {
+	content: "\e9dc";
+}
+.moon-folder3:before {
+	content: "\e9dd";
+}
+.moon-folder4:before {
+	content: "\e9de";
+}
+.moon-folder-plus3:before {
+	content: "\e9df";
+}
+.moon-folder-minus3:before {
+	content: "\e9e0";
+}
+.moon-folder-plus4:before {
+	content: "\e9e1";
+}
+.moon-folder-minus4:before {
+	content: "\e9e2";
+}
+.moon-folder-download2:before {
+	content: "\e9e3";
+}
+.moon-folder-upload2:before {
+	content: "\e9e4";
+}
+.moon-folder-download3:before {
+	content: "\e9e5";
+}
+.moon-folder-upload3:before {
+	content: "\e9e6";
+}
+.moon-folder5:before {
+	content: "\e9e7";
+}
+.moon-folder-open2:before {
+	content: "\e9e8";
+}
+.moon-folder6:before {
+	content: "\e9e9";
+}
+.moon-folder-open3:before {
+	content: "\e9ea";
+}
+.moon-certificate:before {
+	content: "\e9eb";
+}
+.moon-cc:before {
+	content: "\e9ec";
+}
+.moon-price-tag:before {
+	content: "\e9ed";
+}
+.moon-price-tag2:before {
+	content: "\e9ee";
+}
+.moon-price-tags:before {
+	content: "\e9ef";
+}
+.moon-price-tag3:before {
+	content: "\e9f0";
+}
+.moon-price-tags2:before {
+	content: "\e9f1";
+}
+.moon-price-tag4:before {
+	content: "\e9f2";
+}
+.moon-price-tags3:before {
+	content: "\e9f3";
+}
+.moon-price-tag5:before {
+	content: "\e9f4";
+}
+.moon-price-tags4:before {
+	content: "\e9f5";
+}
+.moon-barcode:before {
+	content: "\e9f6";
+}
+.moon-barcode2:before {
+	content: "\e9f7";
+}
+.moon-qrcode:before {
+	content: "\e9f8";
+}
+.moon-ticket:before {
+	content: "\e9f9";
+}
+.moon-ticket2:before {
+	content: "\e9fa";
+}
+.moon-theater:before {
+	content: "\e9fb";
+}
+.moon-store:before {
+	content: "\e9fc";
+}
+.moon-store2:before {
+	content: "\e9fd";
+}
+.moon-cart:before {
+	content: "\e9fe";
+}
+.moon-cart2:before {
+	content: "\e9ff";
+}
+.moon-cart3:before {
+	content: "\ea00";
+}
+.moon-cart4:before {
+	content: "\ea01";
+}
+.moon-cart5:before {
+	content: "\ea02";
+}
+.moon-cart-add:before {
+	content: "\ea03";
+}
+.moon-cart-add2:before {
+	content: "\ea04";
+}
+.moon-cart-remove:before {
+	content: "\ea05";
+}
+.moon-basket:before {
+	content: "\ea06";
+}
+.moon-bag:before {
+	content: "\ea07";
+}
+.moon-bag2:before {
+	content: "\ea08";
+}
+.moon-percent:before {
+	content: "\ea09";
+}
+.moon-coins:before {
+	content: "\ea0a";
+}
+.moon-coin-dollar:before {
+	content: "\ea0b";
+}
+.moon-coin-euro:before {
+	content: "\ea0c";
+}
+.moon-coin-pound:before {
+	content: "\ea0d";
+}
+.moon-coin-yen:before {
+	content: "\ea0e";
+}
+.moon-piggy-bank:before {
+	content: "\ea0f";
+}
+.moon-wallet:before {
+	content: "\ea10";
+}
+.moon-cash:before {
+	content: "\ea11";
+}
+.moon-cash2:before {
+	content: "\ea12";
+}
+.moon-cash3:before {
+	content: "\ea13";
+}
+.moon-cash4:before {
+	content: "\ea14";
+}
+.moon-credit-card:before {
+	content: "\ea15";
+}
+.moon-credit-card2:before {
+	content: "\ea16";
+}
+.moon-calculator:before {
+	content: "\ea17";
+}
+.moon-calculator2:before {
+	content: "\ea18";
+}
+.moon-calculator3:before {
+	content: "\ea19";
+}
+.moon-chip:before {
+	content: "\ea1a";
+}
+.moon-lifebuoy:before {
+	content: "\ea1b";
+}
+.moon-phone:before {
+	content: "\ea1c";
+}
+.moon-phone2:before {
+	content: "\ea1d";
+}
+.moon-phone-slash:before {
+	content: "\ea1e";
+}
+.moon-phone-wave:before {
+	content: "\ea1f";
+}
+.moon-phone-plus:before {
+	content: "\ea20";
+}
+.moon-phone-minus:before {
+	content: "\ea21";
+}
+.moon-phone-plus2:before {
+	content: "\ea22";
+}
+.moon-phone-minus2:before {
+	content: "\ea23";
+}
+.moon-phone-incoming:before {
+	content: "\ea24";
+}
+.moon-phone-outgoing:before {
+	content: "\ea25";
+}
+.moon-phone3:before {
+	content: "\ea26";
+}
+.moon-phone-slash2:before {
+	content: "\ea27";
+}
+.moon-phone-wave2:before {
+	content: "\ea28";
+}
+.moon-phone-hang-up:before {
+	content: "\ea29";
+}
+.moon-phone-hang-up2:before {
+	content: "\ea2a";
+}
+.moon-address-book:before {
+	content: "\ea2b";
+}
+.moon-address-book2:before {
+	content: "\ea2c";
+}
+.moon-address-book3:before {
+	content: "\ea2d";
+}
+.moon-notebook:before {
+	content: "\ea2e";
+}
+.moon-at-sign:before {
+	content: "\ea2f";
+}
+.moon-envelop:before {
+	content: "\ea30";
+}
+.moon-envelop2:before {
+	content: "\ea31";
+}
+.moon-envelop3:before {
+	content: "\ea32";
+}
+.moon-envelop4:before {
+	content: "\ea33";
+}
+.moon-envelop5:before {
+	content: "\ea34";
+}
+.moon-mailbox:before {
+	content: "\ea35";
+}
+.moon-pushpin:before {
+	content: "\ea36";
+}
+.moon-pushpin2:before {
+	content: "\ea37";
+}
+.moon-location:before {
+	content: "\ea38";
+}
+.moon-location2:before {
+	content: "\ea39";
+}
+.moon-location3:before {
+	content: "\ea3a";
+}
+.moon-location4:before {
+	content: "\ea3b";
+}
+.moon-location5:before {
+	content: "\ea3c";
+}
+.moon-location6:before {
+	content: "\ea3d";
+}
+.moon-location7:before {
+	content: "\ea3e";
+}
+.moon-compass:before {
+	content: "\ea3f";
+}
+.moon-compass2:before {
+	content: "\ea40";
+}
+.moon-compass3:before {
+	content: "\ea41";
+}
+.moon-compass4:before {
+	content: "\ea42";
+}
+.moon-compass5:before {
+	content: "\ea43";
+}
+.moon-compass6:before {
+	content: "\ea44";
+}
+.moon-map:before {
+	content: "\ea45";
+}
+.moon-map2:before {
+	content: "\ea46";
+}
+.moon-map3:before {
+	content: "\ea47";
+}
+.moon-map4:before {
+	content: "\ea48";
+}
+.moon-map5:before {
+	content: "\ea49";
+}
+.moon-direction:before {
+	content: "\ea4a";
+}
+.moon-reset:before {
+	content: "\ea4b";
+}
+.moon-history:before {
+	content: "\ea4c";
+}
+.moon-clock:before {
+	content: "\ea4d";
+}
+.moon-clock2:before {
+	content: "\ea4e";
+}
+.moon-clock3:before {
+	content: "\ea4f";
+}
+.moon-clock4:before {
+	content: "\ea50";
+}
+.moon-watch:before {
+	content: "\ea51";
+}
+.moon-watch2:before {
+	content: "\ea52";
+}
+.moon-alarm:before {
+	content: "\ea53";
+}
+.moon-alarm-add:before {
+	content: "\ea54";
+}
+.moon-alarm-check:before {
+	content: "\ea55";
+}
+.moon-alarm-cancel:before {
+	content: "\ea56";
+}
+.moon-bell:before {
+	content: "\ea57";
+}
+.moon-bell2:before {
+	content: "\ea58";
+}
+.moon-bell3:before {
+	content: "\ea59";
+}
+.moon-bell-plus:before {
+	content: "\ea5a";
+}
+.moon-bell-minus:before {
+	content: "\ea5b";
+}
+.moon-bell-check:before {
+	content: "\ea5c";
+}
+.moon-bell-cross:before {
+	content: "\ea5d";
+}
+.moon-stopwatch:before {
+	content: "\ea5e";
+}
+.moon-calendar:before {
+	content: "\ea5f";
+}
+.moon-calendar2:before {
+	content: "\ea60";
+}
+.moon-calendar3:before {
+	content: "\ea61";
+}
+.moon-calendar4:before {
+	content: "\ea62";
+}
+.moon-calendar5:before {
+	content: "\ea63";
+}
+.moon-calendar-empty:before {
+	content: "\ea64";
+}
+.moon-calendar-day:before {
+	content: "\ea65";
+}
+.moon-calendar-week:before {
+	content: "\ea66";
+}
+.moon-printer:before {
+	content: "\ea67";
+}
+.moon-printer2:before {
+	content: "\ea68";
+}
+.moon-printer3:before {
+	content: "\ea69";
+}
+.moon-printer4:before {
+	content: "\ea6a";
+}
+.moon-shredder:before {
+	content: "\ea6b";
+}
+.moon-mouse:before {
+	content: "\ea6c";
+}
+.moon-mouse2:before {
+	content: "\ea6d";
+}
+.moon-mouse-left:before {
+	content: "\ea6e";
+}
+.moon-mouse-right:before {
+	content: "\ea6f";
+}
+.moon-keyboard:before {
+	content: "\ea70";
+}
+.moon-keyboard2:before {
+	content: "\ea71";
+}
+.moon-typewriter:before {
+	content: "\ea72";
+}
+.moon-display:before {
+	content: "\ea73";
+}
+.moon-display2:before {
+	content: "\ea74";
+}
+.moon-display3:before {
+	content: "\ea75";
+}
+.moon-display4:before {
+	content: "\ea76";
+}
+.moon-laptop:before {
+	content: "\ea77";
+}
+.moon-mobile:before {
+	content: "\ea78";
+}
+.moon-mobile2:before {
+	content: "\ea79";
+}
+.moon-tablet:before {
+	content: "\ea7a";
+}
+.moon-mobile3:before {
+	content: "\ea7b";
+}
+.moon-tv:before {
+	content: "\ea7c";
+}
+.moon-radio:before {
+	content: "\ea7d";
+}
+.moon-cabinet:before {
+	content: "\ea7e";
+}
+.moon-drawer:before {
+	content: "\ea7f";
+}
+.moon-drawer2:before {
+	content: "\ea80";
+}
+.moon-drawer-out:before {
+	content: "\ea81";
+}
+.moon-drawer-in:before {
+	content: "\ea82";
+}
+.moon-drawer3:before {
+	content: "\ea83";
+}
+.moon-box:before {
+	content: "\ea84";
+}
+.moon-box-add:before {
+	content: "\ea85";
+}
+.moon-box-remove:before {
+	content: "\ea86";
+}
+.moon-download:before {
+	content: "\ea87";
+}
+.moon-upload:before {
+	content: "\ea88";
+}
+.moon-floppy-disk:before {
+	content: "\ea89";
+}
+.moon-floppy-disks:before {
+	content: "\ea8a";
+}
+.moon-floppy-disks2:before {
+	content: "\ea8b";
+}
+.moon-floppy-disk2:before {
+	content: "\ea8c";
+}
+.moon-floppy-disk3:before {
+	content: "\ea8d";
+}
+.moon-disk:before {
+	content: "\ea8e";
+}
+.moon-disk2:before {
+	content: "\ea8f";
+}
+.moon-usb-stick:before {
+	content: "\ea90";
+}
+.moon-drive:before {
+	content: "\ea91";
+}
+.moon-server:before {
+	content: "\ea92";
+}
+.moon-database:before {
+	content: "\ea93";
+}
+.moon-database2:before {
+	content: "\ea94";
+}
+.moon-database3:before {
+	content: "\ea95";
+}
+.moon-database4:before {
+	content: "\ea96";
+}
+.moon-database-menu:before {
+	content: "\ea97";
+}
+.moon-database-add:before {
+	content: "\ea98";
+}
+.moon-database-remove:before {
+	content: "\ea99";
+}
+.moon-database-insert:before {
+	content: "\ea9a";
+}
+.moon-database-export:before {
+	content: "\ea9b";
+}
+.moon-database-upload:before {
+	content: "\ea9c";
+}
+.moon-database-refresh:before {
+	content: "\ea9d";
+}
+.moon-database-diff:before {
+	content: "\ea9e";
+}
+.moon-database-edit:before {
+	content: "\ea9f";
+}
+.moon-database-edit2:before {
+	content: "\eaa0";
+}
+.moon-database-check:before {
+	content: "\eaa1";
+}
+.moon-database-arrow:before {
+	content: "\eaa2";
+}
+.moon-database-time:before {
+	content: "\eaa3";
+}
+.moon-database-time2:before {
+	content: "\eaa4";
+}
+.moon-undo:before {
+	content: "\eaa5";
+}
+.moon-redo:before {
+	content: "\eaa6";
+}
+.moon-rotate-ccw:before {
+	content: "\eaa7";
+}
+.moon-rotate-cw:before {
+	content: "\eaa8";
+}
+.moon-rotate-ccw2:before {
+	content: "\eaa9";
+}
+.moon-rotate-cw2:before {
+	content: "\eaaa";
+}
+.moon-rotate-ccw3:before {
+	content: "\eaab";
+}
+.moon-rotate-cw3:before {
+	content: "\eaac";
+}
+.moon-flip-vertical:before {
+	content: "\eaaa";
+}
+.moon-flip-vertical2:before {
+	content: "\eaab";
+}
+.moon-flip-horizontal:before {
+	content: "\eaac";
+}
+.moon-flip-horizontal2:before {
+	content: "\eabd";
+}
+.moon-flip-vertical3:before {
+	content: "\eaae";
+}
+.moon-flip-vertical4:before {
+	content: "\eaaf";
+}
+.moon-angle:before {
+	content: "\eab3";
+}
+.moon-shear:before {
+	content: "\eab4";
+}
+.moon-unite:before {
+	content: "\eab5";
+}
+.moon-subtract:before {
+	// content: "\eab6";
+	content: "\eab3";
+}
+.moon-interset:before {
+	content: "\eab7";
+}
+.moon-exclude:before {
+	content: "\eab8";
+}
+.moon-align-left:before {
+	content: "\eab9";
+}
+.moon-align-center-horizontal:before {
+	content: "\eab7";
+}
+.moon-align-right:before {
+	content: "\eabb";
+}
+.moon-align-top:before {
+	content: "\eabc";
+}
+.moon-align-center-vertical:before {
+	content: "\eaba";
+}
+.moon-align-bottom:before {
+	content: "\eabe";
+}
+.moon-undo2:before {
+	content: "\eabf";
+}
+.moon-redo2:before {
+	content: "\eac0";
+}
+.moon-forward:before {
+	content: "\eac1";
+}
+.moon-reply:before {
+	content: "\eac2";
+}
+.moon-reply-all:before {
+	content: "\eac3";
+}
+.moon-bubble:before {
+	content: "\eac4";
+}
+.moon-bubbles:before {
+	content: "\eac5";
+}
+.moon-bubbles2:before {
+	content: "\eac6";
+}
+.moon-bubble2:before {
+	content: "\eac7";
+}
+.moon-bubbles3:before {
+	content: "\eac8";
+}
+.moon-bubbles4:before {
+	content: "\eac9";
+}
+.moon-bubble-notification:before {
+	content: "\eaca";
+}
+.moon-bubbles5:before {
+	content: "\eacb";
+}
+.moon-bubbles6:before {
+	content: "\eacc";
+}
+.moon-bubble3:before {
+	content: "\eacd";
+}
+.moon-bubble-dots:before {
+	content: "\eace";
+}
+.moon-bubble-lines:before {
+	content: "\eacf";
+}
+.moon-bubble4:before {
+	content: "\ead0";
+}
+.moon-bubble-dots2:before {
+	content: "\ead1";
+}
+.moon-bubble-lines2:before {
+	content: "\ead2";
+}
+.moon-bubble5:before {
+	content: "\ead3";
+}
+.moon-bubble6:before {
+	content: "\ead4";
+}
+.moon-bubbles7:before {
+	content: "\ead5";
+}
+.moon-bubble7:before {
+	content: "\ead6";
+}
+.moon-bubbles8:before {
+	content: "\ead7";
+}
+.moon-bubble8:before {
+	content: "\ead8";
+}
+.moon-bubble-dots3:before {
+	content: "\ead9";
+}
+.moon-bubble-lines3:before {
+	content: "\eada";
+}
+.moon-bubble9:before {
+	content: "\eadb";
+}
+.moon-bubble-dots4:before {
+	content: "\eadc";
+}
+.moon-bubble-lines4:before {
+	content: "\eadd";
+}
+.moon-bubbles9:before {
+	content: "\eade";
+}
+.moon-bubbles10:before {
+	content: "\eadf";
+}
+.moon-bubble-blocked:before {
+	content: "\eae0";
+}
+.moon-bubble-quote:before {
+	content: "\eae1";
+}
+.moon-bubble-user:before {
+	content: "\eae2";
+}
+.moon-bubble-smiley:before {
+	content: "\eae3";
+}
+.moon-bubble-check:before {
+	content: "\eae4";
+}
+.moon-bubble-video:before {
+	content: "\eae5";
+}
+.moon-bubble-link:before {
+	content: "\eae6";
+}
+.moon-bubble-lock:before {
+	content: "\eae7";
+}
+.moon-bubble-star:before {
+	content: "\eae8";
+}
+.moon-bubble-heart:before {
+	content: "\eae9";
+}
+.moon-bubble-paperclip:before {
+	content: "\eaea";
+}
+.moon-bubble-cancel:before {
+	content: "\eaeb";
+}
+.moon-bubble-plus:before {
+	content: "\eaec";
+}
+.moon-bubble-minus:before {
+	content: "\eaed";
+}
+.moon-bubble-notification2:before {
+	content: "\eaee";
+}
+.moon-bubble-left:before {
+	content: "\eaef";
+}
+.moon-bubble-right:before {
+	content: "\eaf0";
+}
+.moon-bubble-first:before {
+	content: "\eaf1";
+}
+.moon-bubble-last:before {
+	content: "\eaf2";
+}
+.moon-bubble-reply:before {
+	content: "\eaf3";
+}
+.moon-bubble-forward:before {
+	content: "\eaf4";
+}
+.moon-bubble-reply2:before {
+	content: "\eaf5";
+}
+.moon-bubble-forward2:before {
+	content: "\eaf6";
+}
+.moon-user:before {
+	content: "\eaf7";
+}
+.moon-users:before {
+	content: "\eaf8";
+}
+.moon-user-plus:before {
+	content: "\eaf9";
+}
+.moon-user-minus:before {
+	content: "\eafa";
+}
+.moon-user-cancel:before {
+	content: "\eafb";
+}
+.moon-user-block:before {
+	content: "\eafc";
+}
+.moon-user-lock:before {
+	content: "\eafd";
+}
+.moon-user-check:before {
+	content: "\eafe";
+}
+.moon-users2:before {
+	content: "\eaff";
+}
+.moon-user2:before {
+	content: "\eb00";
+}
+.moon-users3:before {
+	content: "\eb01";
+}
+.moon-user-plus2:before {
+	content: "\eb02";
+}
+.moon-user-minus2:before {
+	content: "\eb03";
+}
+.moon-user-cancel2:before {
+	content: "\eb04";
+}
+.moon-user-block2:before {
+	content: "\eb05";
+}
+.moon-user-lock2:before {
+	content: "\eb06";
+}
+.moon-user-check2:before {
+	content: "\eb07";
+}
+.moon-user3:before {
+	content: "\eb08";
+}
+.moon-user4:before {
+	content: "\eb09";
+}
+.moon-user5:before {
+	content: "\eb0a";
+}
+.moon-user6:before {
+	content: "\eb0b";
+}
+.moon-users4:before {
+	content: "\eb0c";
+}
+.moon-user-tie:before {
+	content: "\eb0d";
+}
+.moon-user7:before {
+	content: "\eb0e";
+}
+.moon-users5:before {
+	content: "\eb0f";
+}
+.moon-collaboration:before {
+	content: "\eb10";
+}
+.moon-vcard:before {
+	content: "\eb11";
+}
+.moon-hat:before {
+	content: "\eb12";
+}
+.moon-bowtie:before {
+	content: "\eb13";
+}
+.moon-tie:before {
+	content: "\eb14";
+}
+.moon-hanger:before {
+	content: "\eb15";
+}
+.moon-tshirt:before {
+	content: "\eb16";
+}
+.moon-pants:before {
+	content: "\eb17";
+}
+.moon-shorts:before {
+	content: "\eb18";
+}
+.moon-sock:before {
+	content: "\eb19";
+}
+.moon-laundry:before {
+	content: "\eb1a";
+}
+.moon-quotes-left:before {
+	content: "\eb1b";
+}
+.moon-quotes-right:before {
+	content: "\eb1c";
+}
+.moon-quotes-left2:before {
+	content: "\eb1d";
+}
+.moon-quotes-right2:before {
+	content: "\eb1e";
+}
+.moon-hour-glass:before {
+	content: "\eb1f";
+}
+.moon-hour-glass2:before {
+	content: "\eb20";
+}
+.moon-hour-glass3:before {
+	content: "\eb21";
+}
+.moon-spinner:before {
+	content: "\eb22";
+}
+.moon-spinner2:before {
+	content: "\eb23";
+}
+.moon-spinner3:before {
+	content: "\eb24";
+}
+.moon-spinner4:before {
+	content: "\eb25";
+}
+.moon-spinner5:before {
+	content: "\eb26";
+}
+.moon-spinner6:before {
+	content: "\eb27";
+}
+.moon-spinner7:before {
+	content: "\eb28";
+}
+.moon-spinner8:before {
+	content: "\eb29";
+}
+.moon-spinner9:before {
+	content: "\eb2a";
+}
+.moon-spinner10:before {
+	content: "\eb2b";
+}
+.moon-spinner11:before {
+	content: "\eb2c";
+}
+.moon-microscope:before {
+	content: "\eb2d";
+}
+.moon-binoculars:before {
+	content: "\eb2e";
+}
+.moon-binoculars2:before {
+	content: "\eb2f";
+}
+.moon-search:before {
+	content: "\eb30";
+}
+.moon-zoom-in:before {
+	content: "\eb31";
+}
+.moon-zoom-out:before {
+	content: "\eb32";
+}
+.moon-search2:before {
+	content: "\eb30";
+}
+.moon-zoom-in2:before {
+	content: "\eb31";
+}
+.moon-zoom-out2:before {
+	content: "\eb32";
+}
+.moon-search3:before {
+	content: "\eb33";
+}
+.moon-search4:before {
+	content: "\eb34";
+}
+.moon-zoom-in3:before {
+	content: "\eb35";
+}
+.moon-zoom-out3:before {
+	content: "\eb36";
+}
+.moon-search5:before {
+	content: "\eb37";
+}
+.moon-search6:before {
+	content: "\eb38";
+}
+.moon-enlarge:before {
+	content: "\eb39";
+}
+.moon-shrink:before {
+	content: "\eb3a";
+}
+.moon-enlarge2:before {
+	content: "\eb3b";
+}
+.moon-shrink2:before {
+	content: "\eb3c";
+}
+.moon-enlarge3:before {
+	content: "\eb3d";
+}
+.moon-shrink3:before {
+	content: "\eb3e";
+}
+.moon-enlarge4:before {
+	content: "\eb3f";
+}
+.moon-shrink4:before {
+	content: "\eb40";
+}
+.moon-enlarge5:before {
+	content: "\eb41";
+}
+.moon-shrink5:before {
+	content: "\eb42";
+}
+.moon-enlarge6:before {
+	content: "\eb43";
+}
+.moon-shrink6:before {
+	content: "\eb44";
+}
+.moon-enlarge7:before {
+	content: "\eb45";
+}
+.moon-shrink7:before {
+	content: "\eb46";
+}
+.moon-key:before {
+	content: "\eb47";
+}
+.moon-key2:before {
+	content: "\eb48";
+}
+.moon-key3:before {
+	content: "\eb49";
+}
+.moon-key4:before {
+	content: "\eb4a";
+}
+.moon-key5:before {
+	content: "\eb4b";
+}
+.moon-keyhole:before {
+	content: "\eb4c";
+}
+.moon-lock:before {
+	content: "\eb4d";
+}
+.moon-lock2:before {
+	content: "\eb4e";
+}
+.moon-lock3:before {
+	content: "\eb4f";
+}
+.moon-lock4:before {
+	content: "\eb50";
+}
+.moon-unlocked:before {
+	content: "\eb51";
+}
+.moon-lock5:before {
+	content: "\eb52";
+}
+.moon-unlocked2:before {
+	content: "\eb53";
+}
+.moon-safe:before {
+	content: "\eb54";
+}
+.moon-wrench:before {
+	content: "\eb55";
+}
+.moon-wrench2:before {
+	content: "\eb56";
+}
+.moon-wrench3:before {
+	content: "\eb57";
+}
+.moon-equalizer:before {
+	content: "\eb58";
+}
+.moon-equalizer2:before {
+	content: "\eb59";
+}
+.moon-equalizer3:before {
+	content: "\eb5a";
+}
+.moon-equalizer4:before {
+	content: "\eb5b";
+}
+.moon-cog:before {
+	content: "\eb5c";
+}
+.moon-cogs:before {
+	content: "\eb5d";
+}
+.moon-cog2:before {
+	content: "\eb5e";
+}
+.moon-cog3:before {
+	content: "\eb5f";
+}
+.moon-cog4:before {
+	content: "\eb60";
+}
+.moon-cog5:before {
+	content: "\eb61";
+}
+.moon-cog6:before {
+	content: "\eb62";
+}
+.moon-cog7:before {
+	content: "\eb63";
+}
+.moon-factory:before {
+	content: "\eb64";
+}
+.moon-hammer:before {
+	content: "\eb65";
+}
+.moon-hammer-wrench:before {
+	content: "\eb66";
+	margin-left: -3px;
+}
+.moon-knife:before {
+	content: "\eb67";
+}
+.moon-screwdriver:before {
+	content: "\eb68";
+}
+.moon-screwdriver2:before {
+	content: "\eb69";
+}
+.moon-magic-wand:before {
+	content: "\eb6a";
+}
+.moon-magic-wand2:before {
+	content: "\eb6b";
+}
+.moon-pulse:before {
+	content: "\eb6c";
+}
+.moon-pulse2:before {
+	content: "\eb6d";
+}
+.moon-aid-kit:before {
+	content: "\eb6e";
+}
+.moon-aid-kit2:before {
+	content: "\eb6f";
+}
+.moon-stethoscope:before {
+	content: "\eb70";
+}
+.moon-ambulance:before {
+	content: "\eb71";
+}
+.moon-alarm2:before {
+	content: "\eb72";
+}
+.moon-pandage:before {
+	content: "\eb73";
+}
+.moon-pandage2:before {
+	content: "\eb74";
+}
+.moon-bug:before {
+	content: "\eb75";
+}
+.moon-bug2:before {
+	content: "\eb76";
+}
+.moon-syringe:before {
+	content: "\eb77";
+}
+.moon-syringe2:before {
+	content: "\eb78";
+}
+.moon-pill:before {
+	content: "\eb79";
+}
+.moon-construction:before {
+	content: "\eb7a";
+}
+.moon-traffic-cone:before {
+	content: "\eb7b";
+}
+.moon-traffic-lights:before {
+	content: "\eb7c";
+}
+.moon-pie-chart:before {
+	content: "\eb7d";
+}
+.moon-pie-chart2:before {
+	content: "\eb7e";
+}
+.moon-pie-chart3:before {
+	content: "\eb7f";
+}
+.moon-pie-chart4:before {
+	content: "\eb80";
+}
+.moon-pie-chart5:before {
+	content: "\eb81";
+}
+.moon-pie-chart6:before {
+	content: "\eb82";
+}
+.moon-pie-chart7:before {
+	content: "\eb83";
+}
+.moon-stats-dots:before {
+	content: "\eb84";
+}
+.moon-stats-bars:before {
+	content: "\eb85";
+}
+.moon-pie-chart8:before {
+	content: "\eb86";
+}
+.moon-stats-bars2:before {
+	content: "\eb87";
+}
+.moon-stats-bars3:before {
+	content: "\eb88";
+}
+.moon-stats-bars4:before {
+	content: "\eb89";
+}
+.moon-stats-bars5:before {
+	content: "\eb8a";
+}
+.moon-stats-bars6:before {
+	content: "\eb8b";
+}
+.moon-chart:before {
+	content: "\eb8c";
+}
+.moon-stats-growth:before {
+	content: "\eb8d";
+}
+.moon-stats-decline:before {
+	content: "\eb8e";
+}
+.moon-stats-growth2:before {
+	content: "\eb8f";
+}
+.moon-stats-decline2:before {
+	content: "\eb90";
+}
+.moon-stairs-up:before {
+	content: "\eb91";
+}
+.moon-stairs-down:before {
+	content: "\eb92";
+}
+.moon-stairs:before {
+	content: "\eb93";
+}
+.moon-stairs2:before {
+	content: "\eb94";
+}
+.moon-ladder:before {
+	content: "\eb95";
+}
+.moon-rating:before {
+	content: "\eb96";
+}
+.moon-rating2:before {
+	content: "\eb97";
+}
+.moon-rating3:before {
+	content: "\eb98";
+}
+.moon-cake:before {
+	content: "\eb99";
+}
+.moon-podium:before {
+	content: "\eb9a";
+}
+.moon-stars:before {
+	content: "\eb9b";
+}
+.moon-medal-star:before {
+	content: "\eb9c";
+}
+.moon-medal:before {
+	content: "\eb9d";
+}
+.moon-medal2:before {
+	content: "\eb9e";
+}
+.moon-medal-first:before {
+	content: "\eb9f";
+}
+.moon-medal-second:before {
+	content: "\eba0";
+}
+.moon-medal-third:before {
+	content: "\eba1";
+}
+.moon-crown:before {
+	content: "\eba2";
+}
+.moon-trophy:before {
+	content: "\eba3";
+}
+.moon-trophy2:before {
+	content: "\eba4";
+}
+.moon-trophy3:before {
+	content: "\eba5";
+}
+.moon-diamond:before {
+	content: "\eba6";
+}
+.moon-diamond2:before {
+	content: "\eba7";
+}
+.moon-trophy4:before {
+	content: "\eba8";
+}
+.moon-gift:before {
+	content: "\eba9";
+}
+.moon-gift2:before {
+	content: "\ebaa";
+}
+.moon-balloon:before {
+	content: "\ebab";
+}
+.moon-pipe:before {
+	content: "\ebac";
+}
+.moon-mustache:before {
+	content: "\ebad";
+}
+.moon-mustache2:before {
+	content: "\ebae";
+}
+.moon-glass:before {
+	content: "\ebaf";
+}
+.moon-glass2:before {
+	content: "\ebb0";
+}
+.moon-glass3:before {
+	content: "\ebb1";
+}
+.moon-glass4:before {
+	content: "\ebb2";
+}
+.moon-bottle:before {
+	content: "\ebb3";
+}
+.moon-bottle2:before {
+	content: "\ebb4";
+}
+.moon-bottle3:before {
+	content: "\ebb5";
+}
+.moon-bottle4:before {
+	content: "\ebb6";
+}
+.moon-mug:before {
+	content: "\ebb7";
+}
+.moon-fork-knife:before {
+	content: "\ebb8";
+}
+.moon-spoon-knife:before {
+	content: "\ebb9";
+}
+.moon-cook:before {
+	content: "\ebba";
+}
+.moon-plate:before {
+	content: "\ebbb";
+}
+.moon-steak:before {
+	content: "\ebbc";
+}
+.moon-fish:before {
+	content: "\ebbd";
+}
+.moon-chicken:before {
+	content: "\ebbe";
+}
+.moon-hamburger:before {
+	content: "\ebbf";
+}
+.moon-pizza:before {
+	content: "\ebc0";
+}
+.moon-cheese:before {
+	content: "\ebc1";
+}
+.moon-bread:before {
+	content: "\ebc2";
+}
+.moon-icecream:before {
+	content: "\ebc3";
+}
+.moon-milk:before {
+	content: "\ebc4";
+}
+.moon-cup:before {
+	content: "\ebc5";
+}
+.moon-cup2:before {
+	content: "\ebc6";
+}
+.moon-coffee-bean:before {
+	content: "\ebc7";
+}
+.moon-coffee:before {
+	content: "\ebc8";
+}
+.moon-teapot:before {
+	content: "\ebc9";
+}
+.moon-leaf:before {
+	content: "\ebca";
+}
+.moon-leaf2:before {
+	content: "\ebcb";
+}
+.moon-apple:before {
+	content: "\ebcc";
+}
+.moon-grapes:before {
+	content: "\ebcd";
+}
+.moon-cherry:before {
+	content: "\ebce";
+}
+.moon-tree:before {
+	content: "\ebcf";
+}
+.moon-tree2:before {
+	content: "\ebd0";
+}
+.moon-tree3:before {
+	content: "\ebd1";
+}
+.moon-tree4:before {
+	content: "\ebd2";
+}
+.moon-cactus:before {
+	content: "\ebd3";
+}
+.moon-mountains:before {
+	content: "\ebd4";
+}
+.moon-paw:before {
+	content: "\ebd5";
+}
+.moon-footprint:before {
+	content: "\ebd6";
+}
+.moon-tent:before {
+	content: "\ebd7";
+}
+.moon-flower:before {
+	content: "\ebd8";
+}
+.moon-flower2:before {
+	content: "\ebd9";
+}
+.moon-rocket:before {
+	content: "\ebda";
+}
+.moon-meter:before {
+	content: "\ebdb";
+}
+.moon-meter2:before {
+	content: "\ebdc";
+}
+.moon-meter-slow:before {
+	content: "\ebdd";
+}
+.moon-meter-medium:before {
+	content: "\ebde";
+}
+.moon-meter-fast:before {
+	content: "\ebdf";
+}
+.moon-meter3:before {
+	content: "\ebe0";
+}
+.moon-hammer2:before {
+	content: "\ebe1";
+}
+.moon-balance:before {
+	content: "\ebe2";
+}
+.moon-scale:before {
+	content: "\ebe3";
+}
+.moon-bomb:before {
+	content: "\ebe4";
+}
+.moon-fire:before {
+	content: "\ebe5";
+}
+.moon-fire2:before {
+	content: "\ebe6";
+}
+.moon-lab:before {
+	content: "\ebe7";
+}
+.moon-atom:before {
+	content: "\ebe8";
+}
+.moon-atom2:before {
+	content: "\ebe9";
+}
+.moon-magnet:before {
+	content: "\ebea";
+}
+.moon-magnet2:before {
+	content: "\ebeb";
+}
+.moon-dumbbell:before {
+	content: "\ebec";
+}
+.moon-skull:before {
+	content: "\ebed";
+}
+.moon-skull2:before {
+	content: "\ebee";
+}
+.moon-lamp:before {
+	content: "\ebef";
+}
+.moon-lamp2:before {
+	content: "\ebf0";
+}
+.moon-lamp3:before {
+	content: "\ebf1";
+}
+.moon-spotlight:before {
+	content: "\ebf2";
+}
+.moon-lamp4:before {
+	content: "\ebf3";
+}
+.moon-lamp5:before {
+	content: "\ebf4";
+}
+.moon-lamp6:before {
+	content: "\ebf5";
+}
+.moon-lamp7:before {
+	content: "\ebf6";
+}
+.moon-lamp8:before {
+	content: "\ebf7";
+}
+.moon-broom:before {
+	content: "\ebf8";
+}
+.moon-toiletpaper:before {
+	content: "\ebf9";
+}
+.moon-bin:before {
+	content: "\ebfa";
+}
+.moon-bin2:before {
+	content: "\ebfb";
+}
+.moon-bin3:before {
+	content: "\ebfc";
+}
+.moon-bin4:before {
+	content: "\ebfd";
+}
+.moon-bin5:before {
+	content: "\ebfe";
+}
+.moon-briefcase:before {
+	content: "\ebff";
+}
+.moon-briefcase2:before {
+	content: "\ec00";
+}
+.moon-briefcase3:before {
+	content: "\ec01";
+}
+.moon-airplane:before {
+	content: "\ec02";
+}
+.moon-airplane2:before {
+	content: "\ec03";
+}
+.moon-airplane3:before {
+	content: "\ec04";
+}
+.moon-airplane4:before {
+	content: "\ec05";
+}
+.moon-paperplane:before {
+	content: "\ec06";
+}
+.moon-car:before {
+	content: "\ec07";
+}
+.moon-steering-wheel:before {
+	content: "\ec08";
+}
+.moon-car2:before {
+	content: "\ec09";
+}
+.moon-gas:before {
+	content: "\ec0a";
+}
+.moon-bus:before {
+	content: "\ec0b";
+}
+.moon-truck:before {
+	content: "\ec0c";
+}
+.moon-bike:before {
+	content: "\ec0d";
+}
+.moon-road:before {
+	content: "\ec0e";
+}
+.moon-train:before {
+	content: "\ec0f";
+}
+.moon-train2:before {
+	content: "\ec10";
+}
+.moon-ship:before {
+	content: "\ec11";
+}
+.moon-boat:before {
+	content: "\ec12";
+}
+.moon-chopper:before {
+	content: "\ec13";
+}
+.moon-chopper2:before {
+	content: "\ec14";
+}
+.moon-cube:before {
+	content: "\ec15";
+}
+.moon-cube2:before {
+	content: "\ec16";
+}
+.moon-cube3:before {
+	content: "\ec17";
+}
+.moon-cube4:before {
+	content: "\ec18";
+}
+.moon-pyramid:before {
+	content: "\ec19";
+}
+.moon-pyramid2:before {
+	content: "\ec1a";
+}
+.moon-package:before {
+	content: "\ec1b";
+}
+.moon-puzzle:before {
+	content: "\ec1c";
+}
+.moon-puzzle2:before {
+	content: "\ec1d";
+}
+.moon-puzzle3:before {
+	content: "\ec1e";
+}
+.moon-puzzle4:before {
+	content: "\ec1f";
+}
+.moon-glasses-3d:before {
+	content: "\ec20";
+}
+.moon-glasses-3d2:before {
+	content: "\ec21";
+}
+.moon-glasses:before {
+	content: "\ec22";
+}
+.moon-glasses2:before {
+	content: "\ec23";
+}
+.moon-brain:before {
+	content: "\ec24";
+}
+.moon-accessibility:before {
+	content: "\ec25";
+}
+.moon-accessibility2:before {
+	content: "\ec26";
+}
+.moon-strategy:before {
+	content: "\ec27";
+}
+.moon-target:before {
+	content: "\ec28";
+}
+.moon-target2:before {
+	content: "\ec29";
+}
+.moon-target3:before {
+	content: "\ec2a";
+}
+.moon-ammo:before {
+	content: "\ec2b";
+}
+.moon-gun:before {
+	content: "\ec2c";
+}
+.moon-gun-forbidden:before {
+	content: "\ec2d";
+}
+.moon-shield:before {
+	content: "\ec2e";
+}
+.moon-shield-check:before {
+	content: "\ec2f";
+}
+.moon-shield-notice:before {
+	content: "\ec30";
+}
+.moon-shield2:before {
+	content: "\ec31";
+}
+.moon-shield3:before {
+	content: "\ec32";
+}
+.moon-shield4:before {
+	content: "\ec33";
+}
+.moon-soccer:before {
+	content: "\ec34";
+}
+.moon-football:before {
+	content: "\ec35";
+}
+.moon-archery:before {
+	content: "\ec36";
+}
+.moon-bow:before {
+	content: "\ec37";
+}
+.moon-sword:before {
+	content: "\ec38";
+}
+.moon-tennis:before {
+	content: "\ec39";
+}
+.moon-pingpong:before {
+	content: "\ec3a";
+}
+.moon-baseball:before {
+	content: "\ec3b";
+}
+.moon-basketball:before {
+	content: "\ec3c";
+}
+.moon-golf:before {
+	content: "\ec3d";
+}
+.moon-golf2:before {
+	content: "\ec3e";
+}
+.moon-hockey:before {
+	content: "\ec3f";
+}
+.moon-racing:before {
+	content: "\ec40";
+}
+.moon-finish:before {
+	content: "\ec41";
+}
+.moon-eight-ball:before {
+	content: "\ec42";
+}
+.moon-bowling:before {
+	content: "\ec43";
+}
+.moon-bowling2:before {
+	content: "\ec44";
+}
+.moon-power:before {
+	content: "\ec45";
+}
+.moon-power2:before {
+	content: "\ec46";
+}
+.moon-power3:before {
+	content: "\ec47";
+}
+.moon-switch:before {
+	content: "\ec48";
+}
+.moon-switch2:before {
+	content: "\ec49";
+}
+.moon-power-cord:before {
+	content: "\ec4a";
+}
+.moon-power-cord2:before {
+	content: "\ec4b";
+}
+.moon-outlet:before {
+	content: "\ec4c";
+}
+.moon-clipboard:before {
+	content: "\ec4d";
+}
+.moon-clipboard2:before {
+	content: "\ec4e";
+}
+.moon-clipboard3:before {
+	content: "\ec4f";
+}
+.moon-clipboard4:before {
+	content: "\ec50";
+}
+.moon-clipboard5:before {
+	content: "\ec51";
+}
+.moon-clipboard6:before {
+	content: "\ec52";
+}
+.moon-playlist:before {
+	content: "\ec53";
+}
+.moon-playlist-add:before {
+	content: "\ec54";
+}
+.moon-list-numbered:before {
+	content: "\ec55";
+}
+.moon-list:before {
+	content: "\ec56";
+}
+.moon-list2:before {
+	content: "\ec57";
+}
+.moon-more:before {
+	content: "\ec58";
+}
+.moon-more2:before {
+	content: "\ec59";
+}
+.moon-grid:before {
+	content: "\ec5a";
+}
+.moon-grid2:before {
+	content: "\ec5b";
+}
+.moon-grid3:before {
+	content: "\ec5c";
+}
+.moon-grid4:before {
+	content: "\ec5d";
+}
+.moon-grid5:before {
+	content: "\ec5e";
+}
+.moon-grid6:before {
+	content: "\ec5f";
+}
+.moon-grid7:before {
+	content: "\ec60";
+}
+.moon-tree5:before {
+	content: "\ec61";
+}
+.moon-tree6:before {
+	content: "\ec62";
+}
+.moon-tree7:before {
+	content: "\ec63";
+}
+.moon-lan:before {
+	content: "\ec64";
+}
+.moon-lan2:before {
+	content: "\ec65";
+}
+.moon-lan3:before {
+	content: "\ec66";
+}
+.moon-menu:before {
+	content: "\ec67";
+}
+.moon-circle-small:before {
+	content: "\ec68";
+}
+.moon-menu2:before {
+	content: "\ec69";
+}
+.moon-menu3:before {
+	content: "\ec6a";
+}
+.moon-menu4:before {
+	content: "\ec6b";
+}
+.moon-menu5:before {
+	content: "\ec6c";
+}
+.moon-menu6:before {
+	content: "\ec6d";
+}
+.moon-menu7:before {
+	content: "\ec6e";
+}
+.moon-menu8:before {
+	content: "\ec6f";
+}
+.moon-menu9:before {
+	content: "\ec70";
+}
+.moon-menu10:before {
+	content: "\ec71";
+}
+.moon-cloud:before {
+	content: "\ec72";
+}
+.moon-cloud-download:before {
+	content: "\ec73";
+}
+.moon-cloud-upload:before {
+	content: "\ec74";
+}
+.moon-cloud-check:before {
+	content: "\ec75";
+}
+.moon-cloud2:before {
+	content: "\ec76";
+}
+.moon-cloud-download2:before {
+	content: "\ec77";
+}
+.moon-cloud-upload2:before {
+	content: "\ec78";
+}
+.moon-cloud-check2:before {
+	content: "\ec79";
+}
+.moon-download2:before {
+	content: "\ec7a";
+}
+.moon-download3:before {
+	content: "\ec7b";
+}
+.moon-upload2:before {
+	content: "\ec7c";
+}
+.moon-upload3:before {
+	content: "\ec7d";
+}
+.moon-import:before {
+	content: "\ec7e";
+}
+.moon-import2:before {
+	content: "\ec7f";
+}
+.moon-download4:before {
+	content: "\ec80";
+}
+.moon-upload4:before {
+	content: "\ec81";
+}
+.moon-download5:before {
+	content: "\ec82";
+}
+.moon-upload5:before {
+	content: "\ec83";
+}
+.moon-download6:before {
+	content: "\ec84";
+}
+.moon-upload6:before {
+	content: "\ec85";
+}
+.moon-download7:before {
+	content: "\ec86";
+}
+.moon-upload7:before {
+	content: "\ec87";
+}
+.moon-download8:before {
+	content: "\ec88";
+}
+.moon-upload8:before {
+	content: "\ec89";
+}
+.moon-download9:before {
+	content: "\ec8a";
+}
+.moon-upload9:before {
+	content: "\ec8b";
+}
+.moon-download10:before {
+	content: "\ec8c";
+}
+.moon-upload10:before {
+	content: "\ec8d";
+}
+.moon-sphere:before {
+	content: "\ec8e";
+}
+.moon-sphere2:before {
+	content: "\ec8f";
+}
+.moon-sphere3:before {
+	content: "\ec90";
+}
+.moon-planet:before {
+	content: "\ec91";
+}
+.moon-planet2:before {
+	content: "\ec92";
+}
+.moon-earth:before {
+	content: "\ec93";
+}
+.moon-earth2:before {
+	content: "\ec94";
+}
+.moon-earth3:before {
+	content: "\ec95";
+}
+.moon-link:before {
+	content: "\ec96";
+}
+.moon-unlink:before {
+	content: "\ec97";
+}
+.moon-link2:before {
+	content: "\ec98";
+}
+.moon-unlink2:before {
+	content: "\ec99";
+}
+.moon-link3:before {
+	content: "\ec9a";
+}
+.moon-unlink3:before {
+	content: "\ec9b";
+}
+.moon-link4:before {
+	content: "\ec9c";
+}
+.moon-unlink4:before {
+	content: "\ec9d";
+}
+.moon-link5:before {
+	content: "\ec9e";
+}
+.moon-unlink5:before {
+	content: "\ec9f";
+}
+.moon-anchor:before {
+	content: "\eca0";
+}
+.moon-flag:before {
+	content: "\eca1";
+}
+.moon-flag2:before {
+	content: "\eca2";
+}
+.moon-flag3:before {
+	content: "\eca3";
+}
+.moon-flag4:before {
+	content: "\eca4";
+}
+.moon-flag5:before {
+	content: "\eca5";
+}
+.moon-flag6:before {
+	content: "\eca6";
+}
+.moon-flag7:before {
+	content: "\eca7";
+}
+.moon-flag8:before {
+	content: "\eca8";
+}
+.moon-attachment:before {
+	content: "\eca9";
+}
+.moon-attachment2:before {
+	content: "\ecaa";
+}
+.moon-eye:before {
+	content: "\ecab";
+}
+.moon-eye-plus:before {
+	content: "\ecac";
+}
+.moon-eye-minus:before {
+	content: "\ecad";
+}
+.moon-eye-blocked:before {
+	content: "\ecae";
+}
+.moon-eye2:before {
+	content: "\ecaf";
+}
+.moon-eye-blocked2:before {
+	content: "\ecb0";
+}
+.moon-eye3:before {
+	content: "\ecb1";
+}
+.moon-eye-blocked3:before {
+	content: "\ecb2";
+}
+.moon-eye4:before {
+	content: "\ecb3";
+}
+.moon-bookmark2:before {
+	content: "\ecb4";
+}
+.moon-bookmark3:before {
+	content: "\ecb5";
+}
+.moon-bookmarks:before {
+	content: "\ecb6";
+}
+.moon-bookmark4:before {
+	content: "\ecb7";
+}
+.moon-spotlight2:before {
+	content: "\ecb8";
+}
+.moon-starburst:before {
+	content: "\ecb9";
+}
+.moon-snowflake:before {
+	content: "\ecba";
+}
+.moon-temperature:before {
+	content: "\ecbb";
+}
+.moon-temperature2:before {
+	content: "\ecbc";
+}
+.moon-weather-lightning:before {
+	content: "\ecbd";
+}
+.moon-weather-lightning2:before {
+	content: "\ecbe";
+}
+.moon-weather-rain:before {
+	content: "\ecbf";
+}
+.moon-weather-rain2:before {
+	content: "\ecc0";
+}
+.moon-weather-snow:before {
+	content: "\ecc1";
+}
+.moon-weather-snow2:before {
+	content: "\ecc2";
+}
+.moon-weather-cloud-wind:before {
+	content: "\ecc3";
+}
+.moon-weather-cloud-wind2:before {
+	content: "\ecc4";
+}
+.moon-weather-cloud-sun:before {
+	content: "\ecc5";
+}
+.moon-weather-cloud-sun2:before {
+	content: "\ecc6";
+}
+.moon-weather-cloudy:before {
+	content: "\ecc7";
+}
+.moon-weather-cloudy2:before {
+	content: "\ecc8";
+}
+.moon-weather-sun-wind:before {
+	content: "\ecc9";
+}
+.moon-weather-sun-wind2:before {
+	content: "\ecca";
+}
+.moon-sun:before {
+	content: "\eccb";
+}
+.moon-sun2:before {
+	content: "\eccc";
+}
+.moon-moon:before {
+	content: "\eccd";
+}
+.moon-day-night:before {
+	content: "\ecce";
+}
+.moon-day-night2:before {
+	content: "\eccf";
+}
+.moon-weather-windy:before {
+	content: "\ecd0";
+}
+.moon-fan:before {
+	content: "\ecd1";
+}
+.moon-umbrella:before {
+	content: "\ecd2";
+}
+.moon-sun3:before {
+	content: "\ecd3";
+}
+.moon-contrast:before {
+	content: "\ecd4";
+}
+.moon-brightness-contrast:before {
+	content: "\ecd5";
+}
+.moon-brightness-high:before {
+	content: "\ecd6";
+}
+.moon-brightness-medium:before {
+	content: "\ecd7";
+}
+.moon-brightness-low:before {
+	content: "\ecd8";
+}
+.moon-bed:before {
+	content: "\ecd9";
+}
+.moon-bed2:before {
+	content: "\ecda";
+}
+.moon-furniture:before {
+	content: "\ecdb";
+}
+.moon-chair:before {
+	content: "\ecdc";
+}
+.moon-star-empty:before {
+	content: "\ecdd";
+}
+.moon-star-empty2:before {
+	content: "\ecde";
+}
+.moon-star-full:before {
+	content: "\ecdf";
+}
+.moon-star-empty3:before {
+	content: "\ece0";
+}
+.moon-star-half:before {
+	content: "\ece1";
+}
+.moon-star-full2:before {
+	content: "\ece2";
+}
+.moon-star:before {
+	content: "\ece3";
+}
+.moon-heart:before {
+	content: "\ece4";
+}
+.moon-heart2:before {
+	content: "\ece5";
+}
+.moon-heart3:before {
+	content: "\ece6";
+}
+.moon-heart4:before {
+	content: "\ece7";
+}
+.moon-heart-broken:before {
+	content: "\ece8";
+}
+.moon-heart5:before {
+	content: "\ece9";
+}
+.moon-heart6:before {
+	content: "\ecea";
+}
+.moon-heart-broken2:before {
+	content: "\eceb";
+}
+.moon-heart7:before {
+	content: "\ecec";
+}
+.moon-heart8:before {
+	content: "\eced";
+}
+.moon-heart-broken3:before {
+	content: "\ecee";
+}
+.moon-lips:before {
+	content: "\ecef";
+}
+.moon-lips2:before {
+	content: "\ecf0";
+}
+.moon-thumbs-up:before {
+	content: "\ecf1";
+}
+.moon-thumbs-up2:before {
+	content: "\ecf2";
+}
+.moon-thumbs-down:before {
+	content: "\ecf3";
+}
+.moon-thumbs-down2:before {
+	content: "\ecf4";
+}
+.moon-thumbs-up3:before {
+	content: "\ecf5";
+}
+.moon-thumbs-down3:before {
+	content: "\ecf6";
+}
+.moon-height:before {
+	content: "\ecf7";
+}
+.moon-man:before {
+	content: "\ecf8";
+}
+.moon-woman:before {
+	content: "\ecf9";
+}
+.moon-man-woman:before {
+	content: "\ecfa";
+}
+.moon-male:before {
+	content: "\ecfb";
+}
+.moon-female:before {
+	content: "\ecfc";
+}
+.moon-peace:before {
+	content: "\ecfd";
+}
+.moon-yin-yang:before {
+	content: "\ecfe";
+}
+.moon-happy:before {
+	content: "\ecff";
+}
+.moon-happy2:before {
+	content: "\ed00";
+}
+.moon-smile:before {
+	content: "\ed01";
+}
+.moon-smile2:before {
+	content: "\ed02";
+}
+.moon-tongue:before {
+	content: "\ed03";
+}
+.moon-tongue2:before {
+	content: "\ed04";
+}
+.moon-sad:before {
+	content: "\ed05";
+}
+.moon-sad2:before {
+	content: "\ed06";
+}
+.moon-wink:before {
+	content: "\ed07";
+}
+.moon-wink2:before {
+	content: "\ed08";
+}
+.moon-grin:before {
+	content: "\ed09";
+}
+.moon-grin2:before {
+	content: "\ed0a";
+}
+.moon-cool:before {
+	content: "\ed0b";
+}
+.moon-cool2:before {
+	content: "\ed0c";
+}
+.moon-angry:before {
+	content: "\ed0d";
+}
+.moon-angry2:before {
+	content: "\ed0e";
+}
+.moon-evil:before {
+	content: "\ed0f";
+}
+.moon-evil2:before {
+	content: "\ed10";
+}
+.moon-shocked:before {
+	content: "\ed11";
+}
+.moon-shocked2:before {
+	content: "\ed12";
+}
+.moon-baffled:before {
+	content: "\ed13";
+}
+.moon-baffled2:before {
+	content: "\ed14";
+}
+.moon-confused:before {
+	content: "\ed15";
+}
+.moon-confused2:before {
+	content: "\ed16";
+}
+.moon-neutral:before {
+	content: "\ed17";
+}
+.moon-neutral2:before {
+	content: "\ed18";
+}
+.moon-hipster:before {
+	content: "\ed19";
+}
+.moon-hipster2:before {
+	content: "\ed1a";
+}
+.moon-wondering:before {
+	content: "\ed1b";
+}
+.moon-wondering2:before {
+	content: "\ed1c";
+}
+.moon-sleepy:before {
+	content: "\ed1d";
+}
+.moon-sleepy2:before {
+	content: "\ed1e";
+}
+.moon-frustrated:before {
+	content: "\ed1f";
+}
+.moon-frustrated2:before {
+	content: "\ed20";
+}
+.moon-crying:before {
+	content: "\ed21";
+}
+.moon-crying2:before {
+	content: "\ed22";
+}
+.moon-cursor:before {
+	content: "\ed23";
+}
+.moon-cursor2:before {
+	content: "\ed24";
+}
+.moon-lasso:before {
+	content: "\ed25";
+}
+.moon-lasso2:before {
+	content: "\ed26";
+}
+.moon-select:before {
+	content: "\ed27";
+}
+.moon-select2:before {
+	content: "\ed28";
+}
+.moon-point-up:before {
+	content: "\ed29";
+}
+.moon-point-right:before {
+	content: "\ed2a";
+}
+.moon-point-down:before {
+	content: "\ed2b";
+}
+.moon-point-left:before {
+	content: "\ed2c";
+}
+.moon-pointer:before {
+	content: "\ed2d";
+}
+.moon-reminder:before {
+	content: "\ed2e";
+}
+.moon-drag-left-right:before {
+	content: "\ed2f";
+}
+.moon-drag-left:before {
+	content: "\ed30";
+}
+.moon-drag-right:before {
+	content: "\ed31";
+}
+.moon-touch:before {
+	content: "\ed32";
+}
+.moon-multitouch:before {
+	content: "\ed33";
+}
+.moon-touch-zoom:before {
+	content: "\ed34";
+}
+.moon-touch-pinch:before {
+	content: "\ed35";
+}
+.moon-hand:before {
+	content: "\ed36";
+}
+.moon-grab:before {
+	content: "\ed37";
+}
+.moon-stack-empty:before {
+	content: "\ed38";
+}
+.moon-stack-plus:before {
+	content: "\ed39";
+}
+.moon-stack-minus:before {
+	content: "\ed3a";
+}
+.moon-stack-star:before {
+	content: "\ed3b";
+}
+.moon-stack-picture:before {
+	content: "\ed3c";
+}
+.moon-stack-down:before {
+	content: "\ed3d";
+}
+.moon-stack-up:before {
+	content: "\ed3e";
+}
+.moon-stack-cancel:before {
+	content: "\ed3f";
+}
+.moon-stack-check:before {
+	content: "\ed40";
+}
+.moon-stack-text:before {
+	content: "\ed41";
+}
+.moon-stack-clubs:before {
+	content: "\ed42";
+}
+.moon-stack-spades:before {
+	content: "\ed43";
+}
+.moon-stack-hearts:before {
+	content: "\ed44";
+}
+.moon-stack-diamonds:before {
+	content: "\ed45";
+}
+.moon-stack-user:before {
+	content: "\ed46";
+}
+.moon-stack4:before {
+	content: "\ed47";
+}
+.moon-stack-music:before {
+	content: "\ed48";
+}
+.moon-stack-play:before {
+	content: "\ed49";
+}
+.moon-move:before {
+	content: "\ed4a";
+}
+.moon-dots:before {
+	content: "\ed4b";
+}
+.moon-warning:before {
+	content: "\ed4c";
+}
+.moon-warning2:before {
+	content: "\ed4d";
+}
+.moon-notification:before {
+	content: "\ed4e";
+}
+.moon-notification2:before {
+	content: "\ed4f";
+}
+.moon-question:before {
+	content: "\ed50";
+}
+.moon-question2:before {
+	content: "\ed51";
+}
+.moon-question3:before {
+	content: "\ed52";
+}
+.moon-question4:before {
+	content: "\ed53";
+}
+.moon-question5:before {
+	content: "\ed54";
+}
+.moon-question6:before {
+	content: "\ed55";
+}
+.moon-plus:before {
+	content: "\ed56";
+}
+.moon-minus:before {
+	content: "\ed57";
+}
+.moon-plus2:before {
+	content: "\ed58";
+}
+.moon-minus2:before {
+	content: "\ed59";
+}
+.moon-plus3:before {
+	content: "\ed5a";
+}
+.moon-minus3:before {
+	content: "\ed5b";
+}
+.moon-plus-circle:before {
+	content: "\ed5c";
+}
+.moon-minus-circle:before {
+	content: "\ed5d";
+}
+.moon-plus-circle2:before {
+	content: "\ed5e";
+}
+.moon-minus-circle2:before {
+	content: "\ed5f";
+}
+.moon-info:before {
+	content: "\ed60";
+}
+.moon-info2:before {
+	content: "\ed61";
+}
+.moon-cancel-circle:before {
+	content: "\ed62";
+}
+.moon-cancel-circle2:before {
+	content: "\ed63";
+}
+.moon-blocked:before {
+	content: "\ed64";
+}
+.moon-cancel-square:before {
+	content: "\ed65";
+}
+.moon-cancel-square2:before {
+	content: "\ed66";
+}
+.moon-cancel:before {
+	content: "\ed67";
+}
+.moon-spam:before {
+	content: "\ed68";
+}
+.moon-cross:before {
+	content: "\ed69";
+}
+.moon-cross2:before {
+	content: "\ed6a";
+}
+.moon-cross3:before {
+	content: "\ed6b" !important;
+}
+.moon-checkmark:before {
+	content: "\ed6c";
+}
+.moon-checkmark2:before {
+	content: "\ed6d";
+}
+.moon-checkmark3:before {
+	content: "\ed6e";
+}
+.moon-checkmark4:before {
+	content: "\ed6f";
+}
+.moon-checkmark5:before {
+	content: "\ed70";
+}
+.moon-spell-check:before {
+	content: "\ed71";
+}
+.moon-spell-check2:before {
+	content: "\ed72";
+}
+.moon-enter:before {
+	content: "\ed73";
+}
+.moon-exit:before {
+	content: "\ed74";
+}
+.moon-enter2:before {
+	content: "\ed75";
+}
+.moon-exit2:before {
+	content: "\ed76";
+}
+.moon-enter3:before {
+	content: "\ed77";
+}
+.moon-exit3:before {
+	content: "\ed78";
+}
+.moon-wall:before {
+	content: "\ed79";
+}
+.moon-fence:before {
+	content: "\ed7a";
+}
+.moon-play3:before {
+	content: "\ed7b";
+}
+.moon-pause:before {
+	content: "\ed7c";
+}
+.moon-stop:before {
+	content: "\ed7d";
+}
+.moon-previous:before {
+	content: "\ed7e";
+}
+.moon-next:before {
+	content: "\ed7f";
+}
+.moon-backward:before {
+	content: "\ed80";
+}
+.moon-forward2:before {
+	content: "\ed81";
+}
+.moon-play4:before {
+	content: "\ed82";
+}
+.moon-pause2:before {
+	content: "\ed83";
+}
+.moon-stop2:before {
+	content: "\ed84";
+}
+.moon-backward2:before {
+	content: "\ed85";
+}
+.moon-forward3:before {
+	content: "\ed86";
+}
+.moon-first:before {
+	content: "\ed87";
+}
+.moon-last:before {
+	content: "\ed88";
+}
+.moon-previous2:before {
+	content: "\ed89";
+}
+.moon-next2:before {
+	content: "\ed8a";
+}
+.moon-eject:before {
+	content: "\ed8b";
+}
+.moon-volume-high:before {
+	content: "\ed8c";
+}
+.moon-volume-medium:before {
+	content: "\ed8d";
+}
+.moon-volume-low:before {
+	content: "\ed8e";
+}
+.moon-volume-mute:before {
+	content: "\ed8f";
+}
+.moon-speaker-left:before {
+	content: "\ed90";
+}
+.moon-speaker-right:before {
+	content: "\ed91";
+}
+.moon-volume-mute2:before {
+	content: "\ed92";
+}
+.moon-volume-increase:before {
+	content: "\ed93";
+}
+.moon-volume-decrease:before {
+	content: "\ed94";
+}
+.moon-volume-high2:before {
+	content: "\ed95";
+}
+.moon-volume-medium2:before {
+	content: "\ed96";
+}
+.moon-volume-medium3:before {
+	content: "\ed97";
+}
+.moon-volume-low2:before {
+	content: "\ed98";
+}
+.moon-volume-mute3:before {
+	content: "\ed99";
+}
+.moon-volume-increase2:before {
+	content: "\ed9a";
+}
+.moon-volume-decrease2:before {
+	content: "\ed9b";
+}
+.moon-volume-decrease3:before {
+	content: "\ed9c";
+}
+.moon-volume-5:before {
+	content: "\ed9d";
+}
+.moon-volume-4:before {
+	content: "\ed9e";
+}
+.moon-volume-3:before {
+	content: "\ed9f";
+}
+.moon-volume-2:before {
+	content: "\eda0";
+}
+.moon-volume-1:before {
+	content: "\eda1";
+}
+.moon-volume-0:before {
+	content: "\eda2";
+}
+.moon-volume-mute4:before {
+	content: "\eda3";
+}
+.moon-volume-mute5:before {
+	content: "\eda4";
+}
+.moon-loop:before {
+	content: "\eda5";
+}
+.moon-loop2:before {
+	content: "\eda6";
+}
+.moon-loop3:before {
+	content: "\eda7";
+}
+.moon-infinite-square:before {
+	content: "\eda8";
+}
+.moon-infinite:before {
+	content: "\eda9";
+}
+.moon-infinite2:before {
+	content: "\edaa";
+}
+.moon-loop4:before {
+	content: "\edab";
+}
+.moon-shuffle:before {
+	content: "\edac";
+}
+.moon-shuffle2:before {
+	content: "\edad";
+}
+.moon-wave:before {
+	content: "\edae";
+}
+.moon-wave2:before {
+	content: "\edaf";
+}
+.moon-split:before {
+	content: "\edb0";
+}
+.moon-merge:before {
+	content: "\edb1";
+}
+.moon-first2:before {
+	content: "\edb2";
+}
+.moon-last2:before {
+	content: "\edb3";
+}
+.moon-arrow-up:before {
+	content: "\edb4";
+}
+.moon-arrow-up2:before {
+	content: "\edb5";
+}
+.moon-arrow-up3:before {
+	content: "\edb6";
+}
+/* up3 pressed is down3 */
+.x-btn-pressed .moon-arrow-up3:before {
+    content: "\edbe";
+}
+.moon-arrow-up4:before {
+	content: "\edb7";
+}
+.moon-arrow-right:before {
+	content: "\edb8";
+}
+.moon-arrow-right2:before {
+	content: "\edb9";
+}
+.moon-arrow-right3:before {
+	content: "\edba";
+}
+.moon-arrow-right4:before {
+	content: "\edbb";
+}
+.moon-arrow-down:before {
+	content: "\edbc";
+}
+.moon-arrow-down2:before {
+	content: "\edbd";
+}
+.moon-arrow-down3:before {
+	content: "\edbe";
+}
+.moon-arrow-down4:before {
+	content: "\edbf";
+}
+.moon-arrow-left:before {
+	content: "\edc0";
+}
+.moon-arrow-left2:before {
+	content: "\edc1";
+}
+.moon-arrow-left3:before {
+	content: "\edc2";
+}
+.moon-arrow-left4:before {
+	content: "\edc3";
+}
+.moon-arrow-up5:before {
+	content: "\edc4";
+}
+.moon-arrow-right5:before {
+	content: "\edc5";
+}
+.moon-arrow-down5:before {
+	content: "\edc6";
+}
+.moon-arrow-left5:before {
+	content: "\edc7";
+}
+.moon-arrow-up-left:before {
+	content: "\edc8";
+}
+.moon-arrow-up6:before {
+	content: "\edc9";
+}
+.moon-arrow-up-right:before {
+	content: "\edca";
+}
+.moon-arrow-right6:before {
+	content: "\edcb";
+}
+.moon-arrow-down-right:before {
+	content: "\edcc";
+}
+.moon-arrow-down6:before {
+	content: "\edcd";
+}
+.moon-arrow-down-left:before {
+	content: "\edce";
+}
+.moon-arrow-left6:before {
+	content: "\edcf";
+}
+.moon-arrow-up-left2:before {
+	content: "\edd0";
+}
+.moon-arrow-up7:before {
+	content: "\edd1";
+}
+.moon-arrow-up-right2:before {
+	content: "\edd2";
+}
+.moon-arrow-right7:before {
+	content: "\edd3";
+}
+.moon-arrow-down-right2:before {
+	content: "\edd4";
+}
+.moon-arrow-down7:before {
+	content: "\edd5";
+}
+.moon-arrow-down-left2:before {
+	content: "\edd6";
+}
+.moon-arrow-left7:before {
+	content: "\edd7";
+}
+.moon-arrow-up-left3:before {
+	content: "\edd8";
+}
+.moon-arrow-up8:before {
+	content: "\edd9";
+}
+.moon-arrow-up-right3:before {
+	content: "\edda";
+}
+.moon-arrow-right8:before {
+	content: "\eddb";
+}
+.moon-arrow-down-right3:before {
+	content: "\eddc";
+}
+.moon-arrow-down8:before {
+	content: "\eddd";
+}
+.moon-arrow-down-left3:before {
+	content: "\edde";
+}
+.moon-arrow-left8:before {
+	content: "\eddf";
+}
+.moon-circle-up:before {
+	content: "\ede0";
+}
+.moon-circle-right:before {
+	content: "\ede1";
+}
+.moon-circle-down:before {
+	content: "\ede2";
+}
+.moon-circle-left:before {
+	content: "\ede3";
+}
+.moon-circle-up2:before {
+	content: "\ede4";
+}
+.moon-circle-right2:before {
+	content: "\ede5";
+}
+.moon-circle-down2:before {
+	content: "\ede6";
+}
+.moon-circle-left2:before {
+	content: "\ede7";
+}
+.moon-circle-up-left:before {
+	content: "\ede8";
+}
+.moon-circle-up3:before {
+	content: "\ede9";
+}
+.moon-circle-up-right:before {
+	content: "\edea";
+}
+.moon-circle-right3:before {
+	content: "\edeb";
+}
+.moon-circle-down-right:before {
+	content: "\edec";
+}
+.moon-circle-down3:before {
+	content: "\eded";
+}
+.moon-circle-down-left:before {
+	content: "\edee";
+}
+.moon-circle-left3:before {
+	content: "\edef";
+}
+.moon-circle-up-left2:before {
+	content: "\edf0";
+}
+.moon-circle-up4:before {
+	content: "\edf1";
+}
+.moon-circle-up-right2:before {
+	content: "\edf2";
+}
+.moon-circle-right4:before {
+	content: "\edf3";
+}
+.moon-circle-down-right2:before {
+	content: "\edf4";
+}
+.moon-circle-down4:before {
+	content: "\edf5";
+}
+.moon-circle-down-left2:before {
+	content: "\edf6";
+}
+.moon-circle-left4:before {
+	content: "\edf7";
+}
+.moon-arrow-resize:before {
+	content: "\edf8";
+}
+.moon-arrow-resize2:before {
+	content: "\edf9";
+}
+.moon-arrow-resize3:before {
+	content: "\edfa";
+}
+.moon-arrow-resize4:before {
+	content: "\edfb";
+}
+.moon-arrow-resize5:before {
+	content: "\edfc";
+}
+.moon-arrow-resize6:before {
+	content: "\edfd";
+}
+.moon-arrow-resize7:before {
+	content: "\edfe";
+}
+.moon-arrow-resize8:before {
+	content: "\edff";
+}
+.moon-square-up-left:before {
+	content: "\ee00";
+}
+.moon-square-up:before {
+	content: "\ee01";
+}
+.moon-square-up-right:before {
+	content: "\ee02";
+}
+.moon-square-right:before {
+	content: "\ee03";
+}
+.moon-square-down-right:before {
+	content: "\ee04";
+}
+.moon-square-down:before {
+	content: "\ee05";
+}
+.moon-square-down-left:before {
+	content: "\ee06";
+}
+.moon-square-left:before {
+	content: "\ee07";
+}
+.moon-arrow-up9:before {
+	content: "\ee08";
+}
+.moon-arrow-right9:before {
+	content: "\ee09";
+}
+.moon-arrow-down9:before {
+	content: "\ee0a";
+}
+.moon-arrow-left9:before {
+	content: "\ee0b";
+}
+.moon-arrow-up10:before {
+	content: "\ee0c";
+}
+.moon-arrow-right10:before {
+	content: "\ee0d";
+}
+.moon-arrow-down10:before {
+	content: "\ee0e";
+}
+.moon-arrow-left10:before {
+	content: "\ee0f";
+}
+.moon-arrow-up-left4:before {
+	content: "\ee10";
+}
+.moon-arrow-up11:before {
+	content: "\ee11";
+}
+.moon-arrow-up-right4:before {
+	content: "\ee12";
+}
+.moon-arrow-right11:before {
+	content: "\ee13";
+}
+.moon-arrow-down-right4:before {
+	content: "\ee14";
+}
+.moon-arrow-down11:before {
+	content: "\ee15";
+}
+.moon-arrow-down-left4:before {
+	content: "\ee16";
+}
+.moon-arrow-left11:before {
+	content: "\ee17";
+}
+.moon-arrow-up-left5:before {
+	content: "\ee18";
+}
+.moon-arrow-up12:before {
+	content: "\ee19";
+}
+.moon-arrow-up-right5:before {
+	content: "\ee1a";
+}
+.moon-arrow-right12:before {
+	content: "\ee1b";
+}
+.moon-arrow-down-right5:before {
+	content: "\ee1c";
+}
+.moon-arrow-down12:before {
+	content: "\ee1d";
+}
+.moon-arrow-down-left5:before {
+	content: "\ee1e";
+}
+.moon-arrow-left12:before {
+	content: "\ee1f";
+}
+.moon-arrow-up13:before {
+	content: "\ee20";
+}
+.moon-arrow-right13:before {
+	content: "\ee21";
+}
+.moon-arrow-down13:before {
+	content: "\ee22";
+}
+.moon-arrow-left13:before {
+	content: "\ee23";
+}
+.moon-arrow-up14:before {
+	content: "\ee24";
+}
+.moon-arrow-right14:before {
+	content: "\ee25";
+}
+.moon-arrow-down14:before {
+	content: "\ee26";
+}
+.moon-arrow-left14:before {
+	content: "\ee27";
+}
+.moon-circle-up5:before {
+	content: "\ee28";
+}
+.moon-circle-right5:before {
+	content: "\ee29";
+}
+.moon-circle-down5:before {
+	content: "\ee2a";
+}
+.moon-circle-left5:before {
+	content: "\ee2b";
+}
+.moon-circle-up6:before {
+	content: "\ee2c";
+}
+.moon-circle-right6:before {
+	content: "\ee2d";
+}
+.moon-circle-down6:before {
+	content: "\ee2e";
+}
+.moon-circle-left6:before {
+	content: "\ee2f";
+}
+.moon-arrow-up15:before {
+	content: "\ee30";
+}
+.moon-arrow-right15:before {
+	content: "\ee31";
+}
+.moon-arrow-down15:before {
+	content: "\ee32";
+}
+.moon-arrow-left15:before {
+	content: "\ee33";
+}
+.moon-arrow-up16:before {
+	content: "\ee34";
+}
+.moon-arrow-right16:before {
+	content: "\ee35";
+}
+.moon-arrow-down16:before {
+	content: "\ee36";
+}
+.moon-arrow-left16:before {
+	content: "\ee37";
+}
+.moon-menu-open:before {
+	content: "\ee38";
+}
+.moon-menu-open2:before {
+	content: "\ee39";
+}
+.moon-menu-close:before {
+	content: "\ee3a";
+}
+.moon-menu-close2:before {
+	content: "\ee3b";
+}
+.moon-enter4:before {
+	content: "\ee3c";
+}
+.moon-enter5:before {
+	content: "\ee3d";
+}
+.moon-esc:before {
+	content: "\ee3e";
+}
+.moon-enter6:before {
+	content: "\ee3f";
+}
+.moon-backspace:before {
+	content: "\ee40";
+}
+.moon-backspace2:before {
+	content: "\ee41";
+}
+.moon-tab:before {
+	content: "\ee42";
+}
+.moon-transmission:before {
+	content: "\ee43";
+}
+.moon-transmission2:before {
+	content: "\ee44";
+}
+.moon-sort:before {
+	content: "\ee45";
+}
+.moon-sort2:before {
+	content: "\ee46";
+}
+.moon-move-up:before {
+	content: "\ee47";
+}
+.moon-move-down:before {
+	content: "\ee48";
+}
+.moon-sort-alpha-asc:before {
+	content: "\ee49";
+}
+.moon-sort-alpha-desc:before {
+	content: "\ee4a";
+}
+.moon-sort-numeric-asc:before {
+	content: "\ee4b";
+}
+.moon-sort-numberic-desc:before {
+	content: "\ee4c";
+}
+.moon-sort-amount-asc:before {
+	content: "\ee4d";
+}
+.moon-sort-amount-desc:before {
+	content: "\ee4e";
+}
+.moon-sort-time-asc:before {
+	content: "\ee4f";
+}
+.moon-sort-time-desc:before {
+	content: "\ee50";
+}
+.moon-battery-6:before {
+	content: "\ee51";
+}
+.moon-battery-5:before {
+	content: "\ee52";
+}
+.moon-battery-4:before {
+	content: "\ee53";
+}
+.moon-battery-3:before {
+	content: "\ee54";
+}
+.moon-battery-2:before {
+	content: "\ee55";
+}
+.moon-battery-1:before {
+	content: "\ee56";
+}
+.moon-battery-0:before {
+	content: "\ee57";
+}
+.moon-battery-charging:before {
+	content: "\ee58";
+}
+.moon-key-keyboard:before {
+	content: "\ee59";
+}
+.moon-key-A:before {
+	content: "\ee5a";
+}
+.moon-key-up:before {
+	content: "\ee5b";
+}
+.moon-key-right:before {
+	content: "\ee5c";
+}
+.moon-key-down:before {
+	content: "\ee5d";
+}
+.moon-key-left:before {
+	content: "\ee5e";
+}
+.moon-command:before {
+	content: "\ee5f";
+}
+.moon-shift:before {
+	content: "\ee60";
+}
+.moon-ctrl:before {
+	content: "\ee61";
+}
+.moon-opt:before {
+	content: "\ee62";
+}
+.moon-checkbox-checked:before {
+	content: "\ee63";
+}
+.moon-checkbox-unchecked:before {
+	content: "\ee64";
+}
+.moon-checkbox-partial:before {
+	content: "\ee65";
+}
+.moon-square:before {
+	content: "\ee66";
+}
+.moon-triangle:before {
+	content: "\ee67";
+}
+.moon-triangle2:before {
+	content: "\ee68";
+}
+.moon-diamond3:before {
+	content: "\ee69";
+}
+.moon-diamond4:before {
+	content: "\ee6a";
+}
+.moon-checkbox-checked2:before {
+	content: "\ee6b";
+}
+.moon-checkbox-unchecked2:before {
+	content: "\ee6c";
+}
+.moon-checkbox-partial2:before {
+	content: "\ee6d";
+}
+.moon-radio-checked:before {
+	content: "\ee6e";
+}
+.moon-radio-checked2:before {
+	content: "\ee6f";
+}
+.moon-radio-unchecked:before {
+	content: "\ee70";
+}
+.moon-toggle-on:before {
+	content: "\ee71";
+}
+.moon-toggle-off:before {
+	content: "\ee72";
+}
+.moon-checkmark-circle:before {
+	content: "\ee73";
+}
+.moon-circle:before {
+	content: "\ee74";
+}
+.moon-circle2:before {
+	content: "\ee75";
+}
+.moon-circles:before {
+	content: "\ee76";
+}
+.moon-circles2:before {
+	content: "\ee77";
+}
+.moon-crop:before {
+	content: "\ee78";
+}
+.moon-crop2:before {
+	content: "\ee79";
+}
+.moon-make-group:before {
+	content: "\ee7a";
+}
+.moon-ungroup:before {
+	content: "\ee7b";
+}
+.moon-vector:before {
+	content: "\ee7c";
+}
+.moon-vector2:before {
+	content: "\ee7d";
+}
+.moon-rulers:before {
+	content: "\ee7e";
+}
+.moon-ruler:before {
+	content: "\ee7f";
+}
+.moon-pencil-ruler:before {
+	content: "\ee80";
+}
+.moon-scissors:before {
+	content: "\ee81";
+}
+.moon-scissors2:before {
+	content: "\ee82";
+}
+.moon-scissors3:before {
+	content: "\ee83";
+}
+.moon-haircut:before {
+	content: "\ee84";
+}
+.moon-comb:before {
+	content: "\ee85";
+}
+.moon-filter:before {
+	content: "\ee86";
+}
+.moon-filter2:before {
+	content: "\ee87";
+}
+.moon-filter3:before {
+	content: "\ee88";
+}
+.moon-filter4:before {
+	content: "\ee89";
+}
+.moon-font:before {
+	content: "\ee8a";
+}
+.moon-ampersand:before {
+	content: "\ee8b";
+}
+.moon-ligature:before {
+	content: "\ee8c";
+}
+.moon-ligature2:before {
+	content: "\ee8d";
+}
+.moon-font-size:before {
+	content: "\ee8e";
+}
+.moon-typography:before {
+	content: "\ee8f";
+}
+.moon-text-height:before {
+	content: "\ee90";
+}
+.moon-text-width:before {
+	content: "\ee91";
+}
+.moon-height2:before {
+	content: "\ee92";
+}
+.moon-width:before {
+	content: "\ee93";
+}
+.moon-bold:before {
+	content: "\ee94";
+}
+.moon-underline:before {
+	content: "\ee95";
+}
+.moon-italic:before {
+	content: "\ee96";
+}
+.moon-strikethrough:before {
+	content: "\ee97";
+}
+.moon-strikethrough2:before {
+	content: "\ee98";
+}
+.moon-font-size2:before {
+	content: "\ee99";
+}
+.moon-bold2:before {
+	content: "\ee9a";
+}
+.moon-underline2:before {
+	content: "\ee9b";
+}
+.moon-italic2:before {
+	content: "\ee9c";
+}
+.moon-strikethrough3:before {
+	content: "\ee9d";
+}
+.moon-omega:before {
+	content: "\ee9e";
+}
+.moon-sigma:before {
+	content: "\ee9f";
+}
+.moon-nbsp:before {
+	content: "\eea0";
+}
+.moon-page-break:before {
+	content: "\eea1";
+}
+.moon-page-break2:before {
+	content: "\eea2";
+}
+.moon-superscript:before {
+	content: "\eea3";
+}
+.moon-subscript:before {
+	content: "\eea4";
+}
+.moon-superscript2:before {
+	content: "\eea5";
+}
+.moon-subscript2:before {
+	content: "\eea6";
+}
+.moon-text-color:before {
+	content: "\eea7";
+}
+.moon-highlight:before {
+	content: "\eea8";
+}
+.moon-pagebreak:before {
+	content: "\eea9";
+}
+.moon-clear-formatting:before {
+	content: "\eeaa";
+}
+.moon-table:before {
+	content: "\eeab";
+}
+.moon-table2:before {
+	content: "\eeac";
+}
+.moon-insert-template:before {
+	content: "\eead";
+}
+.moon-pilcrow:before {
+	content: "\eeae";
+}
+.moon-ltr:before {
+	content: "\eeaf";
+}
+.moon-rtl:before {
+	content: "\eeb0";
+}
+.moon-ltr2:before {
+	content: "\eeb1";
+}
+.moon-rtl2:before {
+	content: "\eeb2";
+}
+.moon-section:before {
+	content: "\eeb3";
+}
+.moon-paragraph-left:before {
+	content: "\eeb4";
+}
+.moon-paragraph-center:before {
+	content: "\eeb5";
+}
+.moon-paragraph-right:before {
+	content: "\eeb6";
+}
+.moon-paragraph-justify:before {
+	content: "\eeb7";
+}
+.moon-paragraph-left2:before {
+	content: "\eeb8";
+}
+.moon-paragraph-center2:before {
+	content: "\eeb9";
+}
+.moon-paragraph-right2:before {
+	content: "\eeba";
+}
+.moon-paragraph-justify2:before {
+	content: "\eebb";
+}
+.moon-indent-increase:before {
+	content: "\eebc";
+}
+.moon-indent-decrease:before {
+	content: "\eebd";
+}
+.moon-paragraph-left3:before {
+	content: "\eebe";
+}
+.moon-paragraph-center3:before {
+	content: "\eebf";
+}
+.moon-paragraph-right3:before {
+	content: "\eec0";
+}
+.moon-paragraph-justify3:before {
+	content: "\eec1";
+}
+.moon-indent-increase2:before {
+	content: "\eec2";
+}
+.moon-indent-decrease2:before {
+	content: "\eec3";
+}
+.moon-share:before {
+	content: "\eec4";
+}
+.moon-share2:before {
+	content: "\eec5";
+}
+.moon-new-tab:before {
+	content: "\eec6";
+}
+.moon-new-tab2:before {
+	content: "\eec7";
+}
+.moon-popout:before {
+	content: "\eec8";
+}
+.moon-embed:before {
+	content: "\eec9";
+}
+.moon-embed2:before {
+	content: "\eeca";
+}
+.moon-markup:before {
+	content: "\eecb";
+}
+.moon-regexp:before {
+	content: "\eecc";
+}
+.moon-regexp2:before {
+	content: "\eecd";
+}
+.moon-code:before {
+	content: "\eece";
+}
+.moon-circle-css:before {
+	content: "\eecf";
+}
+.moon-circle-code:before {
+	content: "\eed0";
+}
+.moon-terminal:before {
+	content: "\eed1";
+}
+.moon-unicode:before {
+	content: "\eed2";
+}
+.moon-seven-segment-0:before {
+	content: "\eed3";
+}
+.moon-seven-segment-1:before {
+	content: "\eed4";
+}
+.moon-seven-segment-2:before {
+	content: "\eed5";
+}
+.moon-seven-segment-3:before {
+	content: "\eed6";
+}
+.moon-seven-segment-4:before {
+	content: "\eed7";
+}
+.moon-seven-segment-5:before {
+	content: "\eed8";
+}
+.moon-seven-segment-6:before {
+	content: "\eed9";
+}
+.moon-seven-segment-7:before {
+	content: "\eeda";
+}
+.moon-seven-segment-8:before {
+	content: "\eedb";
+}
+.moon-seven-segment-9:before {
+	content: "\eedc";
+}
+.moon-share3:before {
+	content: "\eedd";
+}
+.moon-share4:before {
+	content: "\eede";
+}
+.moon-mail:before {
+	content: "\eedf";
+}
+.moon-mail2:before {
+	content: "\eee0";
+}
+.moon-mail3:before {
+	content: "\eee1";
+}
+.moon-mail4:before {
+	content: "\eee2";
+}
+/* HERE BE THE DRAGONS 
+ * Or (in other words): The following glyphs are to be handled with care as icomoon is constantly changing them
+ */
+.moon-amazon:before {
+	content: "\eee3";
+}
+.moon-google:before {
+	content: "\eee4";
+}
+.moon-google2:before {
+	content: "\eee5";
+}
+.moon-google3:before {
+	content: "\eee6";
+}
+.moon-google-plus:before {
+	content: "\eee7";
+}
+.moon-google-plus2:before {
+	content: "\eee8";
+}
+.moon-google-plus3:before {
+	content: "\eee9";
+}
+.moon-hangouts:before {
+	content: "\eeea";
+}
+.moon-google-drive:before {
+	content: "\eeeb";
+}
+.moon-facebook:before {
+	content: "\eeec";
+}
+.moon-facebook2:before {
+	content: "\eeed";
+}
+.moon-instagram:before {
+	content: "\eeee";
+}
+.moon-whatsapp:before {
+	content: "\eeef";
+}
+.moon-spotify:before {
+	content: "\eef0";
+}
+.moon-telegram:before {
+	content: "\eef1";
+}
+.moon-twitter:before {
+	content: "\eef2";
+}
+.moon-vine:before {
+	content: "\eef3";
+}
+.moon-vk:before {
+	content: "\eef4";
+}
+.moon-renren:before {
+	content: "\eef5";
+}
+.moon-sina-weibo:before {
+	content: "\eef6";
+}
+.moon-rss:before {
+	content: "\eef7";
+}
+.moon-rss2:before {
+	content: "\eef8";
+}
+.moon-youtube:before {
+	content: "\eef9";
+}
+.moon-twitch:before {
+	content: "\eefa";
+}
+.moon-vimeo:before {
+	content: "\eefb";
+}
+.moon-vimeo2:before {
+	content: "\eefc";
+}
+.moon-lanyrd:before {
+	content: "\eefd";
+}
+.moon-flickr:before {
+	content: "\eefe";
+}
+.moon-flickr2:before {
+	content: "\eeff";
+}
+.moon-flickr3:before {
+	content: "\ef00";
+}
+.moon-flickr4:before {
+	content: "\ef01";
+}
+.moon-dribbble:before {
+	content: "\ef02";
+}
+.moon-behance:before {
+	content: "\ef03";
+}
+.moon-behance2:before {
+	content: "\ef04";
+}
+.moon-deviantart:before {
+	content: "\ef05";
+}
+.moon-500px:before {
+	content: "\ef06";
+}
+.moon-steam:before {
+	content: "\ef07";
+}
+.moon-steam2:before {
+	content: "\ef08";
+}
+.moon-dropbox:before {
+	content: "\ef09";
+}
+.moon-onedrive:before {
+	content: "\ef0a";
+}
+.moon-github:before {
+	content: "\ef0b";
+}
+.moon-npm:before {
+	content: "\ef0c";
+}
+.moon-basecamp:before {
+	content: "\ef0d";
+}
+.moon-trello:before {
+	content: "\ef0e";
+}
+.moon-wordpress:before {
+	content: "\ef0f";
+}
+.moon-joomla:before {
+	content: "\ef10";
+}
+.moon-ello:before {
+	content: "\ef11";
+}
+.moon-blogger:before {
+	content: "\ef12";
+}
+.moon-blogger2:before {
+	content: "\ef13";
+}
+.moon-tumblr:before {
+	content: "\ef14";
+}
+.moon-tumblr2:before {
+	content: "\ef15";
+}
+.moon-yahoo:before {
+	content: "\ef16";
+}
+.moon-yahoo2:before {
+	content: "\ef17";
+}
+.moon-tux:before {
+	content: "\ef18";
+}
+.moon-appleinc:before {
+	content: "\ef19";
+}
+.moon-finder:before {
+	content: "\ef1a";
+}
+.moon-android:before {
+	content: "\ef1b";
+}
+.moon-windows:before {
+	content: "\ef1c";
+}
+.moon-windows8:before {
+	content: "\ef1d";
+}
+.moon-soundcloud:before {
+	content: "\ef1e";
+}
+.moon-soundcloud2:before {
+	content: "\ef1f";
+}
+.moon-skype:before {
+	content: "\ef20";
+}
+.moon-reddit:before {
+	content: "\ef21";
+}
+.moon-hackernews:before {
+	content: "\ef22";
+}
+.moon-wikipedia:before {
+	content: "\ef23";
+}
+.moon-linkedin:before {
+	content: "\ef24";
+}
+.moon-linkedin2:before {
+	content: "\ef25";
+}
+.moon-lastfm:before {
+	content: "\ef26";
+}
+.moon-lastfm2:before {
+	content: "\ef27";
+}
+.moon-delicious:before {
+	content: "\ef28";
+}
+.moon-stumbleupon:before {
+	content: "\ef29";
+}
+.moon-stumbleupon2:before {
+	content: "\ef2a";
+}
+.moon-stackoverflow:before {
+	content: "\ef2b";
+}
+.moon-pinterest:before {
+	content: "\ef2c";
+}
+.moon-pinterest2:before {
+	content: "\ef2d";
+}
+.moon-xing:before {
+	content: "\ef2e";
+}
+.moon-xing2:before {
+	content: "\ef2f";
+}
+.moon-flattr:before {
+	content: "\ef30";
+}
+.moon-foursquare:before {
+	content: "\ef31";
+}
+.moon-yelp:before {
+	content: "\ef32";
+}
+.moon-paypal:before {
+	content: "\ef33";
+}
+.moon-chrome:before {
+	content: "\ef34";
+}
+.moon-firefox:before {
+	content: "\ef35";
+}
+.moon-IE:before {
+	content: "\ef36";
+}
+.moon-edge:before {
+	content: "\ef37";
+}
+.moon-safari:before {
+	content: "\ef38";
+}
+.moon-opera:before {
+	content: "\ef39";
+}
+.moon-file-pdf:before {
+	content: "\ef36";
+}
+.moon-file-openoffice:before {
+	content: "\ef3b";
+}
+.moon-file-word:before {
+	content: "\ef3c";
+}
+.moon-file-excel:before {
+	content: "\ef3d";
+}
+.moon-libreoffice:before {
+	content: "\ef3e";
+}
+.moon-html-five:before {
+	content: "\ef3f";
+}
+.moon-html-five2:before {
+	content: "\ef40";
+}
+.moon-css3:before {
+	content: "\ef41";
+}
+.moon-git:before {
+	content: "\ef42";
+}
+.moon-codepen:before {
+	content: "\ef43";
+}
+.moon-svg:before {
+	content: "\ef44";
+}
+.moon-IcoMoon:before {
+	content: "\ef45";
+}

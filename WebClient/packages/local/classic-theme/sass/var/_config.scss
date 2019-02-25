@@ -1,0 +1,83 @@
+$base-background-color: rgba(30, 30, 40, 0.75);
+$base-border-radius: 6px;
+$base-window-background-color: rgba(60, 68, 80, 1);
+$base-toolbar-background-color: rgba(79, 86, 96, 1);
+//$base-button-background-color: rgba(41, 47, 65, 1);
+$base-button-background-color: #20242F;
+//$base-border-color: rgba(89, 97, 112, 1);
+$base-border-color: #484C56;
+
+$mean-test-color: #FF9900;
+//$main-bg: linear-gradient(45deg, hsla(137, 91%, 48%, 1) 0%, hsla(137, 91%, 48%, 0) 70%), linear-gradient(135deg, hsla(257, 100%, 45%, 1) 10%, hsla(257, 100%, 45%, 0) 80%), linear-gradient(225deg, hsla(51, 99%, 43%, 1) 10%, hsla(51, 99%, 43%, 0) 80%), linear-gradient(315deg, hsla(169, 95%, 50%, 1) 100%, hsla(169, 95%, 50%, 0) 70%);
+//$main-bg-image: url('./images/background.jpg') center no-repeat;
+
+/* Base values picked from Benedikts visuals. Real RGB values would have been handy */
+$default-text-size: 14px;
+$default-border-radius: 4px;
+$default-window-border: 1px solid #41444C;
+$default-window-background-color: #2E3037;
+$default-header-background-color: #20242F;
+$default-toolbar-background-color: #636874;
+$default-button-background-color: #0D65A0;
+$default-button-border-color: #5A8EB1;
+$default-button-text-color: #C2C2C2;
+$default-button-text-highlight-color: #f0f0f0;
+
+//pro-buttons
+$default-button-pro-background-color: #0D65A0;
+$default-button-pro-border-color: #5A8EB1;
+//no-buttons
+$default-button-contra-background-color: #88181B;
+$default-button-contra-border-color: #AB5C5E;
+//neutral-buttons
+$default-button-neutral-background-color: #363A44;
+$default-button-neutral-border-color: #71747B;
+
+$default-input-background-color: #20242F;
+$default-input-border: 1px solid #828282;
+
+/* ---- End of Benedikts visuals ---- */
+
+@font-face {
+    font-family: 'ffdinregular';
+    src: url('fonts/ffdin-regular.eot');
+    src: url('fonts/ffdin-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ffdin-regular.woff') format('woff'),
+         url('fonts/ffdin-regular.ttf') format('truetype'),
+         url('fonts/ffdin-regular.svg#ffdinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'ffdinmedium';
+    src: url('fonts/ffdin-medium.eot');
+    src: url('fonts/ffdin-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ffdin-medium.woff') format('woff'),
+         url('fonts/ffdin-medium.ttf') format('truetype'),
+         url('fonts/ffdin-medium.svg#ffdinmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'segment7';
+    src: url('fonts/digital.ttf');
+    font-weight: normal;
+    font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+//$font-family: 'ffdinregular', sans-serif;
+$font-family: 'ffdinmedium', sans-serif;
+
+.x-window-text{
+	color: #FFFFFF;
+}
+/* This doesnt work
+.x-toolbar-default{
+	background-image: linear-gradient(0deg , rgba(44, 48, 53, 0.7) 0%, rgba(47, 47, 58, 0.9) 100%);
+}
+*/

@@ -1,0 +1,12 @@
+$form-toolbar-text-field-border-radius: $base-border-radius;
+$form-toolbar-text-field-background-color: rgb(32, 36, 48);
+
+@include extjs-text-field-ui (
+    $ui: 'medialibrary',
+	$ui-background-color: rgb(32, 36, 48),
+	$ui-color: $base-text-color,
+	$ui-border-color: rgb(98, 101, 108),
+	$ui-border-radius: $base-border-radius,
+	$ui-invalid-background-color: rgb(32, 36, 48),
+	$ui-trigger-background-color: rgb(32, 36, 48)
+);

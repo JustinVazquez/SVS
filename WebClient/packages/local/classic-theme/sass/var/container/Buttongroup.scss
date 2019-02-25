@@ -1,0 +1,12 @@
+$btn-group-background-color: transparent;
+$btn-group-border-color: rgb(98, 101, 108);
+$btn-group-box-shadow: none;
+
+@include extjs-btn-group-ui (
+	$ui: 'medialibrary-framed',
+	$ui-background-color: transparent,
+	$ui-border-width: 0,
+	$ui-body-padding: 0,
+	$ui-header-padding: 0,
+	$ui-border-color: transparent
+);

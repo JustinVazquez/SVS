@@ -1,0 +1,19 @@
+@import '_config.scss';
+@import '_icons.scss';
+@import '_weather_icons.scss';
+
+$base-color: $base-background-color;
+$base-text-color: #FFFFFF;
+$body-background-color: transparent;
+
+$panel-body-background-color: transparent;
+$border-layout-ct-background-color: transparent;
+
+$accordion-background-color: $base-color;
+$accordion-item-margin: 4px;
+
+$button-highlight-color: #03b1c8; //#1965A9;
+
+$videro-red: rgb(236, 70, 70); //#c00
+$videro-green: rgb(187, 222, 98); //#0c0
+$videro-blue: rgb(3, 177, 200); //#1f8bfc

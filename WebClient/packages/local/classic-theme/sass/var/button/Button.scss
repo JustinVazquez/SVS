@@ -1,0 +1,14 @@
+$button-toolbar-background-color: $base-button-background-color;
+$button-toolbar-border-color: #5B616F;
+$button-toolbar-color: $base-text-color;
+$button-toolbar-glyph-color: $base-text-color;
+$button-small-border-radius: $base-border-radius;
+
+@include extjs-button-toolbar-small-ui (
+    $ui: 'medialibrary',
+	$background-color: $base-button-background-color,
+	$color: $base-text-color,
+	$border-color: rgb(98, 101, 108),
+	$glyph-color: $base-text-color,
+	$font-size: 14px
+);
