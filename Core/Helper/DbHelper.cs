@@ -9,10 +9,10 @@ namespace Core.Helper
 {
     public static class DbHelper
     {
-        private static readonly string _dataSource = "sql7.freemysqlhosting.net";
+        private static readonly string _dataSource = "127.0.0.1";
         private static readonly string _port = "3306";
-        private static readonly string _userName = "sql7280199";
-        private static readonly string _password = "BmyHbWTuEX";
+        private static readonly string _userName = "root";
+        private static readonly string _password = "";
   
 
         public static void CheckDbConnection(IDbConnection con)

@@ -21,14 +21,14 @@ namespace Core.Access
         public static void AddNotiz(IDbConnection con,int UserID,string Text, int Stunde, DateTime Datum)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Insert into sql7280199.stundennotiz (User_ID,Text,Stunde,Datum) Values ({UserID},'{Text}'{Stunde},'{Datum}'";
+            var sql = $"Insert into SVS.stundennotiz (User_ID,Text,Stunde,Datum) Values ({UserID},'{Text}'{Stunde},'{Datum}'";
             con.Execute(sql);
         }
 
         public static void AddWochenNotiz(IDbConnection con, int klasse, string text, string datum)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Insert into sql7280199.wochennotiz (Inhalt,Klasse_ID,Datum) Values ('{text}',{klasse},'{datum}')";
+            var sql = $"Insert into SVS.wochennotiz (Inhalt,Klasse_ID,Datum) Values ('{text}',{klasse},'{datum}')";
             con.Execute(sql);
         }
 
@@ -42,7 +42,7 @@ namespace Core.Access
         public static NotizModel GetNotizByDateAndStunde(IDbConnection con, string Datum, int Stunde)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Select * From sql7280199.stundennotiz Where Datum = '{Datum}' And Stunde = {Stunde}";
+            var sql = $"Select * From SVS.stundennotiz Where Datum = '{Datum}' And Stunde = {Stunde}";
             var result = con.QueryFirstOrDefault<NotizModel>(sql);
             return result;
         }
@@ -58,7 +58,7 @@ namespace Core.Access
         public static List<WochenNotizModel> GetWochenNotizenByID(IDbConnection con, string von, string bis,int klasse)
         {
             DbHelper.CheckDbConnection(con);
-            var sql = $"Select * From sql7280199.WochenNotiz Where Datum Between '{von}' and '{bis}'";
+            var sql = $"Select * From SVS.WochenNotiz Where Datum Between '{von}' and '{bis}'";
             var result = con.Query<WochenNotizModel>(sql).AsList();
             return result;
         }

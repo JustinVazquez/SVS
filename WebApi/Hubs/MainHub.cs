@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
@@ -168,10 +169,8 @@ namespace WebApi.Hubs
             DateTime sunday = today.AddDays(-currentDayOfWeek);
             DateTime monday = sunday.AddDays(1);
          
-            if (currentDayOfWeek == 0)
-            {
-                monday = monday.AddDays(-7);
-            }
+            if (currentDayOfWeek == 0)         
+                monday = monday.AddDays(-7);          
             var dates = Enumerable.Range(0, 7).Select(days => monday.AddDays(days)).ToList();
             var woche = new WocheModel();
 
@@ -189,7 +188,6 @@ namespace WebApi.Hubs
                         item.Status = StundeplanAccess.GetStatusText(con, item.Status_ID);
                     }
                 }
-
 
                 if (i == 1)
                 {
@@ -230,7 +228,6 @@ namespace WebApi.Hubs
                     }
                 }
 
-
                 if (i == 4)
                 {
                     woche.friday = StundeplanAccess.GetStundenplanByKlassAndDate(con, klasse, dates[i].ToString("yyyy-MM-dd"));
@@ -243,12 +240,10 @@ namespace WebApi.Hubs
                         item.Status = StundeplanAccess.GetStatusText(con, item.Status_ID);
                     }
                 }
-
             }
-
             woche.weekNotes = NotizAccess.GetWochenNotizenByID(con, dates[0].ToString("yyyy-MM-dd"), dates[4].ToString("yyyy-MM-dd"),klasse);
             return woche;
-        }      
+        }          
         #endregion
 
         /// <summary>
@@ -282,7 +277,7 @@ namespace WebApi.Hubs
             var list = UserAccess.getEmails(con, klasse);
             try
             {
-               Email.sendMail(list, text);
+               EmailHelper.sendMail(list, text);
                 return true;
             }
             catch

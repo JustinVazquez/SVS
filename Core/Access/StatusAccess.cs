@@ -10,13 +10,13 @@ namespace Core.Access
     public static class StatusAccess
     {
         /// <summary>
-        ///  Liefert einen Status der einzelnen Stunden
+        ///  Liefert den Status einer einzelnen Stunden
         /// </summary>
         /// <returns>Eine Liste aus Elementen vom Typ StatusModel</returns>
         public static List<StatusModel> GetAllStatus()
         {
             var con = DbHelper.GetDbConnection();
-            var sql = $"Select * From sql7280199.Status";
+            var sql = $"Select * From SVS.Status";
             var result = con.Query<StatusModel>(sql).AsList();
             return result;
         }

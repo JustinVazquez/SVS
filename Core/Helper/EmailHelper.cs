@@ -8,7 +8,7 @@ using Core.Access;
 
 namespace Core.Helper
 {
-    public static class Email
+    public static class EmailHelper
     {
         /// <summary>
         /// Sendet eine Email an Adressen in list mit dem inhalt Text 

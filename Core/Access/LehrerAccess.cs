@@ -16,7 +16,7 @@ namespace Core.Access
         public static List<LehrerModel> GetAllLehrer()
         {
             var con = DbHelper.GetDbConnection();
-            var sql = $"Select * From sql7280199.Lehrer";
+            var sql = $"Select * From SVS.Lehrer";
             var result = con.Query<LehrerModel>(sql).AsList();
             return result;
         }
